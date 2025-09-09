@@ -1,0 +1,4 @@
+db/gmp_vector_db/index.faiss
+db/gmp_vector_db/index.pkl
+db/chunks.jsonl
+.env
