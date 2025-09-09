@@ -1,3 +1,5 @@
+# 대용량 파일 및 .env 파일 commit 방지용
+
 db/gmp_vector_db/index.faiss
 db/gmp_vector_db/index.pkl
 db/chunks.jsonl
