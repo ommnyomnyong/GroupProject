@@ -40,6 +40,7 @@ class GMPResponse(BaseModel):
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 INDEX_NAME = "gmp-sop-vectordb"
 NAMESPACE_LIST = ["sop", "gmp-1st", "gmp-2nd", "old-gmp-1st", "old-gmp-2nd"]
+VECTOR_DIM = 1536
 
 # Pinecone 인덱스 연결 함수
 def get_pinecone_index():
@@ -58,17 +59,16 @@ def startup_event():
     pinecone_index = get_pinecone_index()
     data_cache = {}
     for ns in NAMESPACE_LIST:
-        # Pinecone에서 모든 데이터 불러오기 (vector=None, top_k=10000)
+        # 임의의 벡터로 최대 top_k로 쿼리 (실제 데이터가 많으면 REST API로 id 목록을 받아서 fetch해야 함)
+        dummy_vector = [0.0] * VECTOR_DIM
         results = pinecone_index.query(
-            vector=None,
-            top_k=10000,  # 충분히 큰 값으로 모든 데이터
+            vector=dummy_vector,
+            top_k=10000,  # 최대 10,000개까지
             namespace=ns,
             include_metadata=True
         )
-        # 각 match의 metadata를 리스트로 저장
         data_cache[ns] = [match.get("metadata", {}) for match in results.get("matches", [])]
 
-# 루트 엔드포인트
 @app.get("/")
 def read_root():
     return {
@@ -77,13 +77,11 @@ def read_root():
         "status": "running"
     }
 
-# SOP ID로 캐싱된 데이터에서 검색
 @app.post("/get_gmp/", response_model=GMPResponse)
 def get_gmp(request: SOPRequest):
     sop_id = request.sop_id
     if not sop_id:
         raise HTTPException(status_code=400, detail="sop_id는 필수 입력값입니다.")
-    # 세 namespace 모두에서 해당 sop_id를 검색
     gmp_list = []
     for ns in NAMESPACE_LIST:
         for meta in data_cache.get(ns, []):
@@ -95,7 +93,6 @@ def get_gmp(request: SOPRequest):
         raise HTTPException(status_code=404, detail=f"SOP ID '{sop_id}'에 대한 GMP 데이터를 찾을 수 없습니다.")
     return GMPResponse(gmp=gmp_list)
 
-# Pinecone 연결 테스트
 @app.get("/test_connection")
 def test_connection():
     try:
@@ -111,7 +108,6 @@ def test_connection():
             "error": str(e)
         }
 
-# SOP/GMP 데이터 목록 조회 (캐싱된 데이터 기준)
 @app.get("/sop_list")
 def get_sop_list():
     available_ids = set()
@@ -124,19 +120,17 @@ def get_sop_list():
         "total_count": len(available_ids)
     }
 
-# namespace별 데이터 조회
 @app.get("/get_data/{namespace}")
 def get_data(namespace: str):
     if namespace not in data_cache:
         raise HTTPException(status_code=404, detail="해당 namespace 데이터가 없습니다.")
     return {"data": data_cache[namespace]}
 
-# 개발용 실행 설정
 if __name__ == "__main__":
     uvicorn.run(
         app, 
         host="127.0.0.1", 
         port=8000, 
-        reload=True,  # 코드 변경 시 자동 재시작 (개발용)
+        reload=True,
         log_level="info"
     )
