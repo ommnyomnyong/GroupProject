@@ -262,16 +262,24 @@ async def upload_json(file: UploadFile = File(...)):
     try:
         contents = await file.read()
         data = json.loads(contents.decode('utf-8'))
+        summary = data.get('summary', {})
+        pipeline_info = data.get('pipeline_info', {})
+
         # pipeline_info에서 analyzed_at을 summary로 복사
-        if 'pipeline_info' in data and '분석완료시각' in data['pipeline_info']:
-            data['summary']['analyzed_at'] = data['pipeline_info']['analyzed_at']
+        if '분석완료시각' in pipeline_info:
+            summary['analyzed_at'] = pipeline_info['분석완료시각']
+
         # 한글 키가 있으면 영문 키로 복사
-        summary = data['summary']
-        pipeline_info = data['pipeline_info']
         if '총_gmp_변경점' in summary:
             summary['total_gmp_changes'] = summary['총_gmp_변경점']
         if '영향받는_sop_섹션' in summary:
             summary['affected_sop_sections'] = summary['영향받는_sop_섹션']
+
+        # 필수 키가 없으면 에러 메시지 반환
+        required_keys = ['total_gmp_changes', 'affected_sop_sections', 'analyzed_at']
+        for key in required_keys:
+            if key not in summary:
+                raise HTTPException(status_code=400, detail=f"'{key}' 필드가 summary에 없습니다.")
 
         summary_model = AnalysisSummaryModel(**summary)
         detailed = [DetailedAnalysisModel(**item) for item in data['detailed_analysis']]
@@ -282,6 +290,7 @@ async def upload_json(file: UploadFile = File(...)):
         return {"result": "파일 업로드 및 데이터 저장 성공!"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
 
 pinecone_index = None
 
