@@ -1,11 +1,14 @@
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
-from typing import List, Optional
 import uvicorn
 import pymysql
 import os
 from dotenv import load_dotenv
 from pinecone import Pinecone
+from pydantic import BaseModel, Field
+from typing import List, Dict, Any, Optional
+import json
+
 
 load_dotenv()
 
@@ -29,9 +32,10 @@ INDEX_NAME = "gmp-sop-vectordb"
 VECTOR_DIM = 1536
 ALLOWED_NAMESPACES = ["sop", "gmp-1st", "gmp-2nd", "old-gmp-1st", "old-gmp-2nd"]
 
+# DB 접속 정보 (Cloudtype 환경)
 DB_CONFIG = {
-    'host': '127.0.0.1',
-    'port': 3307,
+    'host': os.getenv('DB_HOST', 'mariadb'),  # Cloudtype 환경에서는 'mariadb'
+    'port': int(os.getenv('DB_PORT', 3306)),
     'user': os.getenv('DB_USER'),
     'password': os.getenv('DB_PASSWORD'),
     'database': os.getenv('DB_NAME'),
@@ -40,6 +44,177 @@ DB_CONFIG = {
 
 def get_db_connection():
     return pymysql.connect(**DB_CONFIG)
+
+# ---- Pydantic 모델 정의 ----
+class AnalysisSummaryModel(BaseModel):
+    총_gmp_변경점: int = Field(..., alias="total_gmp_changes")
+    영향받는_sop_섹션: int = Field(..., alias="affected_sop_sections")
+    분석완료시각: str = Field(..., alias="analyzed_at")
+
+class SopInfoModel(BaseModel):
+    sop_id: str
+    sop_title: Optional[str] = None
+    sop_content: Optional[str] = None
+    match_score: Optional[float] = 0
+
+class GmpChangeInfoModel(BaseModel):
+    change_id: str
+    topic: Optional[str] = None
+    old_gmp_content: Optional[str] = ""
+    new_gmp_content: Optional[str] = ""
+    similarity_score: Optional[float] = 0
+
+class DetailedAnalysisModel(BaseModel):
+    sop_info: SopInfoModel
+    gmp_change_info: Optional[GmpChangeInfoModel] = None
+    change_rationale: Optional[Dict[str, Any]] = {}
+    key_changes: Optional[List[Any]] = []
+    update_recommendation: Optional[str] = ""
+
+class SaveAllRequestModel(BaseModel):
+    summary: AnalysisSummaryModel
+    detailed_analysis: List[DetailedAnalysisModel]
+
+# ---- DB 저장 함수 ----
+def insert_analysis_summary(summary: AnalysisSummaryModel):
+    conn = pymysql.connect(**DB_CONFIG)
+    try:
+        with conn.cursor() as cursor:
+            sql = """
+                INSERT INTO ANALYSIS_SUMMARY (
+                    total_gmp_changes,
+                    affected_sop_sections,
+                    created_at
+                ) VALUES (%s, %s, %s)
+            """
+            cursor.execute(sql, (
+                summary.총_gmp_변경점,
+                summary.영향받는_sop_섹션,
+                summary.분석완료시각
+            ))
+        conn.commit()
+    finally:
+        conn.close()
+
+def insert_sop_data(sop_list: List[DetailedAnalysisModel]):
+    insert_sql = """
+        INSERT INTO SOP (
+            sop_id,
+            sop_title,
+            sop_content,
+            created_at,
+            updated_at
+        ) VALUES (%s, %s, %s, NOW(), NOW())
+        ON DUPLICATE KEY UPDATE
+            sop_title = VALUES(sop_title),
+            sop_content = VALUES(sop_content),
+            updated_at = NOW()
+    """
+    conn = pymysql.connect(**DB_CONFIG)
+    try:
+        with conn.cursor() as cursor:
+            for item in sop_list:
+                sop_info = item.sop_info
+                if not sop_info.sop_id or not sop_info.sop_content:
+                    continue
+                cursor.execute(insert_sql, (
+                    sop_info.sop_id,
+                    sop_info.sop_title,
+                    sop_info.sop_content
+                ))
+            conn.commit()
+    finally:
+        conn.close()
+
+def insert_gmp_data(sop_list: List[DetailedAnalysisModel]):
+    insert_sql = """
+        INSERT INTO GMP (
+            gmp_id,
+            topic,
+            gmp_content,
+            similarity_score,
+            created_at
+        ) VALUES (%s, %s, %s, %s, NOW())
+        ON DUPLICATE KEY UPDATE
+            topic = VALUES(topic),
+            gmp_content = VALUES(gmp_content),
+            similarity_score = VALUES(similarity_score)
+    """
+    conn = pymysql.connect(**DB_CONFIG)
+    try:
+        with conn.cursor() as cursor:
+            for item in sop_list:
+                gmp_info = item.gmp_change_info
+                if not gmp_info or not gmp_info.change_id:
+                    continue
+                old_content = gmp_info.old_gmp_content or ""
+                new_content = gmp_info.new_gmp_content or ""
+                gmp_content = f"OLD:\n{old_content}\n\nNEW:\n{new_content}"
+                cursor.execute(insert_sql, (
+                    gmp_info.change_id,
+                    gmp_info.topic,
+                    gmp_content,
+                    gmp_info.similarity_score
+                ))
+            conn.commit()
+    finally:
+        conn.close()
+
+def insert_sop_gmp_link(sop_list: List[DetailedAnalysisModel]):
+    insert_sql = """
+        INSERT INTO SOP_GMP_LINK (
+            sop_id,
+            gmp_id,
+            match_score,
+            change_rationale,
+            key_changes,
+            update_recommendation,
+            completed,
+            created_at
+        ) VALUES (%s, %s, %s, %s, %s, %s, %s, NOW())
+        ON DUPLICATE KEY UPDATE
+            match_score = VALUES(match_score),
+            change_rationale = VALUES(change_rationale),
+            key_changes = VALUES(key_changes),
+            update_recommendation = VALUES(update_recommendation),
+            completed = VALUES(completed)
+    """
+    conn = pymysql.connect(**DB_CONFIG)
+    try:
+        with conn.cursor() as cursor:
+            for item in sop_list:
+                sop_info = item.sop_info
+                gmp_info = item.gmp_change_info
+                if not sop_info.sop_id or not gmp_info or not gmp_info.change_id:
+                    continue
+                rationale_json = json.dumps(item.change_rationale, ensure_ascii=False)
+                key_changes_json = json.dumps(item.key_changes, ensure_ascii=False)
+                completed_status = '미처리'
+                cursor.execute(insert_sql, (
+                    sop_info.sop_id,
+                    gmp_info.change_id,
+                    sop_info.match_score or 0,
+                    rationale_json,
+                    key_changes_json,
+                    item.update_recommendation,
+                    completed_status
+                ))
+            conn.commit()
+    finally:
+        conn.close()
+
+# ---- FastAPI 엔드포인트 ----
+@app.post("/save_all")
+def save_all(request: SaveAllRequestModel):
+    try:
+        insert_analysis_summary(request.summary)
+        insert_sop_data(request.detailed_analysis)
+        insert_gmp_data(request.detailed_analysis)
+        insert_sop_gmp_link(request.detailed_analysis)
+        return {"result": "모든 데이터 저장 성공!"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 
 pinecone_index = None
 
