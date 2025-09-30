@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 import pymysql
@@ -8,7 +8,7 @@ from pinecone import Pinecone
 from pydantic import BaseModel, Field
 from typing import List, Dict, Any, Optional
 import json
-
+import requests
 
 load_dotenv()
 
@@ -34,7 +34,7 @@ ALLOWED_NAMESPACES = ["sop", "gmp-1st", "gmp-2nd", "old-gmp-1st", "old-gmp-2nd"]
 
 # DB 접속 정보 (Cloudtype 환경)
 DB_CONFIG = {
-    'host': os.getenv('DB_HOST', 'mariadb'),  # Cloudtype 환경에서는 'mariadb'
+    'host': os.getenv('DB_HOST', 'mariadb'),
     'port': int(os.getenv('DB_PORT', 3306)),
     'user': os.getenv('DB_USER'),
     'password': os.getenv('DB_PASSWORD'),
@@ -103,7 +103,6 @@ def insert_analysis_summary(summary: AnalysisSummaryModel):
     finally:
         conn.close()
 
-
 def insert_sop_data(sop_list: List[DetailedAnalysisModel]):
     create_sql = '''
         CREATE TABLE IF NOT EXISTS SOP (
@@ -143,7 +142,6 @@ def insert_sop_data(sop_list: List[DetailedAnalysisModel]):
             conn.commit()
     finally:
         conn.close()
-
 
 def insert_gmp_data(sop_list: List[DetailedAnalysisModel]):
     create_sql = '''
@@ -188,7 +186,6 @@ def insert_gmp_data(sop_list: List[DetailedAnalysisModel]):
             conn.commit()
     finally:
         conn.close()
-
 
 def insert_sop_gmp_link(sop_list: List[DetailedAnalysisModel]):
     create_sql = '''
@@ -259,6 +256,22 @@ def save_all(request: SaveAllRequestModel):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+# ---- 파일 업로드 엔드포인트 ----
+@app.post("/upload_json")
+async def upload_json(file: UploadFile = File(...)):
+    try:
+        contents = await file.read()
+        data = json.loads(contents.decode('utf-8'))
+        # Pydantic 모델로 검증 (에러 방지)
+        summary = AnalysisSummaryModel(**data['summary'])
+        detailed = [DetailedAnalysisModel(**item) for item in data['detailed_analysis']]
+        insert_analysis_summary(summary)
+        insert_sop_data(detailed)
+        insert_gmp_data(detailed)
+        insert_sop_gmp_link(detailed)
+        return {"result": "파일 업로드 및 데이터 저장 성공!"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 pinecone_index = None
 
@@ -288,7 +301,6 @@ def test_connection():
     except Exception as e:
         return {"status": "연결 실패", "error": str(e)}
 
-
 @app.get("/")
 def read_root():
     return {
@@ -297,7 +309,6 @@ def read_root():
         "status": "running"
     }
 
-# Pinecone에서 SOP 전문 데이터 페이징 조회
 @app.get("/get_sop_text")
 def get_sop_text(
     namespace: str = Query("sop"),
@@ -308,7 +319,6 @@ def get_sop_text(
         raise HTTPException(status_code=500, detail="Pinecone 인덱스가 초기화되어 있지 않습니다.")
     if namespace not in ALLOWED_NAMESPACES:
         raise HTTPException(status_code=400, detail=f"지원되는 네임스페이스는 {ALLOWED_NAMESPACES} 입니다.")
-
     try:
         dummy_vector = [0.0] * VECTOR_DIM
         results = pinecone_index.query(
@@ -327,7 +337,6 @@ def get_sop_text(
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Pinecone 쿼리 오류: {e}")
 
-# 수정해야 할 SOP 목록 조회 (Mariadb)
 @app.get("/get_sop_to_update")
 def get_sop_to_update():
     conn = get_db_connection()
@@ -346,7 +355,6 @@ def get_sop_to_update():
     finally:
         conn.close()
 
-# 변경된 GMP 조회 (Mariadb)
 @app.get("/get_changed_gmp")
 def get_changed_gmp():
     conn = get_db_connection()
@@ -365,7 +373,6 @@ def get_changed_gmp():
     finally:
         conn.close()
 
-# 변경 근거 조회
 @app.get("/get_sop_gmp_link")
 def get_sop_gmp_link():
     conn = get_db_connection()
@@ -383,7 +390,6 @@ def get_sop_gmp_link():
         raise HTTPException(status_code=500, detail=f"DB 조회 오류: {e}")
     finally:
         conn.close()
-
 
 if __name__ == "__main__":
     uvicorn.run(
