@@ -1,0 +1,39 @@
+name: Deploy to cloudtype
+on:
+  push:
+    branches:
+      - react
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Connect deploy key
+        uses: cloudtype-github-actions/connect@v1
+        with:
+          token: ${{ secrets.CLOUDTYPE_TOKEN }}
+          ghtoken: ${{ secrets.GHP_TOKEN }}
+      - name: Deploy
+        uses: cloudtype-github-actions/deploy@v1
+        with:
+          token: ${{ secrets.CLOUDTYPE_TOKEN }}
+          project: kimiy990728/gmp-auto-compliance-project
+          stage: main
+          yaml: >
+            name: gmp-auto-compliance-project
+
+            app: python@3.9
+
+            options:
+              env:
+                - name: PINECONE_API_KEY
+                  value: pcsk_6reKK1_FfZUA6TvFE5zfUforyQtfde4sXgLLkoCDxBtAZjdDoVD5VMMiaeqCKyNVC956db
+              ports: 8000
+              start: uvicorn main:app --host=0.0.0.0 --port=8000
+              buildenv: []
+            context:
+              git:
+                url: git@github.com:${{ github.repository }}.git
+                ref: ${{ github.ref }}
+              preset: python-fastapi
