@@ -32,9 +32,9 @@ ALLOWED_NAMESPACES = ["sop", "gmp-1st", "old-gmp-1st", "gmp-2nd"]
 DB_CONFIG = {
     'host': '127.0.0.1',
     'port': 3307,
-    'user': os.getenv('DB_USER', 'ommnyomnyong'),
-    'password': os.getenv('DB_PASSWORD', '1234'),
-    'database': os.getenv('DB_NAME', 'gmp_sop'),
+    'user': os.getenv('DB_USER'),
+    'password': os.getenv('DB_PASSWORD'),
+    'database': os.getenv('DB_NAME'),
     'charset': 'utf8mb4'
 }
 
