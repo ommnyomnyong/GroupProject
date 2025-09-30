@@ -80,6 +80,13 @@ def insert_analysis_summary(summary: AnalysisSummaryModel):
     conn = pymysql.connect(**DB_CONFIG)
     try:
         with conn.cursor() as cursor:
+            cursor.execute('''
+                CREATE TABLE IF NOT EXISTS ANALYSIS_SUMMARY (
+                    total_gmp_changes INT,
+                    affected_sop_sections INT,
+                    created_at VARCHAR(50)
+                )
+            ''')
             sql = """
                 INSERT INTO ANALYSIS_SUMMARY (
                     total_gmp_changes,
@@ -96,7 +103,17 @@ def insert_analysis_summary(summary: AnalysisSummaryModel):
     finally:
         conn.close()
 
+
 def insert_sop_data(sop_list: List[DetailedAnalysisModel]):
+    create_sql = '''
+        CREATE TABLE IF NOT EXISTS SOP (
+            sop_id VARCHAR(100) PRIMARY KEY,
+            sop_title VARCHAR(255),
+            sop_content TEXT,
+            created_at DATETIME,
+            updated_at DATETIME
+        )
+    '''
     insert_sql = """
         INSERT INTO SOP (
             sop_id,
@@ -113,6 +130,7 @@ def insert_sop_data(sop_list: List[DetailedAnalysisModel]):
     conn = pymysql.connect(**DB_CONFIG)
     try:
         with conn.cursor() as cursor:
+            cursor.execute(create_sql)
             for item in sop_list:
                 sop_info = item.sop_info
                 if not sop_info.sop_id or not sop_info.sop_content:
@@ -126,7 +144,17 @@ def insert_sop_data(sop_list: List[DetailedAnalysisModel]):
     finally:
         conn.close()
 
+
 def insert_gmp_data(sop_list: List[DetailedAnalysisModel]):
+    create_sql = '''
+        CREATE TABLE IF NOT EXISTS GMP (
+            gmp_id VARCHAR(100) PRIMARY KEY,
+            topic VARCHAR(255),
+            gmp_content TEXT,
+            similarity_score FLOAT,
+            created_at DATETIME
+        )
+    '''
     insert_sql = """
         INSERT INTO GMP (
             gmp_id,
@@ -143,6 +171,7 @@ def insert_gmp_data(sop_list: List[DetailedAnalysisModel]):
     conn = pymysql.connect(**DB_CONFIG)
     try:
         with conn.cursor() as cursor:
+            cursor.execute(create_sql)
             for item in sop_list:
                 gmp_info = item.gmp_change_info
                 if not gmp_info or not gmp_info.change_id:
@@ -160,7 +189,21 @@ def insert_gmp_data(sop_list: List[DetailedAnalysisModel]):
     finally:
         conn.close()
 
+
 def insert_sop_gmp_link(sop_list: List[DetailedAnalysisModel]):
+    create_sql = '''
+        CREATE TABLE IF NOT EXISTS SOP_GMP_LINK (
+            sop_id VARCHAR(100),
+            gmp_id VARCHAR(100),
+            match_score FLOAT,
+            change_rationale TEXT,
+            key_changes TEXT,
+            update_recommendation TEXT,
+            completed VARCHAR(20),
+            created_at DATETIME,
+            PRIMARY KEY (sop_id, gmp_id)
+        )
+    '''
     insert_sql = """
         INSERT INTO SOP_GMP_LINK (
             sop_id,
@@ -182,6 +225,7 @@ def insert_sop_gmp_link(sop_list: List[DetailedAnalysisModel]):
     conn = pymysql.connect(**DB_CONFIG)
     try:
         with conn.cursor() as cursor:
+            cursor.execute(create_sql)
             for item in sop_list:
                 sop_info = item.sop_info
                 gmp_info = item.gmp_change_info
