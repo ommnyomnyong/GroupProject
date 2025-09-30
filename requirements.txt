@@ -5,4 +5,6 @@ python-dotenv
 pinecone
 pydantic
 python-multipart
+python-docx
 pymysql
+requests
