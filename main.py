@@ -55,6 +55,21 @@ def startup_event():
         print(f"Pinecone 초기화 실패: {e}")
         pinecone_index = None
 
+def test_connection():
+    try:
+        conn = get_db_connection()
+        with conn.cursor() as cursor:
+            cursor.execute("SELECT 1")
+            result = cursor.fetchone()
+        conn.close()
+        if result:
+            return {"status": "연결 성공"}
+        else:
+            raise Exception("쿼리 결과 없음")
+    except Exception as e:
+        return {"status": "연결 실패", "error": str(e)}
+
+
 @app.get("/")
 def read_root():
     return {
@@ -150,20 +165,6 @@ def get_sop_gmp_link():
     finally:
         conn.close()
 
-@app.get("/test_connection")
-def test_connection():
-    try:
-        conn = get_db_connection()
-        with conn.cursor() as cursor:
-            cursor.execute("SELECT 1")
-            result = cursor.fetchone()
-        conn.close()
-        if result:
-            return {"status": "연결 성공"}
-        else:
-            raise Exception("쿼리 결과 없음")
-    except Exception as e:
-        return {"status": "연결 실패", "error": str(e)}
 
 if __name__ == "__main__":
     uvicorn.run(
