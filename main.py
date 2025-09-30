@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, Query, File, UploadFile
+from fastapi import FastAPI, HTTPException, Query, File, UploadFile, APIRouter
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 import pymysql
@@ -9,6 +9,10 @@ from pydantic import BaseModel, Field
 from typing import List, Dict, Any, Optional
 import json
 import requests
+from datetime import datetime
+from fastapi.responses import FileResponse
+from docx import Document
+import tempfile
 
 load_dotenv()
 
@@ -399,6 +403,115 @@ def get_sop_gmp_link():
         raise HTTPException(status_code=500, detail=f"DB 조회 오류: {e}")
     finally:
         conn.close()
+
+@app.patch("/sop/{sop_id}")
+def update_sop(sop_id: str, update: SopUpdateModel):
+    update_data = update.dict(exclude_unset=True)
+    if not update_data:
+        raise HTTPException(status_code=400, detail="수정할 내용이 없습니다.")
+    update_data['updated_at'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    set_clause = ", ".join([f"{k}=%s" for k in update_data.keys()])
+    values = list(update_data.values())
+    values.append(sop_id)
+    sql = f"UPDATE SOP SET {set_clause} WHERE sop_id=%s"
+    conn = get_db_connection()
+    try:
+        with conn.cursor() as cursor:
+            cursor.execute(sql, values)
+        conn.commit()
+    finally:
+        conn.close()
+    return {"result": "SOP 수정 성공"}
+
+@app.get("/export_sop_docx")
+def export_sop_docx():
+    conn = get_db_connection()
+    try:
+        with conn.cursor(pymysql.cursors.DictCursor) as cursor:
+            cursor.execute("""
+                SELECT sop_title, sop_content, updated_at
+                FROM SOP
+                ORDER BY updated_at DESC
+            """)
+            sop_data = cursor.fetchall()
+    finally:
+        conn.close()
+
+    # 워드 문서 생성
+    doc = Document()
+    doc.add_heading("SOP 전문", 0)
+    for sop in sop_data:
+        doc.add_heading(sop['sop_title'] or "(제목 없음)", level=1)
+        doc.add_paragraph(sop['sop_content'] or "(내용 없음)")
+        doc.add_paragraph(f"수정일: {sop['updated_at']}")
+        doc.add_paragraph("")
+
+    # 임시 파일로 저장
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".docx") as tmp:
+        doc.save(tmp.name)
+        tmp_path = tmp.name
+
+    # 파일 응답 후 임시 파일 삭제
+    filename = f"SOP_{datetime.now().strftime('%Y%m%d_%H%M%S')}.docx"
+    response = FileResponse(tmp_path, filename=filename, media_type='application/vnd.openxmlformats-officedocument.wordprocessingml.document')
+    # FastAPI의 background task로 파일 삭제
+    from fastapi import BackgroundTasks
+    def cleanup():
+        os.remove(tmp_path)
+    response.background = BackgroundTasks()
+    response.background.add_task(cleanup)
+    return response
+
+def export_gmp_docx(sop_id: str):
+    conn = get_db_connection()
+    try:
+        with conn.cursor(pymysql.cursors.DictCursor) as cursor:
+            # SOP_GMP_LINK에서 sop_id로 연결된 gmp_id, 근거 등 조회
+            cursor.execute("""
+                SELECT gmp_id, change_rationale, key_changes, update_recommendation
+                FROM SOP_GMP_LINK
+                WHERE sop_id=%s AND completed='처리'
+            """, (sop_id,))
+            link_data = cursor.fetchall()
+            gmp_ids = [row['gmp_id'] for row in link_data]
+            # GMP 테이블에서 전문 조회
+            if gmp_ids:
+                format_strings = ','.join(['%s'] * len(gmp_ids))
+                cursor.execute(f"""
+                    SELECT gmp_id, topic, gmp_content
+                    FROM GMP
+                    WHERE gmp_id IN ({format_strings})
+                """, tuple(gmp_ids))
+                gmp_data = {row['gmp_id']: row for row in cursor.fetchall()}
+            else:
+                gmp_data = {}
+    finally:
+        conn.close()
+
+    # 워드 문서 생성
+    doc = Document()
+    doc.add_heading(f"SOP({sop_id})와 연결된 GMP 전문", 0)
+    for link in link_data:
+        gmp = gmp_data.get(link['gmp_id'])
+        doc.add_heading(gmp['topic'] if gmp else link['gmp_id'], level=1)
+        doc.add_paragraph(gmp['gmp_content'] if gmp else "(GMP 내용 없음)")
+        doc.add_paragraph(f"근거: {link['change_rationale']}")
+        doc.add_paragraph(f"주요 변경사항: {link['key_changes']}")
+        doc.add_paragraph(f"업데이트 권장사항: {link['update_recommendation']}")
+        doc.add_paragraph("")
+
+    # 임시 파일로 저장 및 반환
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".docx") as tmp:
+        doc.save(tmp.name)
+        tmp_path = tmp.name
+    filename = f"GMP_{sop_id}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.docx"
+    response = FileResponse(tmp_path, filename=filename, media_type='application/vnd.openxmlformats-officedocument.wordprocessingml.document')
+    from fastapi import BackgroundTasks
+    def cleanup():
+        os.remove(tmp_path)
+    response.background = BackgroundTasks()
+    response.background.add_task(cleanup)
+    return response
 
 if __name__ == "__main__":
     uvicorn.run(
