@@ -27,7 +27,7 @@ app.add_middleware(
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 INDEX_NAME = "gmp-sop-vectordb"
 VECTOR_DIM = 1536
-ALLOWED_NAMESPACES = ["sop", "gmp-1st", "old-gmp-1st", "gmp-2nd"]
+ALLOWED_NAMESPACES = ["sop", "gmp-1st", "gmp-2nd", "old-gmp-1st", "old-gmp-2nd"]
 
 DB_CONFIG = {
     'host': '127.0.0.1',
