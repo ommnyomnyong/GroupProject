@@ -262,10 +262,21 @@ async def upload_json(file: UploadFile = File(...)):
     try:
         contents = await file.read()
         data = json.loads(contents.decode('utf-8'))
-        # Pydantic 모델로 검증 (에러 방지)
-        summary = AnalysisSummaryModel(**data['summary'])
+        # pipeline_info에서 analyzed_at을 summary로 복사
+        if 'pipeline_info' in data and 'analyzed_at' in data['pipeline_info']:
+            data['summary']['analyzed_at'] = data['pipeline_info']['analyzed_at']
+        # 한글 키가 있으면 영문 키로 복사
+        summary = data['summary']
+        if '총_gmp_변경점' in summary:
+            summary['total_gmp_changes'] = summary['총_gmp_변경점']
+        if '영향받는_sop_섹션' in summary:
+            summary['affected_sop_sections'] = summary['영향받는_sop_섹션']
+        if '분석완료시각' in summary:
+            summary['analyzed_at'] = summary['분석완료시각']
+        # 이제 Pydantic 모델로 검증
+        summary_model = AnalysisSummaryModel(**summary)
         detailed = [DetailedAnalysisModel(**item) for item in data['detailed_analysis']]
-        insert_analysis_summary(summary)
+        insert_analysis_summary(summary_model)
         insert_sop_data(detailed)
         insert_gmp_data(detailed)
         insert_sop_gmp_link(detailed)
