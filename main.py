@@ -245,17 +245,6 @@ def insert_sop_gmp_link(sop_list: List[DetailedAnalysisModel]):
         conn.close()
 
 # ---- FastAPI 엔드포인트 ----
-@app.post("/save_all")
-def save_all(request: SaveAllRequestModel):
-    try:
-        insert_analysis_summary(request.summary)
-        insert_sop_data(request.detailed_analysis)
-        insert_gmp_data(request.detailed_analysis)
-        insert_sop_gmp_link(request.detailed_analysis)
-        return {"result": "모든 데이터 저장 성공!"}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
 # ---- 파일 업로드 엔드포인트 ----
 @app.post("/upload_json")
 async def upload_json(file: UploadFile = File(...)):
@@ -290,6 +279,7 @@ async def upload_json(file: UploadFile = File(...)):
         return {"result": "파일 업로드 및 데이터 저장 성공!"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+    
 
 
 pinecone_index = None
