@@ -334,7 +334,7 @@ def get_sop_to_update():
     try:
         with conn.cursor(pymysql.cursors.DictCursor) as cursor:
             sql = """
-                SELECT sop_id, sop_pinecone_id, sop_title, sop_content, created_at, updated_at
+                SELECT sop_id, sop_title, sop_content, created_at, updated_at
                 FROM SOP
                 ORDER BY updated_at DESC
             """
