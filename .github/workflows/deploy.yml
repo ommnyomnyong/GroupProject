@@ -2,7 +2,7 @@ name: Deploy to cloudtype
 on:
   push:
     branches:
-      - react
+      - main
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -18,17 +18,23 @@ jobs:
         uses: cloudtype-github-actions/deploy@v1
         with:
           token: ${{ secrets.CLOUDTYPE_TOKEN }}
-          project: kimiy990728/gmp-auto-compliance-project
+          project: kimiy990728/groupproject
           stage: main
           yaml: >
-            name: gmp-auto-compliance-project
+            name: gmp-auto-compliance
 
             app: python@3.9
 
             options:
               env:
                 - name: PINECONE_API_KEY
-                  value: pcsk_6reKK1_FfZUA6TvFE5zfUforyQtfde4sXgLLkoCDxBtAZjdDoVD5VMMiaeqCKyNVC956db
+                  value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJtZzBlYjBtNWQ0NDYyNDZmIiwiaWF0IjoxNzU5MTk2MzQ3fQ.xk6dbVadbNXipkPuYz4F3aYWRzGCaJwEUjjx14bnLqA
+                - name: DB_USER
+                  value: ommnyomnyong
+                - name: DB_PASSWORD
+                  value: "1234"
+                - name: DB_NAME
+                  value: gmp_sop
               ports: 8000
               start: uvicorn main:app --host=0.0.0.0 --port=8000
               buildenv: []
