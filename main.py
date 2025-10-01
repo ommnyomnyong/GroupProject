@@ -15,6 +15,7 @@ from docx import Document
 from docx.shared import RGBColor
 import tempfile
 
+
 load_dotenv()
 
 app = FastAPI(
@@ -79,6 +80,11 @@ class DetailedAnalysisModel(BaseModel):
 class SaveAllRequestModel(BaseModel):
     summary: AnalysisSummaryModel
     detailed_analysis: List[DetailedAnalysisModel]
+
+class SopUpdateModel(BaseModel):
+    sop_title: Optional[str] = None
+    sop_content: Optional[str] = None
+    # 필요하다면 modified, updated_at 등도 추가 가능
 
 # ---- DB 저장 함수 ----
 def insert_analysis_summary(summary: AnalysisSummaryModel):
