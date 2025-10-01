@@ -14,6 +14,11 @@ from fastapi.responses import FileResponse
 from docx import Document
 from docx.shared import RGBColor
 import tempfile
+from db.chunking.regex_chunks_sop import process_single_pdf, process_pdfs_parallel, SemanticPDFProcessor
+from db.pinecone.sop_vectordb import filter_sop_chunks, prepare_sop_documents, embed_documents_in_memory, EMBEDDING_MODEL, BATCH_SIZE
+from db.pinecone.to_pinecone import upsert_embeddings_to_pinecone
+import time
+import pickle
 
 
 load_dotenv()
@@ -293,7 +298,6 @@ async def upload_json(file: UploadFile = File(...)):
         raise HTTPException(status_code=500, detail=str(e))
     
 
-
 pinecone_index = None
 
 @app.on_event("startup")
@@ -430,7 +434,7 @@ def update_sop(sop_id: str, update: SopUpdateModel):
     try:
         with conn.cursor() as cursor:
             # 1. SOP 테이블 업데이트
-            sql_update_sop = f"UPDATE SOP SET {set_clause} WHERE sop_id=%s" # 이건 뭐지?
+            sql_update_sop = f"UPDATE SOP SET {set_clause} WHERE sop_id=%s"
             cursor.execute(sql_update_sop, values)
 
             # 2. SOP_MODIFIED 테이블에 수정 내용 insert
@@ -465,10 +469,6 @@ def update_sop(sop_id: str, update: SopUpdateModel):
 
     return {"result": "SOP 수정 및 수정내용 저장 성공"}
 
-
-def get_db_connection():
-    # DB 연결 함수 (기존 코드와 동일)
-    ...
 
 # 수정한 SOP 문서로 출력
 @app.get("/export_sop_docx")
@@ -611,8 +611,46 @@ def export_gmp_docx(sop_id: str):
     response.background.add_task(cleanup)
     return response
 
+router = APIRouter()
+
+# 수정한 SOP 업로드 -> 청킹 및 임베딩하여 pinecone에 저장
+@router.post("/upload_sop_modified")
+async def upload_sop_modified(file: UploadFile = File(...)):
+    # 파일 확장자 체크
+    if not (file.filename.endswith('.pdf') or file.filename.endswith('.docx')):
+        raise HTTPException(status_code=400, detail="지원하는 파일 형식은 PDF 또는 Word입니다.")
+    # 파일 저장 (임시 경로)
+    temp_path = f"/tmp/{file.filename}"
+    with open(temp_path, "wb") as f:
+        f.write(await file.read())
+    # PDF 청킹 (텍스트 추출 + 청킹)
+    chunks = process_single_pdf(temp_path)  # 바로 청킹 결과 리스트 반환
+    if not chunks:
+        raise HTTPException(status_code=400, detail="청킹 결과 없음")
+    filtered = filter_sop_chunks(chunks, jurisdiction_filter=None)
+    documents = prepare_sop_documents(filtered)
+    # 임베딩 결과를 임시 변수에 저장
+    embedding_results = embed_documents_in_memory(documents, EMBEDDING_MODEL, BATCH_SIZE)
+    # 이후 embedding_results를 바로 Pinecone 등으로 넘기면 됨
+    metadata_list = [doc.metadata for doc in documents]  # 메타데이터 리스트 추출
+    upsert_embeddings_to_pinecone(
+        index_name="gmp-sop-vectordb",  
+        embeddings=embedding_results,   # 임베딩 결과 리스트
+        metadata=metadata_list,         # 메타데이터 리스트
+        namespace="sop-2",              # 네임스페이스 지정
+        dimension=1536,                 # 임베딩 차원
+        reset=False,                    # 필요시 True로
+        batch_size=BATCH_SIZE
+    )
+    return {"result": "업로드 및 임베딩+Pinecone 저장 성공", "chunks": len(documents)}
+
+app.include_router(router)
+
 if __name__ == "__main__":
     uvicorn.run(
         app, host="127.0.0.1", port=8000,
         reload=True, log_level="info"
     )
+
+
+### GMP 변경 시 기존 db에서 관리하던 데이터가 날라가지 않도록? sop를 반만 수정하여 다시 돌릴 경우?
