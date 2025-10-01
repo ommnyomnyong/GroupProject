@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, Query, File, UploadFile, APIRouter
+from fastapi import FastAPI, HTTPException, Query, File, UploadFile, APIRouter, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 import pymysql
@@ -12,6 +12,7 @@ import requests
 from datetime import datetime
 from fastapi.responses import FileResponse
 from docx import Document
+from docx.shared import RGBColor
 import tempfile
 
 load_dotenv()
@@ -113,6 +114,7 @@ def insert_sop_data(sop_list: List[DetailedAnalysisModel]):
             sop_id VARCHAR(100) PRIMARY KEY,
             sop_title VARCHAR(255),
             sop_content TEXT,
+            is_current BOOLEAN DEFAULT FALSE,
             created_at DATETIME,
             updated_at DATETIME
         )
@@ -409,54 +411,144 @@ def update_sop(sop_id: str, update: SopUpdateModel):
     update_data = update.dict(exclude_unset=True)
     if not update_data:
         raise HTTPException(status_code=400, detail="수정할 내용이 없습니다.")
-    update_data['updated_at'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    
+    now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    update_data['updated_at'] = now_str
+    update_data['modified'] = True  # SOP 테이블의 modified 열 True로 업데이터 -> 수정 이력 관리
+
     set_clause = ", ".join([f"{k}=%s" for k in update_data.keys()])
     values = list(update_data.values())
     values.append(sop_id)
-    sql = f"UPDATE SOP SET {set_clause} WHERE sop_id=%s"
+
     conn = get_db_connection()
     try:
         with conn.cursor() as cursor:
-            cursor.execute(sql, values)
+            # 1. SOP 테이블 업데이트
+            sql_update_sop = f"UPDATE SOP SET {set_clause} WHERE sop_id=%s" # 이건 뭐지?
+            cursor.execute(sql_update_sop, values)
+
+            # 2. SOP_MODIFIED 테이블에 수정 내용 insert
+            # 수정할 제목과 내용은 update_data에 있을 수 있으니 예외 처리
+
+            # 테이블 생성 쿼리
+            create_modified_sql = '''
+                CREATE TABLE IF NOT EXISTS SOP_MODIFIED (
+                    modified_content_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+                    sop_id VARCHAR(50) NOT NULL,
+                    sop_title VARCHAR(255) NOT NULL,
+                    sop_content TEXT NOT NULL,
+                    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+                    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+                    FOREIGN KEY (sop_id) REFERENCES SOP(sop_id) ON DELETE CASCADE
+                )
+            '''
+            title = update_data.get('sop_title')
+            content = update_data.get('sop_content')
+
+            if title is not None and content is not None:
+                cursor.execute(create_modified_sql)
+                sql_insert_modified = """
+                    INSERT INTO SOP_MODIFIED (sop_id, sop_title, sop_content, created_at, updated_at)
+                    VALUES (%s, %s, %s, %s, %s)
+                """
+                cursor.execute(sql_insert_modified, (sop_id, title, content, now_str, now_str))
+
         conn.commit()
     finally:
         conn.close()
-    return {"result": "SOP 수정 성공"}
 
+    return {"result": "SOP 수정 및 수정내용 저장 성공"}
+
+
+def get_db_connection():
+    # DB 연결 함수 (기존 코드와 동일)
+    ...
+
+# 수정한 SOP 문서로 출력
 @app.get("/export_sop_docx")
 def export_sop_docx():
+    # 1. Pinecone에서 SOP 전문 메타데이터 모두 조회
+    namespace = "sop"
+    top_k = 10000  # 충분히 큰 값으로 전체 조항 조회
+    dummy_vector = [0.0] * VECTOR_DIM
+    results = pinecone_index.query(
+        vector=dummy_vector,
+        top_k=top_k,
+        namespace=namespace,
+        include_metadata=True
+    )
+    matches = results.get("matches", [])
+    data = [match.get("metadata", {}) for match in matches]
+
+    # 2. title별로 그룹화, 각 그룹 내에서 chunk_index로 정렬
+    title_groups = defaultdict(list)
+    for item in data:
+        title = item.get("title", "(제목 없음)")
+        title_groups[title].append(item)
+    # 각 title 그룹 내에서 chunk_index기준으로 정렬
+    for title in title_groups:
+        title_groups[title].sort(key=lambda x: int(x.get("chunk_index", 0)))
+    
+    # 3. DB에서 SOP_MODIFIED 테이블의 최신 수정안 조회 (sop_id 기준)
     conn = get_db_connection()
+    sop_mod_map = {}
     try:
         with conn.cursor(pymysql.cursors.DictCursor) as cursor:
-            cursor.execute("""
-                SELECT sop_title, sop_content, updated_at
-                FROM SOP
-                ORDER BY updated_at DESC
-            """)
-            sop_data = cursor.fetchall()
+            for item in data:
+                sop_id = item.get("id")
+                if sop_id:
+                    cursor.execute("""
+                        SELECT sop_title, sop_content
+                        FROM SOP_MODIFIED
+                        WHERE sop_id=%s
+                        ORDER BY updated_at DESC
+                        LIMIT 1
+                    """, (sop_id,))
+                    mod_row = cursor.fetchone()
+                    if mod_row:
+                        sop_mod_map[sop_id] = mod_row
     finally:
         conn.close()
 
-    # 워드 문서 생성
+    # 4. 워드 문서 생성
     doc = Document()
     doc.add_heading("SOP 전문", 0)
-    for sop in sop_data:
-        doc.add_heading(sop['sop_title'] or "(제목 없음)", level=1)
-        doc.add_paragraph(sop['sop_content'] or "(내용 없음)")
-        doc.add_paragraph(f"수정일: {sop['updated_at']}")
-        doc.add_paragraph("")
+    first_title = True
+    for title, items in title_groups.items():
+        if not first_title:
+            doc.add_page_break()  # title별 페이지 구분
+        first_title = False
+        # title(문서 단위) 헤딩
+        heading = doc.add_heading(title, level=1)
+        heading.runs[0].font.color.rgb = RGBColor(0, 0, 128)  # 진한 파란색 등으로 구분
+        heading.runs[0].font.bold = True
+        for item in items:
+            section_title = item.get("section_title", "")
+            text = item.get("text", "")
+            sop_id = item.get("id")
+            modified = item.get("modified", False)
+            # 조항 제목
+            para = doc.add_paragraph(section_title)
+            para.runs[0].font.bold = True
+            # 조항 본문
+            doc.add_paragraph(text)
+            # 수정안 표시
+            if modified and sop_id in sop_mod_map:
+                mod = sop_mod_map[sop_id]
+                mod_paragraph = doc.add_paragraph()
+                mod_run = mod_paragraph.add_run(f"[수정안] {mod['sop_title']}\n{mod['sop_content']}")
+                mod_run.font.bold = True  # 굵게
+                mod_run.font.color.rgb = RGBColor(255, 0, 0)  # 빨간색 등으로 구분
+        doc.add_paragraph("")  # 빈 줄로 구분
 
-    # 임시 파일로 저장
+    # 5. 임시 파일로 저장 및 반환
     with tempfile.NamedTemporaryFile(delete=False, suffix=".docx") as tmp:
         doc.save(tmp.name)
         tmp_path = tmp.name
-
-    # 파일 응답 후 임시 파일 삭제
     filename = f"SOP_{datetime.now().strftime('%Y%m%d_%H%M%S')}.docx"
     response = FileResponse(tmp_path, filename=filename, media_type='application/vnd.openxmlformats-officedocument.wordprocessingml.document')
-    # FastAPI의 background task로 파일 삭제
-    from fastapi import BackgroundTasks
     def cleanup():
+        import os
         os.remove(tmp_path)
     response.background = BackgroundTasks()
     response.background.add_task(cleanup)
