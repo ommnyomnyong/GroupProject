@@ -11,3 +11,4 @@ requests
 docx
 pdfplumber
 langchain-community>=0.0.1
+langchain-experimental
