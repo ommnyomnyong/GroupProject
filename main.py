@@ -679,6 +679,7 @@ def bulk_generate_edu(num_questions: int = 15, target_audience: str = "GMP 실�
                 mod_title = mod_row["sop_title"]
                 mod_content = mod_row["sop_content"]
                 modified_content_id = mod_row["modified_content_id"]
+
                 # 원본 SOP 가져오기
                 cursor.execute("""
                     SELECT sop_title, sop_content
@@ -691,28 +692,47 @@ def bulk_generate_edu(num_questions: int = 15, target_audience: str = "GMP 실�
                     continue
                 orig_title = orig_row["sop_title"]
                 orig_content = orig_row["sop_content"]
-                # 변경점 비교 프롬프트
-                compare_prompt = f"""
-                                아래는 변경 전 SOP와 변경 후 SOP입니다. 변경된 부분을 중심으로 교육자료와 평가문항을 생성하세요.
 
-                                === 변경 전 SOP ===\n제목: {orig_title}\n{orig_content}\n
-                                === 변경 후 SOP ===\n제목: {mod_title}\n{mod_content}\n"""
-                # LLM 요청
+                # GMP 변경 근거 조회 (sop_id와 연동된 gmp_id 목록 통해 조회)
+                cursor.execute("""
+                    SELECT topic, gmp_content
+                    FROM GMP
+                    WHERE gmp_id IN (
+                        SELECT gmp_id FROM SOP_GMP_LINK WHERE sop_id=%s
+                    )
+                """, (sop_id,))
+                gmp_rows = cursor.fetchall()
+                # GMP 근거 텍스트 결합
+                gmp_contents = "\n\n".join(f"주제: {g['topic']}\n내용: {g['gmp_content']}" for g in gmp_rows) if gmp_rows else ""
+
+                # SOP와 GMP를 하나로 통합하여 sop_content로 전달
+                combined_sop_content = (
+                    f"=== 변경 전 SOP ===\n제목: {orig_title}\n{orig_content}\n\n"
+                    f"=== 변경 후 SOP ===\n제목: {mod_title}\n{mod_content}\n\n"
+                    f"=== 관련 GMP 변경 근거 ===\n{gmp_contents}"
+                )
+
+                # 가이드라인 텍스트 (필요시 DB 등에서 가져와서 변경 가능)
+                guideline_text = "21 CFR Part 211 등 관련 가이드라인 내용"
+
+                # GMPTrainingService 호출 (프롬프트는 서비스 내부에서 처리)
                 result = edu_service.generate_training_package(
-                    sop_content=compare_prompt,
-                    guideline_content="21 CFR Part 211 등 관련 가이드라인 내용",
+                    sop_content=combined_sop_content,
+                    guideline_content=guideline_text,
                     target_audience=target_audience,
                     num_questions=num_questions
                 )
+
                 results.append({
                     "modified_content_id": modified_content_id,
                     "sop_id": sop_id,
                     "training": result
                 })
                 updated_ids.append(modified_content_id)
-            # 2. SOP_MODIFIED educated=True로 일괄 업데이트
+
+            # 2. SOP_MODIFIED educated=True로 업데이트
             if updated_ids:
-                format_strings = ','.join(['%s'] * len(updated_ids))
+                format_strings = ",".join(["%s"] * len(updated_ids))
                 cursor.execute(f"""
                     UPDATE SOP_MODIFIED SET educated=TRUE WHERE modified_content_id IN ({format_strings})
                 """, tuple(updated_ids))
