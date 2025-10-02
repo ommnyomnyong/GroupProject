@@ -1,0 +1,48 @@
+# key : value로 매핑
+Active pharmaceutical ingredient : API
+Alert limits : environment al monitoring
+Alert limits : media fill
+Batch : Lot
+Batch Number : Lot Number : control number
+Critical Process : Critical equipment
+Colony Forming Unit : CFU
+Commercial off-the-shelf : COTS
+Consignment : delivery
+Cross Contamination : Cross-Contamination
+Debugging : IEEE
+Decision Maker : Decision Makers
+Design qualification : DQ
+Expiry Date : Expiration Date
+Good Manufacturing Practice for Medicinal Products : GMP
+Highefficiencyparticulateair filter : HEPA filter
+In-Process Control : Process Control
+Installation Qualification : IQ
+Operational Qualification : OQ
+Performance Qualification : PQ
+Pharmaceutical Quality System : PQS
+Procedure : Procedures
+Quality Unit : Quality Units
+Revalidation : Re-Validation
+Signature : signed
+Standard operating procedure : SOP
+Sterility assurance level : SAL
+Unplanned Change : Emergency Change
+Validation Protocol : Validation Plan
+Validation Master Plan : VMP
+Yield: Control, Accptance, Expected, Theoretical
+파라메트릭릴리스 : 매개변수 출하승인
+계획되지 않은 : 비상
+기대 생산량 : 수율
+대표검체 : 시험용검체
+디버깅: 오류수정
+디자인 스페이스 : 보관
+라이프 사이클 : 라이프 사이클 개념
+로트 : 로트 번호, 로트번호
+멸균 : 무균
+밀폐구역 : 봉쇄구역, 청정구역
+살생제 : 살생물제
+생물 지표 : 생물학적 지표
+생물 인자 : 생물학적 인자
+설정 관리 : 구성 관리
+이론 생산량 : 수율, 이론생산량, 이론수량
+탁송물 : 배송물

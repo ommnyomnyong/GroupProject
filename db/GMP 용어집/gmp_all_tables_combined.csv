@@ -1,0 +1,3145 @@
+﻿0,1,2,3,4
+영문,국문,내용  요약,원문,"참조
+문헌"
+"Acceptance 
+Criteria","적합기준,  허용기준치","시험결과가적합한지판단하는기준이되는수치한도,범위,기타적절한
+척도","Numerical    limits,  ranges,  or  other  suitable  measures  for  acceptance  of  test 
+results.",Ref    2
+,,"적합품질수준  및  부적합품질수준과  같이,  로트  또는  배치(또는  달
+리  편의를  위해  설정한    제조  단위의  하위그룹)의  적부를  결정하
+기  위해  필요한  제품  규격과  적부  기준  및  관련  검체  채취  계획","Acceptance    criteria  means  the  product  specifications  and  acceptance/rejection 
+criteria,    such  as  acceptable  quality  level  and  unacceptable  quality  level,  with 
+an    associated  sampling  plan,  that  are  necessary  for  making  a  decision  to 
+accept 
+  or 
+reject  a 
+lot  or  batch 
+(or  any  other  convenient  subgroups  of 
+manufactured    units).",Ref    3
+Accuracy,정확성,"측정값이    이미  알고  있는  참값이나  표준값에  근접한  정도를  말
+한다.",N/A,Ref    17
+Action  level,조치  수준,"미생물    또는  미립자  수준  등이  초과했을  때  즉각적인  확인  및 
+시정  조치가  필요한  설정  기준","Established    criteria,  e.g.  microbial  or  particulate  levels,  requiring  immediate 
+follow-up    and  corrective  action  if  exceeded.",Ref    11
+"Active 
+ingredient","유효성분,    주성분","유효성분이란    질병을  진단,  치료,  완화,  처치  또는  예방함에  있어 
+약리  작용  또는  기타  직접적인  영향을  제공하거나  인간  또는  동
+물의  체내  구조  또는    다른  기능에  영향을  미치고자  하는  원료를 
+의미한다.  유효성분에는  특정  작용  또는  효과를  제공하기  위하여 
+완제의약품  제조  과정에서  화학적인    변화를  거쳐  변형된  형태로 
+완제의약품  내에  존재하게  되는  원료를  포함한다.","Active 
+ 
+ingredient  means 
+any 
+component 
+that 
+is 
+intended 
+to 
+furnish 
+pharmacological 
+ 
+activity  or  other  direct 
+effect 
+in 
+the  diagnosis, 
+cure, 
+mitigation,    treatment,  or  prevention  of  disease,  or  to  affect  the  structure  or 
+any    function  of  the  body  of  man  or  other  animals.  The  term  includes  those   
+components  that  may  undergo  chemical  change  in  the  manufacture  of  the 
+drug 
+  product  and  be  present 
+in 
+the  drug  product 
+in  a  modified 
+form 
+intended  to    furnish  the  specified  activity  or  effect.",Ref    3
+"Active 
+pharmaceuti
+cal 
+ingredient 
+(API)","원료의약품,  활성성분,   
+유효성분,  주성분","의약품    제조에  사용되며  이때  해당  의약품에서  활성성분이  되는 
+성분  또는  성분들의  혼합물.  이러한  성분의  기능은  질병을  진단, 
+치료,  완화,  처치    또는  예방함에  있어  약리  작용  또는  기타  직접
+적인  영향을  제공하거나  신체  구조  및  기능에  영향을  미치는  것
+이다.","Any 
+ 
+substance  or  mixture  of 
+substances 
+intended 
+to  be  used 
+in 
+the 
+manufacture  of 
+  a  pharmaceutical  dosage 
+form  and 
+that,  when  so  used, 
+becomes  an  active 
+ 
+ingredient  of 
+that  pharmaceutical  dosage 
+form.  Such 
+substances  are  intended    to  furnish  pharmacological  activity  or  other  direct 
+effect  in  the  diagnosis,    cure,  mitigation,  treatment,  or  prevention  of  disease 
+or  to  affect  the    structure  and  function  of  the  body.",Ref    5
+,,"의약품  제조에  사용되며  이때  해당  의약품에서  활성성분이  되는 
+성분  또는  성분들의    혼합물.  이러한  성분의  기능은  질병을  진단, 
+치료,  완화,  처치  또는  예방함에  있어  약리  작용  또는  기타  직접
+적인  영향을  제공하거나  신체    구조  및  기능에  영향을  미치는  것
+이다.","Any 
+ 
+substance  or  mixture  of 
+substances 
+intended 
+to  be  used 
+in 
+the 
+manufacture  of 
+  a  drug 
+(medicinal)  product  and 
+that,  when  used 
+in 
+the 
+production  of  a  drug,    becomes  an  active  ingredient  of  the  drug  product. 
+Such  substances  are    intended  to  furnish  pharmacological  activity  or  other 
+direct  effect  in  the    diagnosis,  cure,  mitigation,  treatment,  or  prevention  of 
+disease  or  to  affect    the  structure  and  function  of  the  body.",Ref    2
+,,"합성,  발효,  추출  등  또는  이들의  조합에  의하여  제조된  물질로서 
+완제의약품의  제조에    사용되는  것을  말한다.",N/A,Ref    15
+Actual  yield,"실  생산량,  수량,    수
+득량","실생산량이란    특정  완제의약품을  제조,  가공  또는  포장하는  적절
+한  단계에서  실제로  생산된  양을  의미한다.","Actual    yield  means  the  quantity  that  is  actually  produced  at  any  appropriate 
+phase    of  manufacture,  processing,  or  packing  of  a  particular  drug  product.",Ref    3
+,,제조공정에서  실제로  얻은  양을  말한다.,N/A,Ref    15
+"Advanced 
+Electronic 
+Signature",첨단  전자    서명,"(EU)다음기준에부합하는전자서명을의미한다.
+(a)서명인과연결된특별한방식이다.
+(b)서명인을확인할수있는방식이다
+(c)서명인자신의통제하에서유지할수있는수단을사용하여생성된다.
+(d)모든데이터변경을감지할수있는방식으로데이터와연계되어있다","(EU)meansanelectronicsignature,whichmeetsthefollowingrequirements:
+(a)itisuniquelylinkedtothesignatory;
+(b)itiscapableofidentifyingthesignatory;
+(c)itiscreatedusingmeansthatthesignatorycanmaintainunderhiscontrol;and
+(d)itislinkedtothedatatowhichitrelatesinsuchamannerthatanychangeofthedataisdete
+ctable.",Ref    1
+,,,,
+"Airlock, 
+Air-Lock","에어로크,  전실","문이    2개  이상  있는  밀폐  공간으로  작업실  출입  시  공기  흐름을 
+관리하기  위해  2개  이상의  방  사이,  예를  들어  청정도가  서로  다
+른  작업실    사이에  설치한다.  에어로크는  사람  또는  물품  및/또는 
+설비의  이동을  위해  설계한다.","An    enclosed  space  with  two  or  more  doors,  which  is  interposed  between 
+two  or    more  rooms,  e.g.  of  differing  classes  of  cleanliness,  for  the  purpose 
+of    controlling  the  air  flow  between  those  rooms  when  they  need  to  be 
+entered.  An 
+  airlock 
+is  designed 
+for  use  either  by  people  or 
+for  goods 
+and/or  equipment.",Ref    5
+,,"문이  2개  이상  있는  밀폐  공간으로  작업실  출입  시  공기  흐름을 
+관리하기  위해  2개    이상의  방  사이,  예를  들어  청정도가  서로  다
+른  작업실  사이에  설치한다.  에어로크는  사람  또는  물품  및/또는 
+설비의  이동을  위해  설계한다.","An 
+  enclosed 
+space  with 
+two  or  more  doors,  and  which 
+is 
+interposed 
+between  two  or    more  rooms,  e.g.  of  differing  class  of  cleanliness,  for  the 
+purpose  of    controlling  the  air-flow  between  those  rooms  when  they  need  to 
+be  entered.  An    air-lock  is  designed  for  and  used  by  either  people  or  goods.",Ref    4
+"Alert  limits 
+(environment
+al 
+monitoring)","경고한계(환경모니터
+링)","정상적인    작업  조건에서  벗어나는  잠재적인  추이에  대하여  조기 
+경보를  주기  위해  설정하는  미생물  또는  미립자  수준으로  명확한 
+시정  조치를  실시할    근거가  되지는  않지만  추후  조사를  실시해
+야  한다.","Established    microbial  or  particulate  levels  giving  early  warning  of  potential 
+drift  from    normal  operating  conditions  which  are  not  necessarily  grounds  for 
+definitive    corrective  action  but  which  require  follow-up  investigation.",Ref    11
+"Alert  limits 
+(media  fill)",경고한계(배지    충전),"양성    배지  충전  단위에  대하여  설정하는  기준  또는  개수로  원인
+을  조사하여야  하나  명확한  시정  조치를  실시할  근거가  되지는 
+않는  기준","Established    levels  or  numbers  of  positive  media  filled  units,  the  cause  of 
+which  should 
+  be 
+investigated,  but  which  are  not  necessarily  grounds 
+for 
+definitive    corrective  action.",Ref    11
+"Analytical 
+Procedure",시험방법,"시험분석을    하기  위하여  상세히  기술한  일련의  시험과정을  말한
+다.",N/A,Ref    17
+Antimicrobial,항균제,미생물을    사멸시키거나  미생물의  성장  및  증식을  억제하는  물질,"An    agent  that  kills  microorganisms  or  suppresses  their  growth  and   
+multiplication.",Ref    13
+Antiseptic,방부제,"미생물을사멸하는것이아니라성장과발달을저해하는물질.
+방부제는보통균체표면에적용한다.","A    substance  that  inhibits  the  growth  and  development  of  microorganisms 
+without    necessarily  killing  them.  Antiseptics  are  usually  applied  to  body",Ref    13
+,,,surfaces.,
+"API  Starting 
+Material",원료의약품    출발물질,"API    제조에  사용되며  API  구성에  중요한  구조의  일부분으로  통
+합되는  원료약품,  중간체  또는  API.  API  출발물질은  시중에서  구
+매할  수도    있고,  하나  또는  그  이상의  공급자로부터  계약에  따라 
+구매할  수도  있으며,  자체  제조할  수도  있다.  API  출발물질은  일
+반적으로  화학적    특징과  구조가  규명되어  있다.","A    raw  material,  intermediate,  or  an  API  that  is  used  in  the  production  of  an   
+API  and 
+that 
+is 
+incorporated  as  a  significant  structural 
+fragment 
+into 
+the   
+structure  of  the  API.  An  API  Starting  Material  can  be  an  article  of  commerce,   
+a  material 
+purchased 
+from 
+one 
+or  more 
+suppliers 
+under 
+contract 
+or 
+commercial 
+  agreement,  or  produced 
+in-house.  API  Starting  Materials  are 
+normally  of    defined  chemical  properties  and  structure.",Ref    2
+Application,어플리케이션,"특정    기능을  실행하기  위해서  미리  정의된  플랫폼/하드웨어에 
+설치되어  운영되는  소프트웨어",Softwareinstalledonadefinedplatform/hardwareprovidingspecificfunctionality,Ref    20
+"Application-S
+pecific 
+Software","어플리케이션-특정   
+용도의  소프트웨어",특정요구사항에따라개발되거나적용된소프트웨어프로그램,"A    software  program  developed  or  adapted  to  the  specific  requirements  of 
+the    application.",Ref    1
+"Aseptic 
+filling",무균  충전,"개별적으로    멸균된  제품이  멸균된  마개와  용기를  사용하여  중요 
+공정  구역에서  충전되고  포장되는  공정","Operation 
+  whereby 
+the  product 
+is 
+sterilised 
+separately, 
+then 
+filled  and 
+packaged  using    sterilised  containers  and  closures  in  critical  processing  zones.",Ref    11
+"Aseptic 
+techniques 
+and 
+manipulation
+s",무균  기술    및  조작법,"환경으로    인한  미생물  오염  위험을  최소화하는  방법으로  무균 
+물질을  조작하는  기법.  표면  사이의  접촉(무균  표면  사이는  제외)
+을  배제하여  노출  지역과    노출  시간을  최소화한다.","Themanipulationofsterilematerialsinsuchawayastominimizetheriskof
+microbiologicalcontaminationfromtheenvironment.Thesetechniquesusuallyinvolvee
+liminatingsurfacetosurfacecontacts(exceptbetweensterilesurfaces)minimizingtheare
+aexposedandthedurationofexposure.",Ref    12
+Assay  :,함량  또는    역가시험,검체    중에  존재하는  분석대상물질의  함량  또는  역가를  정확하게,N/A,Ref    17
+"Content  or 
+Potency",,측정하는  시험을  말한다.,,
+"Authorized 
+person",출하  승인    책임자,"각국    규제  당국이  인정한  자로서  최종  제품  배치가  각국의  법률
+과  규정에  따라  제조  및  시험되고  출하  승인되도록  하는  책임을 
+맡은  자","Thepersonrecognizedbythenationalregulatoryauthorityashavingthe
+responsibilityforensuringthateachbatchoffinishedproducthasbeenmanufactured,tes
+tedandapprovedforreleaseincompliancewiththelawsandregulationsinforceinthatcou
+ntry.",Ref    5
+"Automated 
+System",자동화    시스템,"시스템의    넓은  범위를  포함하는  용어이다.  이것은  자동화된  생산 
+설비,  제어  시스템,  자동화된  시험실  시스템,  생산  실행  시스템,  컴
+퓨터가  수행하는    시험실  또는  생산  데이터베이스  시스템을  포함
+한다.  자동화  시스템은  하드웨어,  소프트웨어,  네트워크  구성요소, 
+그와  관련된  제어  기능  및    문서들도  포함된다.  자동화  시스템은 
+때로  컴퓨터화  시스템으로  언급되어지기도  한다.","Term 
+  used 
+to 
+cover 
+a  broad 
+range  of 
+systems, 
+including 
+automated 
+manufacturing 
+  equipment,  control 
+systems,  automated 
+laboratory 
+systems 
+manufacturing 
+ 
+execution 
+systems 
+and 
+computers 
+running 
+laboratory  or 
+manufacturing  database 
+ 
+systems.  The  automated 
+system  consists  of 
+the 
+hardware,  software  and  network    components,  together  with  the  controlled 
+functions  and  associated    documentation.  Automated  systems  are  sometimes 
+referred  to  as  computerised    systems.",Ref    1
+Barrier,"배리어,    장벽","주위공간으로부터    무균  작업  공간(ISO  5)을  부분적으로  분리함으
+로써      무균  작업  공간을  보호  할  수  있도록  하는  물리적인  장벽","Aphysicalpartitionthataffordsasepticprocessingarea(ISO5)protectionbypartiallysepa
+ratingitfromthesurroundingarea.",Ref    10
+"Batch,(or","제조단위,  배치,  로트",동일한    사이클을  갖는  제조공정으로  단일  제조지시에  의해서  제,Batch    means  a  specific  quantity  of  a  drug  or  other  material  that  is  intended,Ref    3
+Lot),,"조된,  규정된  기준  내에서  일정한  균질성  및  품질을  갖도록  의도
+된  약물  또는  다른    물질의  일정한  분량을  의미한다.","to 
+  have  uniform 
+character 
+and  quality,  within 
+specified 
+limits, 
+and 
+is 
+produced    according  to  a  single  manufacturing  order  during  the  same  cycle 
+of    manufacture.",
+,,"규정  범위  이내의  균질할  것으로  예상되는,  특정  공정  또는  일련
+의  공정을  통해  생산된    특정  양의  물품.  연속  생산인  경우에  배
+치는  일정  부분의  생산물에  해당된다.  배치  단위는  일정한  양  또
+는  일정  시간  동안  생산된  양으로    규정된다.","A    specific  quantity  of  material  produced  in  a  process  or  series  of  processes 
+so    that  it  is  expected  to  be  homogeneous  within  specified  limits.  In  the 
+case  of 
+ 
+continuous  production,  a  batch  may 
+correspond 
+to  a  defined 
+fraction  of  the    production.  The  batch  size  can  be  defined  either  by  a  fixed 
+quantity  or  by    the  amount  produced  in  a  fixed  time  interval.",Ref    2
+,,"단일공정이거나,균질성을기대할수있는연속된공정내에서처리되는출
+발물질,포장자재또는제품/의정의된양
+  참고 
+:  제조의  특정  단계를  완료하기  위해서,  1  개의  배치를     
+여러  서브  배치로  분할  할  필요가  있을  수  있다.  이  서브  배치들
+은  최종적으로  균질한  1개의  균질한  배치를  만들기  위해서  함께   
+  합쳐진다.
+  연속  제조의  경우,  배치는  의도된  균질성을  갖도록  규정된  생산   
+  단위와  일치해야  한다.
+  완제의약품의  관리를  위해  Annex  1의  Directive      2001/83/EC 
+as  amended  by  Directive  2003/63/EC  의  규정은  아래와  같다.
+완제품을관리하기위하여등록된의약품한제조단위는동일한최초물질
+로만들고일련의제조작업을거치거나단일멸균작업을거친제품일체또
+는연속생산공정인경우에는일정시간동안제조된물량을포괄한다.","Adefinedquantityofstartingmaterial,packagingmaterialorproductprocessedinonepr
+ocessorseriesofprocessessothatitcouldbeexpectedtobehomogeneous.
+NoteTocompletecertainstagesofmanufacture,itmaybenecessarytodivideabatchintoa
+numberofsubbatches,whicharelaterbroughttogethertoformafinal
+homogeneousbatch.Inthecaseofcontinuousmanufacture,thebatchmust
+correspondtoadefinedfractionoftheproduction,characterisedbyitsintended
+homogeneity.
+Forcontrolofthefinishedproduct,thefollowingdefinitionhasbeengiveninAnnex1ofDir
+ective2001/83/ECasamendedbyDirective2003/63/EC:‘Forthecontrolofthefinishedpro
+duct,abatchofaproprietarymedicinalproductcomprisesalltheunitsofapharmaceutical
+formwhicharemadefromthesameinitialmassofmaterialandhaveundergoneasingleser
+iesofmanufacturingoperationsorasinglesterilisationoperationor,inthecaseofacontin
+uousproductionprocess,alltheunitsmanufacturedinagivenperiodoftime’.",Ref    4
+"Batch  (or 
+Lot)","제조단위,  배치,  로트","하나의    공정  또는  일련의  공정으로  처리하여  균질한  것으로  간
+주되는  일정량의  출발물질,  포장자재  또는  제품.  한  배치를  여러 
+개의  서브배치로  나누고    나중에  다시  하나로  합쳐  최종적으로 
+균질한  하나의  배치를  만들  필요가  있을  수  있다.  사후  멸균의  경
+우에  멸균기의  용량에  따라  배치  단위가    결정된다.  연속  제조의 
+경우  제조단위는  의도된  균질성에  의해  결정되는  일정  생산  부분
+과  일치하여야  한다.  제조  단위는  일정  시간  동안    생산된  양  또
+는  일정량으로  규정할  수  있다.","A 
+  defi  ned  quantity  of  starting  material,  packaging  material,  or  product   
+processed  in  a  single  process  or  series  of  processes  so  that  it  is  expected   
+to  be  homogeneous.  It  may  sometimes  be  necessary  to  divide  a  batch  into  a   
+number  of  sub-batches,  which  are 
+later  brought 
+together 
+to 
+form  a 
+final   
+homogeneous  batch.  In  the  case  of  terminal  sterilization,  the  batch  size  is   
+determined  by  the  capacity  of  the  autoclave.  In  continuous  manufacture,  the   
+batch  must  correspond  to  a  defi  ned  fraction  of  the  production,  characterized   
+by  its  intended  homogeneity.  The  batch  size  can  be  defi  ned  either  as  a",Ref    5
+,,,fixed    quantity  or  as  the  amount  produced  in  a  fi  xed  time  interval.,
+,,"동일한  제조공정으로  제조되어  균질성을  가지는  의약품의  일정한 
+분량을  말한다.",N/A,Ref    15
+"Batch 
+Number  (or 
+Lot  Number)","제조번호,  배치  번호,   
+로트  번호","특정    배치(또는  로트)를  표현하는  숫자,  문자  및/또는  상징의  고
+유한  조합.  이로부터  생산  및  유통  내역을  확인할  수  있다.","A    unique  combination  of  numbers,  letters,  and/or  symbols  that  identifies  a   
+batch  (or  lot)  and  from  which  the  production  and  distribution  history  can  be   
+determined.",Ref    2
+,,배치를  명확하게  규정하는  숫자  및/또는  문자의    독특한  조합,"A 
+  distinctive 
+combination  of  numbers 
+and/or 
+letters  which 
+specifically   
+identifies  a  batch.",Ref    4
+,,"한  배치를  특이적으로  구분하는  숫자  및/또는  문자의  독특한  조
+합으로  라벨,  제조    기록서,  성적서  등에  표기한다.","Adistinctivecombinationofnumbersand/orletterswhichuniquelyidentifies
+abatchonthelabels,itsbatchrecordsandcorrespondingcertificatesofanalysis,etc.",Ref    5
+,,"일정한  제조단위분에  대하여  제조관리  및  출하에  관한  모든  사항
+을  확인할  수  있도록    표시된  번호로서  숫자ㆍ문자  또는  이들을 
+조합한  것을  말한다.",N/A,Ref    15
+"Batch 
+records","제조기록서,    제조단위 
+기록(서)","반제품    또는  완제품의  특정  제조단위  제조와  관련된  모든  문서. 
+제조기록서는  제품  각  제조단위와  최종제품의  품질에  관련된  모
+든  상황에  대한  내역을    제공한다.","Alldocumentsassociatedwiththemanufactureofabatchofbulkproductorfinishedprod
+uct.Theyprovideahistoryofeachbatchofproductandofallcircumstancespertinenttothe
+qualityofthefinalproduct.",Ref    5
+Bespoke,맞춤형,"고객    요구사항을  만족  시키기  위해  특정  주문에  의해  생산된  시
+스템이다.","A    system  produced  for  a  customer,  specifically  to  order,  to  meet  a  defined 
+set    of  user  requirements.",Ref    1
+"Bespoke/Cus
+tomized 
+computerise
+d  system","맞춤형/자체개발    컴
+퓨터  시스템",특정    업무  프로세스에  맞게  자체적으로  설계한  컴퓨터  시스템,Acomputerisedsystemindividuallydesignedtosuitaspecificbusinessprocess,Ref    20
+Bioburden,미생물  부하,"원료약품,API출발물질,중간체또는API에존재할가능성이있는미생물
+의기준및종류(특정미생물존재여부등).바이오버든은그기준을초과하
+지않았거나특정미생물이검출되지않는한,오염으로간주하지않아야한
+다.","The    level  and  type  (e.g.  objectionable  or  not)  of  micro-organisms  that  can 
+be    present  in  raw  materials,  API  starting  materials,  intermediates  or  APIs.   
+Bioburden  should  not  be  considered  contamination  unless 
+the 
+levels  have 
+been    exceeded  or  defined  objectionable  organisms  have  been  detected.",Ref    2
+,,멸균  공정  전  의약품에  있는  총  생균수,"Total 
+  number  of  viable  microorganisms  on  or 
+in  pharmaceutical  product 
+prior  to    sterilisation.",Ref    11
+Biocide,살생(물)제,미생물을    사멸하는  물질을  지칭하는  일반용어,A    general  term  for  any  agent  that  kills  organisms.,Ref    13
+Biogenerator,생물제너레이터,"발효기와    같이  생물학적  인자를  기타  물질과  함께  투입하여  생
+물학적  인자가  증식하거나  기타  물질과의  반응으로  생물학적  인
+자가  다른  성분을  생산하게    만드는  봉쇄  시스템.  바이오  제너레
+이터에는  일반적으로  조절,  관리,  연결,  물품  투입,  물품  배출을  위
+한  장치가  부착되어  있다.","A    contained  system,  such  as  a  fermenter,  into  which  biological  agents  are   
+introduced  along  with  other  materials  so  as  to  effect  their  multiplication  or   
+their  production  of  other  substances  by 
+reaction  with 
+the  other  materials.   
+Biogenerators 
+are 
+generally 
+fitted  with 
+devices 
+for 
+regulation, 
+control,   
+connection,  material  addition  and  material  withdrawal.",Ref    4
+"Biological 
+Agents",생물(학적)인자,"병원성    여부에  상관없이  유전공학적  미생물,  세포  배양액,  내부
+기생충을  포함하는  미생물.","Micro-organisms, 
+ 
+including 
+genetically 
+engineered  micro-organisms, 
+cell 
+cultures  and    endoparasites,  whether  pathogenic  or  not.",Ref    4
+"BiologicalIndi
+cator",생물(학적)    지표,"물리적    또는  화학적  공정의  멸균  사이클의  유효성을  확인하기 
+위하여  적합한  배지에  접종하여  멸균기  내  적절한  적재  위치에 
+두는  미생물  개체군.    챌린지  미생물은  해당  공정에  대한  저항력","Apopulationofmicroorganismsinoculatedontoasuitablemedium(e.g.,solution,contai
+nerorclosure)andplacedwithinappropriatesterilizerloadlocationstodeterminethesteri
+lizationcycleefficacyofaphysicalorchemicalprocess.Thechallengemicroorganismissel",Ref    10
+,,"에  근거하여  선정한다.  입고되는  로트의  D값과  생균수가  생물학
+적  지표(BI)의  품질을  규정한다.","ectedbaseduponitsresistancetothegivenprocess.IncominglotD-valueandmicrobiolo
+gicalcountdefinethequalityoftheBI.",
+Bug,버그,소프트웨어에서의    에러의  징후(결함),A    manifestation  of  an  error  in  software  (a  fault).,Ref    1
+Bulk  Product,"반제품,  벌크  제품","최종    포장을  포함하지  않고,  모든  공정  단계가  완료된  제품","Any 
+  product  which  has  completed  all  processing  stages  up 
+to,  but  not 
+including,    final  packaging.",Ref    4
+,,최종  포장을  제외한  공정  단계를  거친  제품,"Any 
+  product 
+that  has  completed  all  processing 
+stages  up 
+to,  but  not 
+including,    final  packaging.",Ref    5
+Calibration,교정,"특정    계측장치  또는  장치의  측정  결과를  참조  또는  추적  가능한 
+표준  물질에  의한  것과  비교하였을  때  적절한  측정  범위에서  규
+정  기준  이내에    있음을  보여  주는  행위.","The    demonstration  that  a  particular  instrument  or  device  produces  results 
+within    specified  limits  by  comparison  with  those  produced  by  a  reference  or   
+traceable  standard  over  an  appropriate  range  of  measurements.",Ref    2
+,,"특정조건하에서,계측기기또는계측계에의해서표시되는값또는물질계
+측에의해서표시되는값과    표준기기에서  해당하는  알려진  값  사이
+의  관계를      설립하는  행위들의  모음.","The 
+ 
+set  of  operations  which 
+establish,  under 
+specified 
+conditions, 
+the   
+relationship 
+between 
+values 
+indicated 
+by 
+a  measuring 
+instrument 
+or 
+measuring    system,  or  values  represented  by  a  material  measure,  and  the 
+corresponding    known  values  of  a  reference  standard.",Ref    4
+,,"특정조건하에서,계측기기또는계측계에의해서표시되는값또는물질계
+측에의해서표시되는값과    표준기기에서  해당하는  알려진  값  사이
+의  관계를      설립하는  행위들의  모음.  측정  결과의  허용  기준이 
+설정되어  있어야  한다.","The 
+ 
+set  of  operations 
+that  establish,  under 
+specifi  ed 
+conditions, 
+the   
+relationship 
+between 
+values 
+indicated 
+by 
+an 
+instrument 
+or 
+system 
+for   
+measuring 
+(especially  weighing), 
+recording,  and 
+controlling,  or 
+the  values   
+represented  by  a  material  measure,  and  the  corresponding  known  values  of  a",Ref    5
+,,,"reference  standard.  Limits  for  acceptance  of  the  results  of  measuring  should   
+be  established.",
+,,"계측기,  시험기기  또는  기록계가  나타내는  값과  표준기기의  참값
+을  비교하여  오차가    허용범위  내에  있음을  확인하고,  허용오차범
+위를  벗어나는  경우  허용범위  내에  들도록  조정하는  것을  말한다.",N/A,Ref    15
+"Capability  of 
+a  Process","프로세스    능력,  공정
+능력","제품의    요구  기준을  만족시키는  제품을  구현할  수  있는  프로세
+스의  능력.  프로세스  능력  개념을  통계적  용어로도  정의할  수  있
+다.  (ISO    9000:2005)","Ability    of  a  process  to  realise  a  product  that  will  fulfil  the  requirements  of 
+that 
+  product.  The  concept  of  process  capability  can  also  be  defined 
+in 
+statistical    terms.  (ISO  9000:2005)",Ref    19
+"Change 
+Control",변경관리,"밸리데이션된    시설,  시스템,  설비  또는  공정에  영향을  미칠  수 
+있을  것으로  예상되거나  실제  발생한  변경을  검토할  수  있는  적
+절한  원칙의  검증된  일반적    시스템.  변경  관리의  목적은  밸리데
+이션된  상태로  시스템이  유지되는  것을  보장하도록  하는  활동에 
+대한  필요성을  결정하는  것이다.","A    formal  system  by  which  qualified  representatives  of  appropriate  disciplines   
+review  proposed  or  actual  changes  that  might  affect  a  validated  status  of   
+facilities,  systems,  equipment  or  processes.  The 
+intent 
+is 
+to  determine 
+the   
+need 
+for  action 
+that  would  ensure 
+that 
+the 
+system 
+is  maintained 
+in  a   
+validated  state.",Ref    1
+,,"밸리데이션된  시설,  시스템,  설비  또는  공정에  영향을  미칠  수  있
+을  것으로  예상되거나    실제  발생한  변경을  검토할  수  있는  적절
+한  원칙의  검증된  일반적  시스템.  변경  관리의  목적은  밸리데이션
+된  상태로  시스템이  유지되는  것을    보장(문서화)하도록  하는  활
+동에  대한  필요성을  결정하는  것이다.","A    formal  system  by  which  qualified  representatives  of  appropriate  disciplines   
+review  proposed  or  actual  changes  that  might  affect  the  validated  status  of   
+facilities,  systems,  equipment  or  processes.  The 
+intent 
+is 
+to  determine 
+the   
+need 
+for 
+action 
+that  would 
+ensure 
+and  document 
+that 
+the 
+system 
+is 
+maintained    in  a  validated  state.",Ref    6
+"Change 
+Management",변경    매니지먼트,"변경의    제안,  평가,  승인,  추진,  검토를  위한  체계적  접근  방식.","A 
+  systematic  approach 
+to  proposing,  evaluating,  approving, 
+implementing 
+and    reviewing  changes.",Ref    19
+,,,,
+"Chemicalger
+micide",화학  살균제,미생물    사멸을  위해  사용하는  화학물질  또는  화학적  혼합물,A    chemical  or  a  mixture  of  chemicals  used  to  kill  microorganisms.,Ref    13
+Clean  Area,청정구역,"미립자와    미생물  오염에  대한  일정한  환경  관리가  이루어지며 
+그  지역  내에  오염  물질의  유입,  발생,  유지를  감소시키는  방식으
+로  시공하고  사용하는    구역이다.","An 
+  area  with  defined  environmental  control  of  particulate  and  microbial   
+contamination, 
+constructed 
+and  used 
+in 
+such 
+a  way 
+as 
+to 
+reduce 
+the   
+introduction,  generation  and  retention  of  contaminants  within  the  area.",Ref    4
+,,"미립자와  미생물  오염에  대한  일정한  환경  관리가  이루어지며  그 
+지역  내에  오염  물질의    유입,  발생,  유지를  감소시키는  방식으로 
+시공하고  사용하는  구역이다.","An 
+  area  with  defined  environmental  control  of  particulate  and  microbial   
+contamination, 
+constructed 
+and  used 
+in 
+such 
+a  way 
+as 
+to 
+reduce 
+the   
+introduction,  generation,  and  retention  of  contaminants  within  the  area.",Ref    5
+,,"부유입자  및  미생물이  유입되거나  잔류하는  것을  통제하여  일정 
+수준  이하로  유지되도록    관리하는  구역을  말한다.",N/A,Ref    15
+,,부유입자  및  미생물의  청정도  기준이  규정된  구역,Anareawithdefinedparticleandmicrobiologicalcleanlinessstandards.,Ref    10
+,,,,
+"Class  of 
+Cleanliness",청정등급,청정구역의    관리수준을  정한  등급을  말한다.,N/A,Ref    15
+Cleanroom,청정실,"의약품이미립자와미생물에오염되는것을방지하기위하여설계,유지,
+관리되는작업실.이러한작업실은지정되어야하고,적절한공기청정도
+기준을지속적으로만족시킨다.","Aroomdesigned,maintained,andcontrolledtopreventparticleandmicrobiologicalcont
+aminationofdrugproducts.Sucharoomisassignedandreproduciblymeetsanappropria
+teaircleanlinessclassification.",Ref    10
+Clean  Zone,청정지역,청정지역    :  청정구역  참조,SeeCleanArea.,Ref    10
+"Clean/Contai
+ned  Area",청정/밀폐(봉쇄)구역,"청정구역과    봉쇄구역  모두의  목적을  동시에  달성할  수  있는  방
+식으로  시공하고  운영하는  구역","An    area  constructed  and  operated  in  such  a  manner  that  will  achieve  the 
+aims  of    both  a  clean  area  and  a  contained  area  at  the  same  time.",Ref    4
+"Cleaning 
+Validation",세척    밸리데이션,"세척    밸리데이션은  승인된  세척  절차를  통해  설비를  세척하면 
+의약품  처리에  적합한  상태가  된다는  점을  보여  주는  문서화된 
+증거이다.","Cleaning 
+ 
+validation 
+is  documented  evidence 
+that  an  approved 
+cleaning 
+procedure  will    provide  equipment  which  is  suitable  for  processing  medicinal 
+products.",Ref    6
+"Colony 
+Forming 
+Unit  (CFU)",콜로니  형성    단위,"하나    또는  그  이상의  미생물을  미생물  생장  배지에  넣었을  때 
+눈에  보이는  하나의  집락이  형성된  것을  기술하는  미생물학적  용
+어.  집락형성단위    하나를  1  CFU로  표기한다.","Amicrobiologicaltermthatdescribestheformationofasinglemacroscopiccolonyafterth
+eintroductionofoneormoremicroorganismstomicrobiologicalgrowthmedia.Onecolo
+nyformingunitisexpressedas1CFU.",Ref    10
+"Commercial 
+of  the  shelf",상용    소프트웨어,"상업적으로    상용화된  소프트웨어,  다양한  영역의  사용자들에  의
+해  적합성이  검증된  소프트웨어.","Software    commercially  available,  whose  fitness  for  use  is  demonstrated  by  a 
+broad    spectrum  of  users",Ref    20
+software,,,,
+"Commercial 
+off-the-shelf 
+(COTS)",상용제품,"설정이    가능한  프로그램  –  “기본  프로그램의  변경  없이  “빈  칸을 
+채우는  방식에  의해”  특정  사용자의  요구에  맞게  설정을  할  수  있
+는  프로그램    제품","Configurable    Programs-  Stock  programs  that  can  be  configured  to  specific 
+user  applications    by  “filling  in  the  blanks”,  without  (COTS)  altering  the  basic 
+program.",Ref    1
+Component,"원료,  성분","완제의약품에서는    포함되지  않을  수  있는  물질을  포함하여,  완제
+의약품의  제조에  사용되는  모든  종류의  첨가물을  의미한다.","Component    means  any  ingredient  intended  for  use  in  the  manufacture  of  a 
+drug  product,    including  those  that  may  not  appear  in  such  drug  product.",Ref    3
+,,"완제의약품에서는  포함되지  않을  수  있는  물질을  포함하여,  완제
+의약품의  제조에  사용되는    모든  종류의  첨가물을  의미한다.","Anyingredientintendedforuseinthemanufactureofadrugproduct,includingthosethat
+maynotappearinthefinaldrugproduct.",Ref    10
+"Compoundin
+g",배합,"완제의약품을    생산하기  위하여  벌크  원료의약품을  다른  벌크  원
+료의약품  및/또는  하나  이상의  부형제와  결합하는  공정","A    process  wherein  bulk  drug  substance  is  combined  with  another  bulk  drug   
+substance  and/or  one  or  more  excipients  to  produce  a  drug  product.",Ref    11
+"Computer 
+Hardware",컴퓨터    하드웨어,"컴퓨터시스템의    다양한  장비  부분들을  말한다.  이것은  중앙처리
+장치(CPU),  프린터,  모뎀,  브라운관,  또는  다른  관련  장비를  포함
+한다.","Various    pieces  of  equipment  in  the  computer  system,  including  the  central 
+processing    unit,  the  printer,  the  modem,  the  cathode  ray  tube  (CRT),  and 
+other  related    apparatus.",Ref    1
+"Computer 
+System",컴퓨터  시스템,"컴퓨터    하드웨어  구성요소는  소프트웨어  프로그램과  함께  실행
+될  수  있도록  구성된다.  이것은  전체적으로  특정  기능  또는  기능
+의  그룹을  실행할  수    있도록  설계된  것이다.","Computer    hardware  components  assembled  to  perform  in  conjunction  with  a 
+set  of 
+  software  programs,  which  are  collectively  designed 
+to  perform  a 
+specific    function  or  group  of  functions.",Ref    1
+,,특정  기능  또는  일정  그룹의  기능을  수행하기  위해  설계되고  조,"A    group  of  hardware  components  and  associated  software,  designed  and",Ref    2
+,,립된  하드웨어  구성  부분    및  관련  소프트웨어,assembled    to  perform  a  specific  function  or  group  of  functions.,
+"Computerise
+d  System",컴퓨터화  시스템,컴퓨터    시스템에  운영을  위한  제어  기능이  더해진  것이다.,A    computer  system  plus  the  controlled  function  that  it  operates.,Ref    1
+,,"입력데이터,      전기  공정  및  자동  제어  또는  기록을 
+위해  사용될  정보의  출력을  포함하는  시스템","A    system  including  the  input  of  data,  electronic  processing  and  the  output 
+of    information  to  be  used  either  for  reporting  or  automatic  control.",Ref    4
+,,컴퓨터  시스템과  통합된  공정  또는  작업.,A    process  or  operation  integrated  with  a  computer  system.,Ref    2
+"Concurrent 
+Validation",동시적    밸리데이션,판매를    목적으로  제품을  생산하는  도중에  실시하는  밸리데이션,"Validation    carried  out  during  routine  production  of  products  intended  for 
+sale.",Ref    6
+"Configuratio
+n","구성설정,    환경설정, 
+구성","소프트웨어,    컴퓨터화  시스템,  하드웨어,  펌웨어  및  운영  시스템
+과  같은  특정  항목  또는  시스템의  물리적  기능적  성질을  문서화
+한  것.  설정을  변경하면    하나의  구성을  다른  구성으로  전환시킨
+다.","The    documented  physical  and  functional  characteristics  of  a  particular  item, 
+or 
+ 
+system,  e.g. 
+software, 
+computerised 
+system,  hardware, 
+firmware  and 
+operating    system.  A  change  converts  one  configuration  into  a  new  one.",Ref    1
+"Configuratio
+n 
+Management",설정(구성)    관리,"시스템의    설정  항목을  파악하고  정의하며,  시스템  라이프사이클 
+전체에  걸쳐  이  설정  항목의  승인과  변경을  관리하고,  설정  항목
+의  상태와  변경  요청을    기록하고  보고하며,  설정  구성  항목의  완
+벽성과  정확성을  확인하는  업무.","The    process  of  identifying  and  defining  the  configuration  items  in  a  system,   
+controlling  the  release  and  change  of  these  items  throughout  the  system  life   
+cycle,  recording  and  reporting  the  status  of  configuration  items  and  change   
+requests,  and  verifying 
+the  completeness  and  correctness  of  configuration   
+items.",Ref    1
+"Consignment 
+(or  delivery)","납품물,    탁송(배송)물","특정    요청  또는  주문에  따라  한  제조업체가  만들고  한  번에  공
+급되는  의약품의  수량으로  일회  납품물은  하나  이상의  포장  또는","The    quantity  of  a  pharmaceutical(s),  made  by  one  manufacturer  and  supplied 
+at  one    time  in  response  to  a  particular  request  or  order.  A  consignment",Ref    5
+,,"용기를  포괄할  수    있으며,  하나  이상의  배치  물품일  수도  있다.","may 
+comprise 
+  one  or  more  packages  or 
+containers  and  may 
+include 
+material  belonging  to  more    than  one  batch.",
+"Contained 
+Area",밀폐(봉쇄)구역,"해당    구역  내에서  생물의약품이  외부로  나가  외부  환경을  오염
+시키는  것을  방지할  수  있는  방식(및  적절한  공기조화  장치와  여
+과  설비  구비)으로    시공하고  운영하는  구역","An    area  constructed  and  operated  in  such  a  manner  (and  equipped  with 
+appropriate    air  handling  and  filtration)  so  as  to  prevent  contamination  of 
+the  external    environment  by  biological  agents  from  within  the  area.",Ref    4
+Containment,"밀폐,  봉쇄","생물학적인자또는기타물질을일정공간내로제한하는행위
+일차봉쇄:생물학적인자가바로인접한작업환경으로침투하는것을막는
+봉쇄시스템.안전한운영절차와함께밀폐용기나생물학적안전캐비닛을
+사용한다.
+이차봉쇄:생물학적인자가외부환경이나기타작업지역으로침투하는것
+을막는봉쇄시스템.특수설계된공조장치가구비된작업실,물품유출시
+에사용하는멸균기및/또는에어록의설치,안전한운영절차가필요하다.
+대개는일차봉쇄의효과를보강하는기능을한다.","Theactionofconfiningabiologicalagentorotherentitywithinadefinedspace.
+Primarycontainment:Asystemofcontainmentwhichpreventstheescapeofabiologicala
+gentintotheimmediateworkingenvironment.Itinvolvestheuseofclosedcontainersorsa
+fetybiologicalcabinetsalongwithsecureoperatingprocedures.
+Secondarycontainment:Asystemofcontainmentwhichpreventstheescapeofabiologic
+alagentintotheexternalenvironmentorintootherworkingareas.Itinvolvestheuseofroo
+mswithspeciallydesignedairhandling,theexistenceofairlocksand/orsterilisersfortheex
+itofmaterialsandsecureoperatingprocedures.Inmanycasesitmayaddtotheeffectivene
+ssofprimarycontainment.",Ref    4
+"Contaminatio
+n",오염,"생산,검체채취,포장또는재포장,보관또는수송시원료약품,중간체또는
+API에화학적·생물학적성질의불순물이나이물질이원치않게들어가는
+것.","The    undesired  introduction  of  impurities  of  a  chemical  or  microbiological 
+nature,    or  of  foreign  matter,  into  or  onto  a  raw  material,  intermediate,  or 
+API 
+  during  production, 
+sampling,  packaging  or 
+repackaging, 
+storage  or 
+transport.",Ref    2
+,,"생산,검체채취,포장또는재포장,보관또는수송시원료약품,중간체또는
+API에화학적·생물학적성질의불순물이나이물질이원치않게들어가는
+것.","The    undesired  introduction  of  impurities  of  a  chemical  or  microbiological 
+nature, 
+ 
+or 
+of 
+foreign  matter, 
+into 
+or 
+on 
+to 
+a 
+starting  material 
+or 
+intermediate    during  production,  sampling,  packaging  or  repackaging,  storage 
+or  transport.",Ref    5
+"Continual 
+Improvement",지속적  개선,"요구 
+  기준의  충족  능력을  향상시키는  반복적  활동. 
+(ISO 
+9000;2005)","Recurring 
+ 
+activity 
+to 
+increase 
+the 
+ability 
+to 
+fulfil 
+requirements. 
+(ISO 
+9000:2005)",Ref    19
+,,,,
+"Contol 
+Number",관리번호,"제조단위를    부여할  수  없는  자재  등을  관리하기  위하여  부여한 
+번호로서  숫자ㆍ문자  또는  이들을  조합한  것을  말한다.",N/A,Ref    15
+"Contract 
+Manufacturer",수탁제조업자,원제조업체를    대신하여  제조  작업의  일부를  수행하는  제조업체,"A    manufacturer  performing  some  aspect  of  manufacturing  on  behalf  of  the   
+original  manufacturer.",Ref    2
+"Control 
+Strategy",관리  전략,"현재의    제품  및  공정  이해를  바탕으로  공정  성능과  제품  품질을 
+보장하기  위해  정한  관리  대책.  유효  성분  및  의약품  원료와  관련
+된  변수와  특성    요소,  시설  및  설비  운전  조건,  IPC,  최종  제품 
+규격,  모니터  및  관리  방법과  주기가  포함될  수  있다.","A 
+  planned 
+set  of 
+controls,  derived 
+from 
+current  product  and  process   
+understanding 
+that  ensures  process  performance  and  product  quality.  The   
+controls  can  include  parameters  and  attributes  related  to  drug  substance  and   
+drug  product  materials  and  components, 
+facility  and  equipment  operating   
+conditions, 
+in-process 
+controls, 
+finished 
+product 
+specifications, 
+and 
+the   
+associated  methods  and  frequency  of  monitoring  and  control.",Ref    18
+,,"현재의  제품  및  공정  이해를  바탕으로  공정  성능과  제품  품질을 
+보장하기  위해  정한    관리  대책.  유효  성분  및  의약품  원료와  관
+련된  변수와  특성  요소,  시설  및  설비  운전  조건,  IPC,  최종  제품 
+규격,  모니터  및  관리    방법과  주기가  포함될  수  있다.","A 
+  planned 
+set  of 
+controls,  derived 
+from 
+current  product  and  process   
+understanding, 
+that  assures  process  performance  and  product  quality.  The   
+controls  can  include  parameters  and  attributes  related  to  drug  substance  and   
+drug  product  materials  and  components, 
+facility  and  equipment  operating   
+conditions, 
+in-process 
+controls, 
+finished 
+product 
+specifications, 
+and 
+the   
+associated  methods  and  frequency  of  monitoring  and  control.",Ref    19
+"Controlled 
+Area",관리구역,"잠재적인오염원의유입(공급공기는대략청정도D구역과유사할것이
+다.)과,생명체(살아있는유기체)에대한예기치못한노출로인한위험을통
+제하기위하여구축하고운영하는구역.
+  통제  수준은  유기체의  특성을  반영할  수  있어야  한다.    최소한 
+통제구역은  외부  환경보다    음압으로  유지되어야  하고,  소량의  부
+유  오염물질도  효과적으로  제거해야  한다.","An    area  constructed  and  operated  in  such  a  manner  that  some  attempt  is 
+made  to    control  the  introduction  of  potential  contamination  (an  air  supply   
+approximating 
+to  grade  D  may  be  appropriate),  and 
+the  consequences  of   
+accidental  release  of  living  organisms.  The  level  of  control  exercised  should   
+reflect  the  nature  of  the  organism  employed  in  the  process.  At  a  minimum, 
+the    area  should  be  maintained  at  a  pressure  negative  to  the  immediate",Ref    4
+,,,"external    environment  and  allow  for  the  efficient  removal  of  small  quantities 
+of    airborne  contaminants.",
+"Corrective 
+Action","시정조치,    개선조치","감지된    부적합  상황  또는  기타  바람직하지  않은  상황의  원인을 
+제거하기  위한  조치.  주:  시정  조치는  재발  방지를  위한  것이며, 
+예방  조치는  발생    방지를  위한  것이다.  (ISO  9000:2005)","Action 
+ 
+to  eliminate 
+the 
+cause  of  a  detected  non-conformity  or  other 
+undesirable    situation.  NOTE:  Corrective  action  is  taken  to  prevent  recurrence 
+whereas    preventive  action  is  taken  to  prevent  occurrence.  (ISO  9000:2005)",Ref    19
+Critical,중요한,"API가    규격에  부합하도록  하기  위해  사전  설정된  기준  범위  이
+내에서  관리되어야  하는  공정  단계,  공정  조건,  시험  기준,  또는 
+기타  관련  변수    또는  항목을  지칭하는  표현.","Describes 
+  a  process 
+step,  process  condition, 
+test 
+requirement,  or  other 
+relevant    parameter  or  item  that  must  be  controlled  within  predetermined 
+criteria  to    ensure  that  the  API  meets  its  specification.",Ref    2
+CriticalArea,중요  구역,"무균물질의무균성을유지하기위해설계된공간.
+무균제품,용기,마개및장비등이이공간에서노출될수있다.","Anareadesignedtomaintainsterilityofsterilematerials.
+Sterilizedproduct,containers,closures,andequipmentmaybeexposedincriticalareas.",Ref    10
+"Critical 
+operation",중요    조작(작업),의약품의    품질  편차를  유발할  수  있는  제조공정  작업,"An    operation  in  the  manufacturing  process  that  may  cause  variation  in  the   
+quality  of  the  pharmaceutical  product.",Ref    5
+"Critical 
+Process  or 
+equipment","중요공정    또는  중요 
+기계  설비",제품의    품질에  영향을  미치는  공정  또는  기계ㆍ설비를  말한다.,N/A,Ref    15
+"Critical 
+Process 
+Parameter",중요  공정    변수,"변동이    발생하면  핵심  품질  특성  요소에  영향을  주므로  공정이 
+원하는  품질을  생산하도록  하기  위해  모니터  또는  관리해야  하는 
+공정  변수.","A    process  parameter  whose  variability  has  an  impact  on  a  critical  quality   
+attribute  and 
+therefore  should  be  monitored  or  controlled 
+to  ensure 
+the   
+process  produces  the  desired  quality.",Ref    18
+Critical,중요  품질    특성,"원하는    제품  품질을  보장하기  위하여  적절한  한도,  범위,  또는","A    physical,  chemical,  biological  or  microbiological  property  or  characteristic    Ref    18",
+"Quality 
+Attribute",,"분포  이내에  있어야  하는,  물리적,  화학적,  생물학적,  또는  미생물
+학적  특징이나    특성.","that  should  be  within  an  appropriate  limit,  range,  or  distribution  to  ensure   
+the  desired  product  quality.",
+"Critical 
+surfaces",중요  표면,"무균제품    또는  제품의  용기  또는  마개에  직접적으로  영향을  주
+거나  접촉할  수  있는  표면.  중요  표면은  작업  시작  전  무균  상태
+이어야  하며,  공정  내내    무균성이  유지되어야  한다.","Surfacesthatmaycomeintocontactwithordirectlyaffectasterilizedproductoritscontain
+ersorclosures.Criticalsurfacesarerenderedsterilepriortothestartofthemanufacturingo
+peration,andsterilityismaintainedthroughoutprocessing.",Ref    10
+Critical  zone,중요  지역,"무균제품,원료또는제품접촉표면이환경에노출되는무균공정작업실내
+부구역","Zone    within  the  Aseptic  Processing  Area  where  sterile  product,  product 
+components    or  product  contact  surfaces  are  exposed  to  the  environment.",Ref    12
+"CrossContam
+ination
+(Cross-Conta
+mination)",교차오염,어떤    원자재나  제품이  다른  원자재나  제품에  오염되는  것.,"Contamination 
+  of  a  material  or  of  a  product  with  another  material  or 
+product.",Ref    4
+,,어떤  원자재나  제품이  다른  원자재나  제품에  오염되는  것.,Contamination    of  a  material  or  product  with  another  material  or  product.,Ref    2
+,,"생산  중에  어떤  출발물질,  반제품  또는  완제품이  다른  출발물질이
+나  제품에  오염되는    것.","Contamination 
+  of  a 
+starting  material, 
+intermediate  product  or 
+fi  nished 
+product  with    another  starting  material  or  product  during  production.",Ref    5
+D  value,D  값,"주어진    온도에서  특정  미생물의  개체수가  1로그,  즉  90퍼센트  감
+소하는데  걸리는  노출  시간(단위:  분)","Thetime(inminutes)ofexposureatagiventemperaturethatcausesaone-logor90percen
+treductioninthepopulationofaspecificmicroorganism.",Ref    10
+"Debugging 
+(IEEE)",디버깅(오류수정),"의심되는    결함에  대한  위치  확인,  분석,  수정하는  절차","The    process  of  locating,  analysing,  and  correcting  suspected  faults.",Ref    1
+"Decision 
+Maker(s)",결정  책임자,"적절한    품질  리스크  관리  결정을  적시에  내릴  수  있는  권한과 
+능력을  갖춘  자.","Person(s) 
+  with 
+the  competence  and  authority 
+to  make  appropriate  and 
+timely  quality  risk    management  decisions.",Ref    14
+"Decontamina
+tion",오염제거,"포자를제거할수있는화학적물질을사용하여바이오버든을제거하는과
+정",Aprocessthateliminatesviablebioburdenviauseofsporicidalchemicalagents.,Ref    10
+,,"미생물을  제거하거나  사멸하는  모든  과정.  유해한  화학물질과  방
+사성  물질을  제거  또는    중화하는  행위에도  동일한  용어를  사용
+한다.","Any    process  for  removing  and/or  killing  microorganisms.  The  same  term  is 
+also    used  for  removing  or  neutralizing  hazardous  chemicals  and  radioactive   
+materials.",Ref    13
+"Depyrogenat
+ion","발열성물질제거,    탈파
+이로젠",발열성    물질(예.  내독소)의  파괴  혹은  제거  시  사용하는  과정,"Aprocessusedtodestroyorremovepyrogens(e.g.,endotoxin).",Ref    10
+"Design 
+qualification 
+(DQ)",설계적격성평가,"시설,    시스템,  설비의  설계안이  목적  용도에  적합함을  확인하여 
+문서화  하는  절차","The 
+  documented  verification 
+that 
+the  proposed  design  of 
+the 
+facilities, 
+systems    and  equipment  is  suitable  for  the  intended  purpose.",Ref    6
+,,"기계,  설비  또는  시스템의  설계가  의도한  목적에  적합한지를  검증
+하고  문서화하는  것을    말한다.",N/A,Ref    17
+,,,,
+"Design 
+Space","디자인  스페이스,  설계   
+영역","품질    보증과의  연관성이  증명된  공정  변수와  투입  변수(예,  물품 
+특성  요소)의  다차원적  조합과  상호작용.  디자인  스페이스  안에서
+의  작업은    변경으로  간주되지  않는다.  디자인  스페이스를  벗어나
+는  것은  변경으로  간주되며  일반적으로  규제  기관에  변경  신청을 
+해야  한다.  디자인    스페이스는  신청업체가  제안하며  규제  기관의 
+평가와  승인을  받는다.","The    multidimensional  combination  and  interaction  of 
+input  variables 
+(e.g.,   
+material  attributes)  and  process  parameters  that  have  been  demonstrated  to   
+provide 
+assurance 
+of  quality.  Working  within 
+the 
+design 
+space 
+is 
+not   
+considered  as  a  change.  Movement  out  of  the  design  space  is  considered  to 
+be    a  change  and  would  normally  initiate  a  regulatory  post  approval  change   
+process.  Design 
+space 
+is  proposed  by 
+the 
+applicant 
+and 
+is 
+subject 
+to   
+regulatory  assessment  and  approval.",Ref    18
+,,"품질을  보증하는  것으로  증명된  프로세스  변수와  투입  변수(예, 
+물품  특성)의  다차원적    조합  및  상호  작용.","The    multidimensional  combination  and  interaction  of 
+input  variables 
+(e.g.,   
+material  attributes)  and  process  parameters  that  have  been  demonstrated  to   
+provide  assurance  of  quality.",Ref    19
+Detectability,검출능력,위해    요소의  존재나  사실을  발견하거나  결정하는  능력.,"The    ability  to  discover  or  determine  the  existence,  presence,  or  fact  of  a   
+hazard.",Ref    14
+"Detection 
+Limit",검출한계,"검체    중에  존재하는  분석대상물질의  검출  가능한  최소량을  말한
+다.",N/A,Ref    17
+Deviation,일탈,승인된    지시  사항  또는  확립된  기준에서  벗어나는  사항,Departure    from  an  approved  instruction  or  established  standard.,Ref    2
+,,"제조  또는  품질관리  과정에서  미리  정하여진  기준을  벗어나  이루
+어진  행위를  말한다.",N/A,Ref    15
+,,,,
+Disinfectant,"소독약,    소독제","미생물을    사멸하기  위해  사용하는  화학물질  또는  화학물질  혼합
+물로  반드시  포자를  제거하는  것은  아니다.  주로  표면  또는  사물
+의  미생물을  죽이기  위해    사용한다.","A    chemical  or  mixture  of  chemicals  used  to  kill  microorganisms,  but  not   
+necessarily  spores.  Disinfectants  are  usually  applied  to  inanimate  surfaces    or 
+objects.",Ref    13
+Disinfection,소독,"표면의 
+  바이오버든을  안전한  수준으로  감소시키거나  제거하는 
+과정.  미생물  균체에만  효과가  있는  소독제도  있고  세균  및  진균 
+포자를  효과적으로    사멸하는  부가적인  효능이  있는  소독제도  있
+다.","Processbywhichsurfacebioburdenisreducedtoasafeleveloreliminated.Somedisinfecti
+onagentsareeffectiveonlyagainstvegetativemicrobes,whileotherspossessadditionalc
+apabilitytoeffectivelykillbacterialandfungalspores.",Ref    10
+,,"미생물을  사멸하는  물리적  또는  화학적  방법으로  반드시  포자를 
+제거하지는  않는다.","Aphysicalorchemicalmeansofkillingmicroorganisms,butnot
+necessarilyspores.",Ref    13
+Drug,의약품,"""의약품""이란다음각목의어느하나에해당하는물품을말한다.
+가.대한민국약전(大韓民國藥典)에실린물품중의약외품이아닌것
+나.사람이나동물의질병을진단·치료·경감·처치또는예방할목적으로사
+용하는물품중기구·기계또는장치가아닌것
+다.사람이나동물의구조와기능에약리학적(藥理學的)영향을줄목적으
+로사용하는물품중기구·기계또는장치가아닌것",N/A,Ref    16
+"DrugProduct,   
+    Medicinal 
+Product","완제의약품,  제제,약제",시판용으로    최종의  직접  용기에  포장된  제형.,The    dosage  form  in  the  final  immediate  packaging  intended  for  marketing.,Ref    2
+,,"완제의약품이란  정제,  캡슐제,  액제  등  일반적으로(반드시  그런  것
+은  아니다)    비활성성분과  결합된  활성성분을  포함하는  최종  제형
+을  의미한다.  완제의약품은  활성  성분을  포함하지  않으나  위약으","Drug 
+  productmeans  a 
+finished  dosage 
+form, 
+for  example, 
+tablet,  capsule, 
+solution, 
+  etc., 
+that  contains  an  active  drug 
+ingredient  generally,  but  not 
+necessarily,    in  association  with  inactive  ingredients.  The  term  also  includes  a",Ref    3
+,,로  사용하는  최종  제형을    포함한다.,"finished 
+  dosage 
+form 
+that  does  not  contain  an  active 
+ingredient  but 
+is 
+intended  to  be    used  as  a  placebo.",
+"Drug 
+Substance",원료의약품,활성    성분(API)  참조,See    Active  Pharmaceutical  Ingredient,Ref    2
+Dynamic,작업  상태,일반적인    생산  조건  하에서  청정구역  분류와  관련된  조건들,Conditionsrelatingtocleanareaclassificationunderconditionsofnormalproduction.,Ref    10
+"Electronic 
+Signature",전자서명,"특정    데이터  입력의  승인,  허가  또는  검증을  의미하는  목적의  수
+기서명  또는  약식  서명을  대체할  수  있는  전자적인  방법을  말한
+다.  위의  “첨단    전자서명”을  참조한다.","Anelectronicmeasurethatcanbesubstitutedforahandwrittensignatureorinitialsforthe
+purposeofsignifyingapproval,authorisationorverificationofspecificdataentries.
+Seealsodefinitionfor‘AdvancedElectronicSignature’,above.",Ref    1
+,,"1999/93/EC  states:’전자서명’은  전자적인  형식의  데이터를  의미한
+다.    그것은  다른  전자  데이터와  첨부되거나  논리상  연관된  것이
+다.  또한  이것은  입증의  방법으로  사용된다.","1999/93/EC    states:  ‘electronic  signature’  means  data  in  electronic  form  which 
+are    attached  to  or  logically  associated  with  other  electronic  data  and  which   
+serve 
+as 
+a  method 
+of 
+authentication. 
+(See 
+also 
+‘Advanced 
+Electronic   
+Signature’)",Ref    1
+,,"21  CFR  파트  11:  개인의  수기  서명과  동등한  법적  구속력을  갖는, 
+개인이    작성,  채택,  인가한  상징  또는  일련의  상징으로  이루어진 
+컴퓨터  데이터  편집물을  의미한다.","21    CFR  Part11  defines  this  as:  The  computer  data  compilation  of  any  symbol 
+or    series  of  symbols  executed,  adopted,  or  authorised  by  an  individual  to  be 
+the    legally  binding  equivalent  of  the  individual’s  hand-written  signature.",Ref    1
+"Embedded 
+System",내장형    시스템,"일반적으로    마이크로프로세서나  PLC  기반  시스템과  같이  자동화 
+설비의  특정  부분의  제어가  유일한  목적인  시스템을  말한다.  이것
+은  독립형  컴퓨터    시스템과  대조된다.","A    system,  usually  microprocessor  or  PLC  based,  whose  sole  purpose  is  to 
+control    a  particular  piece  of  automated  equipment.  This  is  contrasted  with  a   
+standalone  computer  system.",Ref    1
+Enabler,촉진  요소,목표    달성  수단을  제공하는  도구  또는  프로세스.,A    tool  or  process  which  provides  the  means  to  achieve  an  objective.,Ref    19
+Endotoxin,"내독소,    엔도톡신,  군
+체내독소","박테리아    세포  벽에  존재하는  발열성  물질(예:  지질다당류).  엔도
+톡신이  들어간  주사를  맞은  환자는  발열부터  사망에  이르는  반응
+을  나타낼  수  있다.","Apyrogenicproduct(e.g.,lipopolysaccharide)presentinthebacterialcellwall.Endotoxin
+canleadtoreactionsinpatientsreceivinginjectionsrangingfromfevertodeath.",Ref    10
+"Environment
+al 
+monitoring 
+programme",환경모니터링프로그램,"공정과    제조  구역에  대한  일상적인  미립자  및  미생물  모니터링
+을  기술하고  조치  수준을  초과하였을  때  시정  조치를  포함하는 
+문서화된  특정  프로그램","Defined    documented  programme  which  describes  the  routine  particulate  and   
+microbiological  monitoring 
+of 
+processing 
+and  manufacturing 
+areas, 
+and   
+includes  a  corrective  action  plan  when  action  levels  are  exceeded.",Ref    11
+"Executive 
+Program",실행    프로그램,"일반적으로    운영  시스템의  일부로  다른  컴퓨터  프로그램의  실행
+을  통제하고  데이터  처리  시스템  내  업무  흐름을  통제하는  컴퓨
+터  프로그램.","A    computer  program,  usually  part  of  the  operating  system,  that  controls  the   
+execution  of  other  computer  programs  and  regulates  the  flow  of  work  in  a 
+data    processing  system.",Ref    1
+"Expiry  Date 
+(or 
+Expiration 
+Date)","유효기한,    사용기간","API의    용기/라벨에  표기된  일자로,  이  일자까지는  해당  API를  지
+정  조건에서  보관하였을  때  설정된  유효기간  규격  범위  이내의 
+품질이  유지될    것으로  예상되며,  그  일자를  넘었을  때에는  사용
+하지  말아야  한다.","The 
+  date  placed  on 
+the  container/labels  of  an  API  designating 
+the 
+time 
+during 
+  which 
+the  API 
+is  expected 
+to 
+remain  within  established  shelf 
+life   
+specifications  if  stored  under  defined  conditions,  and  after  which  it  should   
+not  be  used.",Ref    2
+"Feedback  / 
+Feedforward",피드백/피드포워드,"피드백:프로세스또는시스템의결과나영향에의한그프로세스나시스템
+의변형또는관리
+피드포워드:프로세스의예상결과나영향을활용한프로세스의변형또는","Feedback:Themodificationorcontrolofaprocessorsystembyitsresultsoreffects.
+Feedforward:Themodificationorcontrolofaprocessusingitsanticipatedresultsoreffect
+s.(OxfordDictionaryofEnglish.OxfordUniversityPress;2003)",Ref    19
+,,"관리.(OxfordDictionaryofEnglish.OxfordUniversityPress;2003)
+피드백/피드포워드를공정관리전략에기술적으로적용하고,품질관리
+에개념적으로적용할수있다.","Feedback/feedforwardcanbeappliedtechnicallyinprocesscontrolstrategiesandconce
+ptuallyinqualitymanagement.",
+Fiber,섬유,"폭    보다  길이가  최소한  3배  이상  큰  미립자  오염물질을  의미한
+다.","Fibermeans    any  particulate  contaminant  with  a  length  at  least  three  times 
+greater  than    its  width.",Ref    3
+"Finished 
+Product","완제품,  최종제품","최종    용기로의  포장을  포함하여  생산의  모든  단계를  거친  의약
+품.","A    medicinal  product  which  has  undergone  all  stages  of  production,  including   
+packaging  in  its  final  container.",Ref    4
+,,"최종  용기에의  포장  작업과  라벨  작업을  포함하여  모든  제조  단
+계를  거친  완제  의약품","A 
+ 
+finished  dosage 
+form 
+that  has  undergone  all 
+stages  of  manufacture, 
+including    packaging  in  its  fi  nal  container  and  labelling.",Ref    5
+,,"의약품제조에서모든제조공정이완료된원료의약품      또는  완제의약
+품을  말한다.",N/A,Ref    15
+Firmware,펌웨어,"EPROM과같이,하드웨어장치에영구적으로이식된소프트웨어프로그
+램을말한다.
+(EPROM=‘ErasableProgrammableReadOnlyMemory’)","A    software  program  permanently  recorded  in  a  hardware  device,  such  as  an 
+EPROM. 
+ 
+(3) 
+(Note:  EPROM  stands 
+for 
+‘Erasable  Programmable  Read  Only 
+Memory’)",Ref    1
+"Functional 
+Requirement",기능적    요구사항,"컴퓨터    연관  시스템이  실행해야  하는  기능에  관해  서술한  내역
+서","Statements 
+ 
+that  describe 
+functions  a 
+computer-related 
+system  must  be 
+capable  of    performing.",Ref    1
+s,,,,
+"Functional 
+Specification
+s",기능  규격서,"컴퓨터화    시스템이  컴퓨터  연관  시스템의  기능  요구사항을  만족
+시킬  방법에  관한  내역서","Statements 
+ 
+of 
+how 
+the 
+computerised 
+system 
+will 
+satisfy 
+functional 
+requirements  of  the    computer-related  system.",Ref    1
+"Functional 
+Testing",기능  시험,"의도된    기능을  실행하는  소프트웨어,  시스템  또는  시스템  구성요
+소를  검증하는  과정","A 
+  process 
+for  verifying 
+that  software,  a  system,  or  a  system  component 
+performs    its  intended  functions.",Ref    1
+"Gang-printed 
+labeling",혼합조판인쇄라벨,"둘    이상의  라벨  항목이  인쇄된  자재에서  유래된  라벨을  의미한
+다.","Gang-printed    labeling  means  labeling  derived  from  a  sheet  of  material  on 
+which  more  than    one  item  of  labeling  is  printed.",Ref    3
+"Good 
+Manufacturin
+g  Practice 
+for 
+Medicinal 
+Products 
+(GMP)","의약품  제조    및  품질
+관리  기준","허가사항또는시험규격에의해요구되고,사용목적에적합하도록하는품
+질기준들에따라제품이일관되게생산되고조절되고있음을보증하는품
+질보증의일부이다.GMP는생산과품질관리모두와관계가있다.","1.2GoodManufacturingPracticeisthatpartofQualityAssurancewhichensuresthatprod
+uctsareconsistentlyproducedandcontrolledtothequalitystandardsappropriatetotheir
+intendeduseandasrequiredbytheMarketingAuthorisationorproductspecification.
+GoodManufacturingPracticeisconcernedwithbothproductionandqualitycontrol.",Ref    9
+"Gowning 
+Qualification","무균복  착용    적격성
+평가","작업자개인이무균적인방법으로무균복을착용할수있는능력을입증할
+수있도록처음또는주기적으로시행하는프로그램.","Aprogramthatestablishes,bothinitiallyandonaperiodicbasis,thecapabilityofanindivid
+ualtodonthecompletesterilegowninanasepticmanner.",Ref    10
+Growth,배지성능시험,배지가    미생물  성장을  촉진함을  증명하기  위하여  수행하는  시험,Test    performed  to  demonstrate  that  media  will  support  microbial  growth.,Ref    11
+"promotion 
+test",,,,
+"Half-Finished 
+Product",반제품,"제조공정단계에있는것으로서필요한제조공정을더 
+  거쳐야  완제품
+이  되는  것을      말한다.",N/A,Ref    15
+"Hardware 
+Acceptance 
+Test 
+Specification","하드웨어    허용  시험 
+규격서","하드웨어    설치물의  모든  주요  측면을  테스트하여  관련  법규와 
+승인  받은  설계  기준에  부합하는지  확인하고  정부  기관의  규제를 
+받는  사용자가  요구했던    사항을  적합하게  고려하여  반영했는지 
+확인하기  위한  문서.","Statements 
+ 
+for 
+the 
+testing  of  all  key  aspects  of  hardware 
+installation 
+to 
+assure    adherence  to  appropriate  codes  and  approved  design  intentions  and 
+that 
+the 
+ 
+recommendations 
+of 
+the 
+regulated 
+user 
+have  been 
+suitably 
+considered.",Ref    1
+"Hardware 
+Design 
+Specification","하드웨어    설계  규격
+서","소프트웨어를    설치하는  하드웨어  자체에  대한  정보와  그  하드웨
+어를  다른  시스템이나  설비와  연결하는  방법을  기술한  문서.","Description    of  the  hardware  on  which  the  software  resides  and  how  it  is  to 
+be  connected    to  any  system  or  equipment.",Ref    1
+Harm,"해,  위해","제품    품질  또는  활용성  상실로  인해  발생할  수  있는  훼손을  포
+함한  건강  훼손.","Damage 
+ 
+to  health, 
+including 
+the  damage 
+that  can  occur 
+from 
+loss  of 
+product  quality    or  availability.",Ref    14
+Hazard,위해요소,위해의    잠재적  원인,The    potential  source  of  harm,Ref    14
+HEPA  filter,"HEPA필터,    고성능미
+립자공기필터,  고성능
+공기필터","최소0.3μm입자를99.97%제거할수있는    효과를  지닌  고  효율      미
+립자  공기  필터.","H i g h e f f i c i e n c y p a r t i c u l a t e a i r f i
+l t e r w i t h m i n i m u m 0 . 3 μ
+mparticleretainingefficiencyof99.97percent.",Ref    10
+"Highefficienc
+yparticulateai
+r(HEPA)filter","HEPA필터,    고성능미
+립자공기필터,  고성능
+공기필터","지정된    크기의  미립자  물질을  지정된  퍼센트만큼  제거할  수  있
+도록  디자인된  효과적인  매트릭스","Retentive 
+  matrix  designed 
+to 
+remove  a  defined  percentage  of  particulate 
+matter  of  a    defined  size.",Ref    11
+HVAC,공기조화장치,"난방,환기및공기조화","Heating,ventilation,andairconditioning.","Ref  10,   
+11"
+"Identification 
+Test",확인시험,검체    중  분석대상물질을  확인하는  시험을  말한다.,N/A,Ref    17
+Impurity,불순물,중간체    또는  API에  존재하는  바람직하지  않은  모든  성분,"Any    component  present  in  the  intermediate  or  API  that  is  not  the  desired 
+entity.",Ref    2
+"Impurity 
+Profile",불순물프로필,API에    존재하는  확인  및  미확인  불순물에  대한  설명,A    description  of  the  identified  and  unidentified  impurities  present  in  an  API.,Ref    2
+"Inactive 
+ingredient","불활성성분,    첨가제",활성    성분  이외의  모든  원료를  의미한다.,Inactive    ingredient  means  any  component  other  than  anactive  ingredient.,Ref    3
+"Industrial 
+isolators 
+used  for 
+aseptic 
+processing.","무균  공정용    산업  아
+이솔레이터","무균공정에사용하는산업용아이솔레이터는미생물이관리되는내부공
+간및노출표면으로구성된다.미생물제거효율이있는필터와무균공정,
+포자사멸공정(보통가스사용)을통해외부환경으로부터재오염되지않
+도록유지된다.","Industrial 
+  isolators  used  for  aseptic  processing  are  isolators 
+in  which 
+the 
+internal    space  and  exposed  surfaces  are  microbiologically  controlled.  Control 
+is 
+  achieved  by 
+the  use  of  microbiologically 
+retentive 
+filters, 
+sterilization   
+processes, 
+sporicidal 
+processes 
+(usually 
+by 
+gassing) 
+and 
+prevention 
+of   
+recontamination  from  the  external  environment.",Ref    12
+Innovation,혁신,새로운    기술이나  방법의  도입.,The    introduction  of  new  technologies  or  methodologies.,Ref    19
+"In-Process 
+Control(or 
+Process 
+Control)",공정관리,"생산을수행하는동안에모니터를위해서    수행하는  점검을  의미한다. 
+필요한      경우,  제품이  제품의  규격에  적합한지  확인하고,  공정을 
+조정한다.              환경  또는  장비의  제어는  공정검사의  일부분으로 
+여겨질  수  있다.","Checks    performed  during  production  in  order  to  monitor  and  if  necessary  to 
+adjust    the  process  to  ensure  that  the  product  conforms  its  specification.  The   
+control  of  the  environment  or  equipment  may  also  be  regarded  as  a  part  of   
+in-process  control.",Ref    4
+,,"생산을수행하는동안에모니터를위해서    수행하는  점검을  의미한다. 
+필요한  경우,  제품이  제품의  규격에  적합한지      확인하고,  공정을 
+조정한다.  환경  또는  장비의  제어는  공정검사의  일부분으로  여겨
+질  수  있다.","Checks    performed  during  production  in  order  to  monitor  and,  if  necessary, 
+to  adjust    the  process  to  ensure  that  the  product  conforms  to  its  specifi 
+cations.  The    control  of  the  environment  or  equipment  may  also  be  regarded 
+as  a  part  of    in-process  control.",Ref    5
+,,"공정을  모니터하고  필요한  경우에는  공정을  조정하여  중간체  또
+는  API가  규격에    부합하도록  하기  위해  생산  과정  중에  실시하
+는  점검.","Checks    performed  during  production  in  order  to  monitor  and,  if  appropriate, 
+to 
+  adjust 
+the  process  and/or 
+to  ensure 
+that 
+the 
+intermediate  or  API 
+conforms  to    its  specifications.",Ref    2
+"In-process 
+material","중간물질,    공정  중  반
+응물질","의약품    제조를  위해  생산되고  이를  위해  사용되는  것으로,  조립, 
+배합,  혼합,  또는  화학  반응  유래  방식으로  생산된  모든  물품을 
+의미한다.","In-process    material  means  any  material  fabricated,  compounded,  blended,  or 
+derived  by 
+ 
+chemical 
+reaction 
+that 
+is  produced 
+for, 
+and  used 
+in, 
+the 
+preparation  of  the    drug  product.",Ref    3
+"Installation 
+Qualification 
+(IQ)",설치적격성평가,"설치    또는  변형된  상태의  시설,  시스템,  설비가  승인된  설계  문
+서  및  제조업체의  권고  사항에  부합함을  확인하여  문서화  하는 
+절차","The    documented  verification  that  the  facilities,  systems  and  equipment,  as   
+installed 
+or 
+modified, 
+comply 
+with 
+the 
+approved 
+design 
+and 
+the 
+manufacturer's    recommendations.",Ref    6
+,,,,
+,,"기계,  설비  또는  시스템이  설정된  기준에  맞게  설치되었는지를  현
+장에서  검증하고    문서화하는  것을  말한다.",N/A,Ref    17
+"Integration 
+testing","완성시험,    통합시험","시스템    전체의  통합이  완료될  때까지  소프트웨어  요소나  하드웨
+어  요소,  또는  이  두  요소를  순차적으로  결합하고  테스트하는  활
+동.","An 
+  orderly  progression  of 
+testing 
+in  which  software  elements,  hardware 
+elements,    or  both  are  combined  and  tested  until  the  entire  system  has  been 
+integrated.",Ref    1
+Integrity  test,완전성시험,필터    시스템의  기능적인  성능을  확인할  목적으로  수행하는  시험,Test    to  determine  the  functional  performance  of  a  filter  system.,Ref    11
+Interface,인터페이스,"다른    시스템  구성요소와  상호작용  하거나  통신(커뮤니케이션)하
+기위해  공유된  영역","A 
+ 
+shared  boundary. 
+To 
+interact  or 
+communicate  with 
+another 
+system 
+component.",Ref    1
+Intermediate,중간체,"API    공정  단계  중에  생산되는  것으로  API가  되기  전  추가적인 
+분자변화  또는  정제를  거쳐야  하는  물질.  중간체는  분리될  수도, 
+그렇지  않을    수도  있다.","A 
+  material  produced  during 
+steps  of 
+the  processing  of 
+an  API 
+that 
+undergoes    further  molecular  change  or  purification  before  it  becomes  an 
+API. 
+ 
+Intermediates  may  or  may  not  be 
+isolated. 
+(Note: 
+this  Guide  only 
+addresses    those  intermediates  produced  after  the  point  that  the  company 
+has  defined  as    the  point  at  which  the  production  of  the  API  begins.)",Ref    2
+"Intermediate 
+Precision",실험실내    정밀성,"동일    실험실내에서  각각  서로  다른  실험일,  시험자,  기구  또는 
+장비  등을  이용하여  분석  실험하여  얻은  측정값들  사이의  근접성
+을  말한다.",N/A,Ref    17
+"Intermediate 
+Product","중간제품,  반제품","벌크    제품이  되기  위해서는  추가  제조  단계를  거쳐야  하는  부분
+적으로  가공  처리된  물품","Partly    processed  material  which  must  undergo  further  manufacturing  steps 
+before  it    becomes  a  bulk  product.",Ref    4
+,,"벌크  제품이  되기  위해서는  추가  제조  단계를  거쳐야  하는  부분
+적으로  가공  처리된  물품","Partly 
+  processed  product 
+that  must  undergo 
+further  manufacturing  steps 
+before  it    becomes  a  bulk  product.",Ref    5
+Intervention,간섭,중요구역에서발생하는무균조작또는행동을말한다.,Anasepticmanipulationoractivitythatoccursatthecriticalarea.,Ref    10
+Isolator,아이솔레이터,"청정등급100(ISO5)또는더높은수준의청정공기를공급받는오염이제
+거된장치로,아이솔레이터내부는외부환경(예:주변청정실공기및작업
+자)으로부터내부를안전하고지속적으로격리시킨다.
+아이솔레이터는크게두종류로나눌수있다.
+폐쇄형아이솔레이터시스템은주변환경으로연결된개구부를사용하지
+않고무균연결을통해보조설비로자재를이동시킴으로써아이솔레이터
+내부가외부오염에노출되지않도록한다.
+개방형아이솔레이터시스템은작업중하나이상의개구부를통해자재를
+연속적으로또는반연속적으로유입및/또는유출되도록설계된다.개구
+부는외부오염원이아이솔레이터내로유입되지않도록설계(예:연속적
+인과압력을사용하여)된다.","Adecontaminatedunit,suppliedwithClass100(ISO5)orhigherairquality,thatprovidesu
+ncompromised,continuousisolationofitsinteriorfromtheexternalenvironment(e.g.,su
+rroundingcleanroomairandpersonnel).
+Therearetwomajortypesofisolators:
+Closedisolatorsystemsexcludeexternalcontaminationfromtheisolator'sinteriorbyacc
+omplishingmaterialtransferviaasepticconnectiontoauxiliaryequipment,ratherthanus
+eofopeningstothesurroundingenvironment.Closedsystemsremainsealedthroughout
+operations.
+  Open 
+isolator 
+systems  are  designed 
+ 
+ 
+to  allow 
+for 
+the  continuous  or 
+semi-continuous 
+ingress 
+and/or  egress  of 
+ 
+  materials  during  operations 
+through  one  or  more  openings.  Openings  are 
+ 
+  engineered 
+(e.g.,  using 
+continuous  overpressure)  to  exclude  the  entry  of      external  contamination 
+into  the  isolator.",Ref    10
+"IT 
+Infrastructure",IT  기반,"어플리케이션이    기능을  수행할  수  있도록  해주는  하드웨어  및 
+소프트웨어(운영체제,  네트워킹  소프트웨어  등)","Thehardwareandsoftwaresuchasnetworkingsoftwareandoperation
+systems,whichmakesitpossiblefortheapplicationtofunction",Ref    20
+"Knowledge 
+Management",지식  관리,"제품,    제조  프로세스,  원료와  관련된  정보의  수집,  분석,  보관,  유
+포를  위한  체계적  접근  방식.","Systematic 
+ 
+approach 
+to 
+acquiring, 
+analysing, 
+storing, 
+and  disseminating 
+information    related  to  products,  manufacturing  processes  and  components.",Ref    19
+,,,,
+Laminar  flow,층류,"직선    벡터의  시작점부터  끝부분까지  일정한  속도를  가지고  평행
+이면서  한  방향으로  이동하는  공기흐름.","Anairflowmovinginasingledirectionandinparallellayersatconstantvelocityfromthebe
+ginningtotheendofastraightlinevector.",Ref    10
+"Large-volum
+e  parenterals",대용량주사제,"최종    제형  1개  용기  중에  용량이  100mL  이상인  주사용  무균  액
+제","Sterile    solutions  intended  for  parenteral  application  with  a  volume  of  100  ml 
+or  more    in  one  container  of  the  fi  nished  dosage  form.",Ref    5
+"Legacy 
+Computerise
+d  Systems","기존    컴퓨터화  시스
+템","이미    구축되어  있으며  상당한  기간  동안  사용된  시스템을  의미
+한다.  여러  가지  이유로  인해  시스템의  개발  및  커미셔닝  단계와 
+관련된  GMP  준수    관련  문서와  기록서가  적절하게  구비되어  있
+지  않다.  또한  오래  전에  구축되었기  때문에  시스템  밸리데이션 
+관련  기록도  없을  수  있다.","These    are  regarded  as  systems  that  have  been  established  and  in  use  for 
+some    considerable  time.  For  a  variety  of  reasons,  they  may  be  generally   
+characterised  by 
+lack  of  adequate  GMP  compliance 
+related  documentation 
+and    records  pertaining  to  the  development  and  commissioning  stage  of  the 
+system.    Additionally,  because  of  their  age  there  may  be  no  records  of  a 
+formal    approach  to  validation  of  the  system.",Ref    1
+Life  cycle,"라이프  사이클,  제품수
+명","초기    요구사항부터  폐기까지의  시스템과  관련된  모든  단계(설계, 
+규격,  프로그래밍,  테스트,  설치,  운영,  유지보수)","All    phases  in  the  life  of  the  system  from  initial  requirements  until  retirement   
+including  design,  specification,  programming,  testing,  installation,    operation, 
+and  maintenance.",Ref    20
+,,"초기  개발부터  판매를  거쳐  제품  중단에  이르는  한  제품의  일생
+에  걸친  모든    단계(ICH  Q8).","All    phases  in  the  life  of  a  product  from  the  initial  development  through   
+marketing  until  the  product’s  discontinuation",Ref    18
+"Life  Cycle 
+Concept","라이프    사이클  개념, 
+제품수명  개념","사용자    요구사항  확인을  시작으로,  설계,  통합,  적격성,  사용자  밸
+리데이션,  관리  및  유지보수를  거쳐  최종적으로  시스템의  상업적 
+사용  중단까지에    이르는  컴퓨터  시스템  개발에  대한  접근법","An    approach  to  computer  system  development  that  begins  with  (PMA  CSVC)   
+identification 
+of 
+the 
+user’s 
+requirements, 
+continues 
+through 
+design,   
+integration,  qualification,  user  validation,  control  and  maintenance,  and    ends 
+only  when  commercial  use  of  the  system  is  discontinued.",Ref    1
+Linearity,직선성,"실험방법이    일정  범위에  있는  검체  중  분석대상물질의  양  (또는 
+농도)에  대하여  직선적인  측정값을  얻어낼  수  있는  능력을  말한
+다.",N/A,Ref    17
+"Liquifiable 
+Gases",액화성가스,"정상적인    충전온도  및  압력  하에서  실린더  내에서  액체로  존재
+하는  가스.","Those    which,  at  the  normal  filling  temperature  and  pressure,  remain  as  a 
+liquid  in    the  cylinder.",Ref    4
+Loop  Testing,"루프    시험,순환시험",입력/출력    루프  형태를  결정하는  설치  구성물  조합에  대한  확인,"Checking    the  installed  combination  of  elements  characterising  each  type  of   
+input/output  loop.",Ref    1
+Lot,"제조단위,  로트",배치    참조.,See    Batch,Ref    2
+,,"특정  기준  내에서  균일한  성질과  품질을  지니는  제조단위  또는 
+제조단위  중  특정  부분.    연속  공정으로  생산되는  완제의약품의 
+경우  특정  기준  내에서  균일한  성질과  품질을  지닌다고  보장하는 
+방식으로  일정  단위  시간  또는  일정    수량으로  생산되는  특정량
+을  의미한다.","Lot 
+  means  a  batch,  or  a  specific 
+identified  portion  of  a  batch,  having 
+uniform    character  and  quality  within  specified  limits;  or,  in  the  case  of  a 
+drug 
+  product  produced  by  continuous  process, 
+it 
+is  a  specific 
+identified 
+amount    produced  in  a  unit  of  time  or  quantity  in  a  manner  that  assures  its 
+having    uniform  character  and  quality  within  specified  limits.",Ref    3
+Lot  Number,"로트번호,    제조번호",배치    번호  참조,See    Batch  Number,Ref    2
+"Lot  number, 
+control 
+number,  or 
+batch 
+number","로트번호,    관리번호, 
+제조번호","로트번호,    관리번호,  또는  제조번호란  문자,  숫자,  기호를  구분  가
+능하게  조합한  것으로  이를  통해  완제의약품  또는  기타  원자재의 
+제조,  가공,  포장,    보관,  유통에  대한  전체  이력을  확인할  수  있
+다.","Lot 
+  number, 
+control  number,  or  batch  number  means 
+any  distinctive 
+combination  of    letters,  numbers,  or  symbols,  or  any  combination  of  them, 
+from  which  the    complete  history  of  the  manufacture,  processing,  packing, 
+holding,  and    distribution  of  a  batch  or  lot  of  drug  product  or  other  material 
+can  be    determined.",Ref    3
+Manifold,다기관,"1개    이상의  가스  용기를  동시에  비우고  충전할  수  있도록  설계
+된  설비  또는  장치.","Equipmentorapparatusdesignedtoenableoneormoregascontainerstobefilled
+simultaneouslyfromthesamesource.",Ref    4
+,,,,
+Manufacture,제조,"물품의    입고,  API의  생산,  포장,  재포장,  라벨링,  재라벨링,  품질관
+리,  출하  승인,  보관,  유통  및  관련  관리  활동  등  모든  작업  행위","All    operations  of  receipt  of  materials,  production,  packaging,  repackaging,   
+labelling,  relabelling,  quality  control,  release,  storage,  and  distribution    of  APIs 
+and  related  controls.",Ref    2
+,,"물품과  제품의  구입,  생산,  품질관리,  출하,  보관,  의약품의  배포 
+및  연관된  모든    행위","All 
+  operations  of  purchase  of  materials  and  products,  Production,  Quality   
+Control,  release,  storage,  distribution  of  medicinal  products  and  the  related   
+controls.",Ref    4
+,,"물품과  제품의  구매,  생산,  품질관리,  출하승인,  보관,  의약품의  유
+통  및  관련  관리    작업  등  모든  작업","Alloperationsofpurchaseofmaterialsandproducts,production,quality
+control(QC),release,storageanddistributionofpharmaceuticalproducts,andtherelate
+dcontrols.",Ref    5
+"Manufacture, 
+processing, 
+packing,  or 
+holding  of  a 
+drug 
+product","의약품의    제조,  가공, 
+포장,  또는  보관","완제의약품의    제조,  가공,  포장  또는  보관은  포장과  라벨,  시험과 
+완제의약품의  품질관리를  포함한다.","Manufacture, 
+  processing,  packing,  or  holding  of  a  drug  product 
+includes 
+packaging  and 
+ 
+labeling  operations, 
+testing,  and  quality  control  of  drug 
+products.",Ref    3
+Manufacturer,"제조업,  제조업자","Article    40  of  Directive  2001/83/EC1.에  언급된  제조  권한을  가지
+고  있는  자.","Holder 
+  of  a  Manufacturing  Authorisation  as  described 
+in  Article  40  of 
+Directive    2001/83/EC1.",Ref    4
+,,"의약품의생산,포장,재포장,라벨작업,재라벨작업등의    작업을  수행하
+는  회사","A 
+ 
+company 
+that 
+carries  out  operations 
+such  as  production,  packaging,   
+repackaging,  labelling  and  relabelling  of  pharmaceuticals.",Ref    5
+,,,,
+"Marketing 
+authorization 
+(product 
+licence, 
+registration   
+certificate)","제조,판매    승인","의약품을    관장하는  규제당국에서  발행하는  법적  문서로  제품의 
+구성성분  및  조성,  성분과  최종  제품  자체의  약전  또는  기타  공인 
+규격을  규정하고  포장,    라벨,  유효기한에  관한  세부  사항을  포함
+한다.","A    legal  document  issued  by  the  competent  medicines  regulatory  authority 
+that    establishes  the  detailed  composition  and  formulation  of  the  product 
+and  the    pharmacopoeial  or  other  recognized  specifi  cations  of  its  ingredients 
+and  of    the  final  product  itself,  and  includes  details  of  packaging,  labelling 
+and    shelf-life.",Ref    5
+"Master 
+formula",제품표준서,"출발물질과    그  분량,  포장자재,  특정  분량의  완제품을  생산하는
+데  필요한  방법과  주의사항에  대한  기술,  공정관리를  포함한  공정
+지시서를  규정한  문서  또는    문서모음","A    document  or  set  of  documents  specifying  the  starting  materials  with  their   
+quantities  and  the  packaging  materials,  together  with  a  description  of 
+the   
+procedures  and  precautions  required  to  produce  a  specifi  ed  quantity  of  a   
+finished 
+product 
+as  well 
+as 
+the 
+processing 
+instructions, 
+including 
+the   
+inprocess  controls.",Ref    5
+"Master 
+record","기록  원본,    마스터  기
+록","제조기록문서의    기초가  되는  문서  또는  문서  모음(기입하지  않은 
+제조기록서)","A 
+  document  or  set  of  documents 
+that  serve  as  a  basis 
+for 
+the  batch   
+documentation  (blank  batch  record).",Ref    5
+Material,원자재,"원료약품(출발물질,    시약,  용매),  공정보조물,  중간체,  API,  포장 
+및  표시  자재를  지칭하는  일반적인  용어","A    general  term  used  to  denote  raw  materials  (starting  materials,  reagents,   
+solvents),  process 
+aids, 
+intermediates,  APIs 
+and  packaging 
+and 
+labelling   
+materials.",Ref    2
+,,원료약품  및  자재를  말한다.,N/A,Ref    15
+Media  fills,배지충전,"미생물증식용배지를사용하여무균공정을평가하는방법
+배지충전은모의제품충전,액상배지시험,액상배지충전등과같은의미","Method    of  evaluating  an  aseptic  process  using  a  microbial  growth  medium. 
+(Media    fills  are  understood  to  be  synonymous  to  simulated  product  fills,",Ref    11
+,,로이해된다.,"broth    trials,  broth  fills  etc.).",
+"Medicinal 
+Product",완제의약품,"사람또는동물의질병을치료하거나,예방하기위해구성된물질또는물질
+의조합
+의약적진단을하거나,사람또는동물에서생리학적인기능을회복시키거
+나,교정,수정하기위해사람또는동물에게투여될수있는물질또는물질
+의조합은의약품으로간주된다.","Anysubstanceorcombinationofsubstancespresentedfortreatingorpreventingdisease
+inhumanbeingsoranimals.
+Anysubstanceorcombinationofsubstanceswhichmaybeadministeredtohumanbeings
+oranimalswithaviewtomakingamedicaldiagnosisortorestoring,correctingormodifyin
+gphysiologicalfunctionsinhumanbeingsorinanimalsislikewiseconsideredamedicinalp
+roduct.",Ref    4
+,,"모든  제조공정이  완료되어  최종적으로  인체에  투여할  수  있도록 
+일정한  제형으로  제조된    의약품을  말한다.",N/A,Ref    15
+Microbicide,살균제,"미생물을사멸하는화학물질또는화학적혼합물
+biocide,chemicalgermicide,antimicrobial대신하여사용한다.","A    chemical  or  mixture  of  chemicals  that  kills  microorganisms.  The  term  is 
+often    used  in  place  of  ""biocide"",  ""chemical  germicide""  or    ""antimicrobial"".",Ref    13
+"Mother 
+Liquor",모액,"결정화    또는  분리  공정  이후  남아  있는  잔류  액체.  모액에는  미
+반응  물질,  중간체,  API물질  및/또는  불순물이  포함되어  있을  수 
+있다.  모액은    추가  공정에  사용될  수  있다.","The 
+ 
+residual 
+liquid  which 
+remains 
+after 
+the 
+crystallization  or 
+isolation   
+processes.  A  mother 
+liquor  may  contain  unreacted  materials, 
+intermediates,   
+levels  of  the  API  and/or  impurities.  It  may  be  used  for  further  processing.",Ref    2
+Network,네트워크,"(a)상호연결또는상호관련된교점의집단.
+(b)상호연결된의사소통시설.근거리통신망(LAN)은사무실또는사무실
+그룹에걸쳐작동하는고대역폭(높은데이터전송율가능)컴퓨터네트워
+크이다.","(a)Aninterconnected,orinterrelatedgroupofnodes.
+(b)Aninterconnectedcommunicationsfacility.ALocalAreaNetwork(LAN)isahighband
+width(allowingahighdatatransferrate)computernetworkoperatingoverasmallareasuc
+hasanofficeorgroupofoffices.",Ref    1
+"Nonfiber 
+releasing 
+filter","섬유를    방출하지  않
+는  필터","세척    또는  세정  등  적절한  전처리를  실시한  후  사용하면  여과 
+대상  원료  또는  완제의약품으로  섬유를  방출하지  않는  필터","Nonfiber    releasing  filtermeans  any  filter,  which  after  appropriate  pretreatment 
+such    as  washing  or  flushing,  will  not  release  fibers  into  the  component  or 
+drug    product  that  is  being  filtered.",Ref    3
+Operating,운영(가동)환경,"시스템의 
+  중요부분과  직/간접적으로  상호작용하거나,  시스템의",Thoseconditionsandactivitiesinterfacingdirectlyorindirectlywiththesystemof,Ref    1
+Environment,,밸리데이션  상태에  영향을  줄  수  있는  모든  조건  및  활동들,"concern,controlofwhichcanaffectthesystem’svalidatedstate.",
+"Operating 
+System","운영(가동)체제,    운영
+(가동)시스템","하드웨어와    어플리케이션  프로그램간의  인터페이스를  지원하는, 
+컴퓨터와  함께  제공되는  일련의  소프트웨어  프로그램","A    set  of  software  programs  provided  with  a  computer  that  function  as  the   
+interface  between  the  hardware  and  the  applications  program.",Ref    1
+"Operational 
+Qualification 
+(OQ)",운전적격성평가,"설치    또는  변형된  상태의  시설,  시스템,  설비가  예정  운전  범위 
+안에서  예상대로  작동됨을  확인하여  문서화  하는  절차","The    documented  verification  that  the  facilities,  systems  and  equipment,  as   
+installed 
+or  modified, 
+perform 
+as 
+intended 
+throughout 
+the 
+anticipated   
+operating  ranges.",Ref    6
+,,"기계,  설비  또는  시스템이  예측된  운전범위  내에서  의도한  대로 
+가동하는지를  검증하고    문서화하는  것을  말한다.",N/A,Ref    17
+Operator,운전자,"라인    설치,  유지보수를  포함한  무균  공정  작업에  관여하는  모든 
+사람  또는  무균  라인  활동에  연관된  기타  작업자","Anyindividualparticipatingintheasepticprocessingoperation,includinglineset-up,fille
+r,maintenance,orotherpersonnelassociatedwithasepticlineactivities.",Ref    10
+"Out  of 
+Specification",기준일탈,시험의    결과가  미리  정하여진  시험기준을  벗어난  경우를  말한다.,N/A,Ref    15
+"Outsourced 
+Activities",아웃소싱    활동,위탁업체와의    계약에  의거하여  수탁업체가  수행하는  활동.,"Activities    conducted  by  a  contract  acceptor  under  a  written  agreement  with 
+a  contract    giver.",Ref    19
+"Overkill 
+sterilization",오버킬멸균공정,"최소    1분의  D  값을  지닌  미생물을  적어도  12  log  감소시킬  수 
+있는  멸균  공정","A 
+  process 
+that 
+is 
+sufficient 
+to  provide  at 
+least  a  12 
+log 
+reduction  of   
+microorganisms  having  a  minimum  D  value  of  1  minute.",Ref    10
+process,,,,
+Packaging,포장,"완제의약품이되기위한공정을거친반제품의충전,라벨링을포함하는모
+든공정
+참고:무균충전에있어서충전되어졌으나,1차용기에최종포장되지않은
+반제품은일반적으로포장의일부분으로여겨지지않는다.","Alloperations,includingfillingandlabelling,whichabulkproducthastoundergoinordert
+obecomeafinishedproduct.
+NoteSterilefillingwouldnotnormallyberegardedaspartofpackaging,thebulkproductb
+eingthefilled,butnotfinallypackaged,primarycontainers.",Ref    4
+,,"충전및라벨작업을포함하여벌크제품을최종제품으로만들기위해거쳐
+야하는모든작업으로무균조건에서의무균 
+  제품 
+  충전  또는  사후 
+멸균  제품의  충전은  일반적으로  포장  작업의  일부로  간주되지     
+않는다.","All    operations,  including  fi  lling  and  labelling,  that  a  bulk  product  has  to   
+undergo  in  order  to  become  a  fi  nished  product.  Filling  of  a  sterile  product   
+under  aseptic  conditions  or  a  product  intended  to  be  terminally  sterilized,   
+would  not  normally  be  regarded  as  part  of  packaging.",Ref    5
+"Packaging 
+Material",포장자재,보관    및  운송  중  중간체  또는  API를  보호하기  위한  모든  물질.,"Any    material  intended  to  protect  an  intermediate  or  API  during  storage  and   
+transport.",Ref    2
+,,"의약품  포장에  사용되는  모든  물품으로서  운송이나  수송용의  외
+부  포장을  제외한다.  포장    자재는  제품과  직접  접촉하는지  여부
+에  따라  일차  포장  또는  이차  포장으로  구분한다.","Any    material  employed  in  the  packaging  of  a  medicinal  product,  excluding 
+any 
+ 
+outer 
+packaging 
+used 
+for 
+transportation 
+or 
+shipment. 
+Packaging 
+materials  are    referred  to  as  primary  or  secondary  according  to  whether  or 
+not  they  are    intended  to  be  in  direct  contact  with  the  product.",Ref    4
+,,"의약품의  포장에  투입된  인쇄  자재를  포함한  모든  물품으로,  운송
+이나  수송용의  기타    외포장은  제외한다.  포장자재는  제품과의  직
+접  접촉  여부에  따라  일차  포장  또는  이차  포장으로  구분된다.","Any    material,  including  printed  material,  employed  in  the  packaging  of  a   
+pharmaceutical,  but  excluding  any  outer  packaging  used  for  transportation  or   
+shipment. 
+Packaging  materials 
+are 
+referred 
+to 
+as  primary  or 
+secondary   
+according  to  whether  or  not  they  are  intended  to  be  in  direct  contact  with   
+the  product.",Ref    5
+,,"포장과  표시작업에  사용되는  용기,  표시재료,  첨부문서,  포장재료 
+등을  말한다",N/A,Ref    15
+Parametric,"파라메트릭릴리스,    매",제조공정중수집정보와매개변수출하관련GMP규정준수를근거로제품,A    system  of  release  that  gives  the  assurance  that  the  product  is  of  the,Ref    7
+Release,개변수  출하승인,이의도하는품질을확보했음을보증할수있는출하승인시스템,"intended  quality  based  on 
+information  collected  during 
+the  manufacturing   
+process  and  on  the  compliance  with  specific  GMP  requirements  related  to   
+Parametric  Release.",
+"Percentage 
+of 
+theoretical 
+yield",이론수율의    백분율,"퍼센트로    표현된  실  생산량(특정  완제의약품의  제조,  가공,  또는 
+포장의  적절한  단계)과  이론  생산량(동일  단계)의  비율","Percentage    of  theoretical  yieldmeans  the  ratio  of  the  actual  yield  (at  any 
+appropriate 
+  phase  of  manufacture,  processing,  or  packing  of  a  particular 
+drug  product) 
+to 
+ 
+the 
+theoretical  yield 
+(at 
+the  same  phase),  stated  as  a 
+percentage.",Ref    3
+"Performance 
+Indicators",성과  지표,"조직,    프로세스,  또는  시스템의  성과를  반영하여  품질  목표를  계
+량적으로  평가하는데  활용되는  측정  가능한  값.  ""성과    메트릭""이
+라고  부르기도  한다.","Measurable 
+ 
+values 
+used 
+to 
+quantify 
+quality 
+objectives 
+to 
+reflect 
+the 
+performance 
+of 
+an 
+ 
+organisation, 
+process 
+or 
+system, 
+also 
+known 
+as 
+“performance  metrics”  in  some    regions.",Ref    19
+"Performance 
+Qualification 
+(PQ)",성능적격성평가,"시설,    시스템,  설비가  서로  연결된  상태에서  승인된  공정  방법과 
+제품  규격을  토대로  효과적이고  재현성  있게  성능을  발휘할  수 
+있음을  확인하여    문서화  하는  절차","The    documented  verification  that  the  facilities,  systems  and  equipment,  as   
+connected  together,  can  perform  effectively  and  reproducibly,  based  on  the   
+approved  process  method  and  product  specification.",Ref    6
+,,"기계,  설비  또는  시스템이  설정된  품질기준에  맞게  제품을  제조할 
+수  있는지를  검증하고    문서화하는  것을  말한다.",N/A,Ref    17
+"Pharmaceutic
+al  Isolator",제약    아이솔레이터,"아이솔레이터는    특정  기준에  부합하는  압력에  근거하여  일상적
+인  누출  시험을  실시하기  위해  밀폐할  수  있는  수준까지  통합된 
+물리적인  장벽으로  이루어진    장치이다.  내부에는  주변  환경과  분
+리된  작업  환경이  마련된다.  아이솔레이터  외부에서  내부  공간의 
+무결성을  해하지  않은  상태로  아이솔레이터    내부에  접근하여  조
+작을  실시할  수  있다.","Anisolatorisanarrangementofphysicalbarriersthatareintegratedtotheextentthattheis
+olatorcanbesealedinordertocarryoutaroutineleaktestbasedonpressuretomeetspecifi
+edlimits.Internallyitprovidesaworkspace,whichisseparatedfromthesurroundingenvir
+onment.Manipulationscanbecarriedoutwithinthespacefromthe
+outsidewithoutcompromisingitsintegrity.",Ref    12
+Pharmaceutic,의약품,수출국과    수입국  모두에서  약사  관련  법규의  규제  대상이  되는,Anymaterialorproductintendedforhumanorveterinaryusepresentedin,Ref    5
+al  product,,"것으로서  최종  제형  또는  그러한  제형에  사용하기  위한  출발물질
+로  제공되는  사람용  또는    동물용  물품  또는  제품","itsfinisheddosageformorasastartingmaterialforuseinsuchadosage
+form,thatissubjecttocontrolbypharmaceuticallegislationintheexportingstateand/ort
+heimportingstate.",
+"Pharmaceutic
+al  Quality 
+System 
+(PQS)",제약  품질    시스템,"품질과    관련하여  제약  회사의  방향을  이끌고  통제하는  관리  시
+스템.  (ICH  Q10,  ISO  9000:2005  기반)","Management    system  to  direct  and  control  a  pharmaceutical  company  with 
+regard  to  quality.    (ICH  Q10  based  upon  ISO  9000:2005)",Ref    19
+Precision,정밀성,"균질한    검체를  여러  번  채취하여  정해진  조건에  따라  측정하였
+을  때  각각의  측정값들  사이의  근접성(분산정도)을  말한다.",N/A,Ref    17
+"Preventive 
+Action",예방  조치,"잠재적인    미준수  또는  기타  바람직하지  않은  상황의  원인을  제
+거하는  조치.  주:  예방  조치는  발생  방지를  위한  것이며,  시정  조
+치는  재발  방지를  위한    것이다.  (ISO  9000:2005)","Action 
+ 
+to  eliminate 
+the 
+cause  of  a  potential  non-conformity  or  other 
+undesirable    potential  situation.  NOTE:  Preventive  action  is  taken  to  prevent 
+occurrence    whereas  corrective  action 
+is  taken  to  prevent  recurrence. 
+(ISO 
+9000:2005)",Ref    19
+Procedure(s),절차(서),"중간체    또는  API의  제조와  관련하여  실시할  작업,  지켜야  할  주
+의사항,  직간접적으로  취해야할  조치를  문서화한  서술","A 
+ 
+documented 
+description 
+of 
+the 
+operations 
+to 
+be 
+performed, 
+the 
+precautions  to    be  taken  and  measures  to  be  applied  directly  or  indirectly 
+related  to  the    manufacture  of  an  intermediate  or  API.",Ref    2
+,,"의약품의  생산에  직/간접적으로  관련되어  적용되어  행하여지는 
+공정,  주의사항,  수반되는    주의사항,  대책  등에  대한  묘사","Description    of  the  operations  to  be  carried  out,  the  precautions  to  be  taken 
+and  measures    to  be  applied  directly  or  indirectly  related  to  the  manufacture 
+of  a    medicinal  product.",Ref    4
+Process  Aids,공정  보조제,"중간체    또는  API의  제조에  보조용으로  사용되는  물질이며  용매
+는  제외되고  화학  반응이나  생물학적  반응에  직접  관여하지  않는","Materials, 
+  excluding  solvents,  used  as  an  aid 
+in 
+the  manufacture  of  an 
+intermediate  or    API 
+that  do  not 
+themselves  participate 
+in  a  chemical  or",Ref    2
+,,"것(예,  필터  보조물,    활성탄소  등)","biological  reaction    (e.g.  filter  aid,  activated  carbon,  etc).",
+"Process 
+Control",공정제어,공정관리(IPC)    참조,See    In-Process  Control.,Ref    2
+"Process 
+owner",업무책임자,특정    업무(Business  Process)에  대해  책임을  지는  사람,The    person  responsible  for  the  business  process.,Ref    20
+"Process 
+Validation",공정    밸리데이션,"설정된    범위  이내에서  작업했을  때  사전에  설정된  규격과  품질 
+특성에  부합하는  의약품을  효과적이고  재현성  있게  생산할  수  있
+음을  보여  주는  문서화된    증거","The 
+  documented  evidence 
+that 
+the  process,  operated  within  established 
+parameters,    can  perform  effectively  and  reproducibly  to  produce  a  medicinal 
+product    meeting  its  predetermined  specifications  and  quality  attributes.",Ref    6
+"Product 
+Lifecycle",제품수명,"초기    개발  단계부터  판매를  거쳐  그  제품이  중단되기까지  모든 
+라이프사이클  단계.","All    phases  in  the  life  of  the  product  from  the  initial  development  through   
+marketing  until  the  product’s  discontinuation.",Ref    14
+"Product 
+Realisation",제품  구현,"환자,    의료  전문가,  규제  기관(판매  허가  준수  포함),  내부  고객의 
+요구  사항을  충족시키는데  적절한  품질  특성을  지닌  제품의  확보.","Achievement    of  a  product  with  the  quality  attributes  appropriate  to  meet 
+the  needs  of    patients,  health  care  professionals,  and  regulatory  authorities 
+(including    compliance  with  marketing  authorisation)  and  internal  customers 
+requirements.",Ref    19
+Production,생산,"물품의    입고에서  가공  및  포장을  거치는  API  조제와  관련된  모
+든  작업","All 
+  operations 
+involved 
+in 
+the  preparation  of  an  API 
+from 
+receipt  of 
+materials    through  processing  and  packaging  of  the  API.",Ref    2
+,,"원료약품의      구성부터,  공정,  포장을  통하여  완제
+의약품이  되기까지의  의약품  제조에  관련된  모든  행
+위.","All 
+  operations 
+involved 
+in 
+the  preparation  of  a  medicinal  product, 
+from 
+receipt    of  materials,  through  processing  and  packaging,  to  its  completion  as 
+a    finished  product.",Ref    4
+,,"물품의  인수부터  가공,  포장  및  재포장,  라벨  작업  및  재라벨  작
+업을  거쳐  최종    제품을  만들기  까지  의약품  제조와  관련된  모든 
+작업","Alloperationsinvolvedinthepreparationofapharmaceuticalproduct,
+fromreceiptofmaterials,throughprocessing,packagingandrepackaging,
+labellingandrelabelling,tocompletionofthefinishedproduct.",Ref    5
+"Prospective 
+Validation",예측적    밸리데이션,판매용    의약품의  정식  생산에  앞서  실시하는  밸리데이션,"Validation    carried  out  before  routine  production  of  products  intended  for 
+sale.",Ref    6
+"Proven 
+Acceptable 
+Range",검증된  허용    범위,"다른    변수를  일정하게  유지하면서  이  허용  범위  이내에서  작업
+을  하면  관련  품질  기준에  부합하는  물품이  생산되는,  특성  분석
+이  완료된  공정  변수의    범위.","Acharacterisedrangeofaprocessparameterforwhichoperationwithinthisrange,whilek
+eepingotherparametersconstant,willresultinproducingamaterialmeetingrelevantqua
+litycriteria.",Ref    18
+"Public  Key 
+Infrastructure",공개  키    기반구조,"공개키기반구조(PKI)는공개키암호화기술,디지털인증서를사용하여안
+전한통신(커뮤니케이션)을위한프레임워크를제공한다.
+PKI는다양한영역에서존재할수있지만기본적으로두가지종류가있다.
+사설PKI는비즈니스와다른관련(예를들어,고객/공급자)부분의이익을
+위하여기업에의해사용되어진다.
+공인PKI(신뢰성있는제3자가사용하는)는인터넷과같은개방형        시
+스템에서  사용되어지고,  사전에  연관  없는  당사자들간의  보안을 
+용이하게  한다.","PublicKeyInfrastructure(PKI)providesaframeworkforsecurecommunication,usingaco
+mbinationofpublic-keycryptographyandDigitalCertificates.
+PKIscanexistwithinmanydifferentdomainsbutessentiallytherearetwotypes:
+APrivatePKIisdeployedbyacorporationforthebenefitofitsbusinessandanyrelatedparti
+es(e.g.customers,suppliers).
+PublicPKIs(using‘TrustedThirdParties’)aredeployedonopensystems,suchastheIntern
+etandfacilitatesecuritybetweenpreviouslyunrelatedparties.",Ref    1
+Purity  Test,순도시험,"검체    중  유연물질,  중금속,  잔류용매  등  불순물의  존재  정도를 
+정확하게  측정하는  시험을  말한다.",N/A,Ref    17
+,,,,
+Pyrogen,발열성물질,환자에게    발열  증상을  유발하는  물질,Asubstancethatinducesafebrilereactioninapatient.,Ref    10
+Qualification,적격성평가,"시설,    시스템,  설비가  올바르게  작동하여  실제로  예상  결과를  낳
+을  수  있다는  점을  증명하는  행위.  밸리데이션  이라는  용어는  때
+로  적격성  평가의    개념을  포괄하기도  한다.","Actionofprovingthatanypremises,systemsanditemsofequipment
+workcorrectlyandactuallyleadtotheexpectedresults.Themeaningof
+theword“validation”issometimesextendedtoincorporatetheconceptof
+qualification.",Ref    5
+,,"설비  또는  부대  시스템이  적절하게  설치되고  올바로  작동하며  예
+상  결과를  실제로  낳을    수  있음을  증명하고  문서화하는  행위.  적
+격성평가가  밸리데이션의  일부이기는  하지만,  개개  적격성평가  단
+계만으로는  공정밸리데이션을  구성하지    않는다.","Action    of  proving  and  documenting  that  equipment  or  ancillary  systems  are 
+properly    installed,  work  correctly,  and  actually  lead  to  the  expected  results.   
+Qualification  is  part  of  validation,  but  the  individual  qualification  steps    alone 
+do  not  constitute  process  validation.",Ref    2
+,,"장비가  올바르게  작동하고,  기대한  결과값을  실제로  도출해  낼  수 
+있는  지  검증하는    행위.  밸리데이션이  때때로  적격성  평가의  개
+념을  포함하여  확대된다.","Actionofprovingthatanyequipmentworkscorrectlyandactuallyleadstotheexpectedres
+ults.
+Thewordvalidationissometimeswidenedtoincorporatetheconceptofqualification.",Ref    4
+,,"기계ㆍ설비가  설계한  대로  제작,  설치되고  목적한  대로  작동하여 
+원하는  결과가    얻어진다는  것을  증명하고  이를  문서화하는  것을 
+말한다.",N/A,Ref    15
+Quality,품질,"제품,    시스템  또는  공정에  내재된  일련의  특성이  기준  요건을  충
+족하는  정도.","The    degree  to  which  a  set  of  inherent  properties  of  a  product,  system  or 
+process    fulfills  requirements  (see  ICH  Q6A  definition  specifically  for    ""quality"" 
+of  drug  substance  and  drug  (medicinal)  products.)",Ref    14
+,,"약효  성분이나  의약품의  예정  용도  적합성.  확인,  함량,  순도  등의 
+특성  요소가  이에    포함된다","The    suitability  of  either  a  drug  substance  or  a  drug  product  for  its  intended   
+use.  This  term  includes  such  attributes  as  the  identity,  strength,  and  purity",Ref    18
+,,"제품,  시스템  또는  공정에  내재된  일련의  특성이  기준  요건을  충
+족하는  정도.","The    degree  to  which  a  set  of  inherent  properties  of  a  product,  system  or 
+process    fulfils  requirements.",Ref    19
+"Quality 
+Assurance",품질  보증,"품질보증은품질에개별적 
+  또는  총체적으로  영향을  미치는  모든 
+사항들을  다루는      광의의  개념이다.  의약품이  사용목적에  맞는 
+품질을  가지고  있음을  보증할  목적으로  만들어진  조직적인  협의
+사항들의  총합이다.  그러므로,      품질보증은  GMP  와  이  가이드라
+인  범위  밖의  다른  요소들을  포함한다.","Quality    Assurance  is  a  wide-ranging  concept,  which  covers  all  matters,  which   
+individually  or  collectively  influence  the  quality  of  a  product.  It  is  the    sum 
+total  of 
+the  organised  arrangements  made  with 
+the  objective  of  ensuring   
+that  medicinal  products  are  of  the  quality  required  for  their  intended  use.   
+Quality  Assurance 
+therefore 
+incorporates  Good  Manufacturing  Practice  plus   
+other  factors  outside  the  scope  of  this  Guide.",Ref    9
+,,"모든  API가  목적  용도에  필요한  품질을  갖추며  품질  시스템이  유
+지되도록  하기  위한    목적으로  이루어진  조직화된  체계의  총합","The 
+  sum 
+total  of 
+the  organised  arrangements  made  with 
+the  object  of 
+ensuring  that    all  APIs  are  of  the  quality  required  for  their  intended  use  and 
+that  quality    systems  are  maintained.",Ref    2
+"Quality  by 
+Design",설계에  의한    품질,"목표를    미리  정하면서  시작하며  합리적인  과학과  품질  리스크 
+관리를  기반으로  제품과  공정  이해,  그리고  공정  관리를  강조하는 
+체계적인  개발  방식.","Asystematicapproachtodevelopmentthatbeginswithpredefinedobjectivesandemph
+asizesproductandprocessunderstandingandprocesscontrol,basedonsoundsciencea
+ndqualityriskmanagement.",Ref    18
+"Quality 
+Control",품질관리,"품질관리는    필요하고  관련  있는  시험이  실제로  실시되고  원자재 
+또는  제품의  품질이  만족스럽다고  판정되기  이전에  제조에  사용
+되거나  판매  또는  공급용으로    출하되지  않도록  보장하는  검체채
+취,  규격  및  시험,  그리고  조직,  문서화,  출하  절차와  관련된  GMP
+의  일부이다.","Quality 
+  Control 
+is 
+that  part  of  Good  Manufacturing  Practice  which 
+is 
+concerned 
+with 
+ 
+sampling, 
+specifications 
+and 
+testing, 
+and 
+with 
+the 
+organisation,    documentation  and  release  procedures  which  ensure  that  the 
+necessary  and    relevant  tests  are  actually  carried  out  and  that  materials  are 
+not  released    for  use,  nor  products  released  for  sale  or  supply,  until  their 
+quality  has    been  judged  to  be  satisfactory.",Ref    9
+,,규격에의  부합  여부에  대한  점검  또는  시험,Checking    or  testing  that  specifications  are  met.,Ref    2
+"Quality 
+control  unit",품질관리부서,"품질관리에    관련된  직무에  대하여  책임을  지도록  회사에  의해서 
+지정된  사람  또는  조직요소를  의미한다.","Quality    control  unitmeans  any  person  or  organizational  element  designated 
+by  the  firm    to  be  responsible  for  the  duties  relating  to  quality  control.",Ref    3
+"Quality 
+Manual",품질매뉴얼,조직의    품질  경영  시스템을  규정한  문서.  (ISO  9000:2005),"Document 
+  specifying 
+the  quality  management  system  of  an  organisation. 
+(ISO  9000:2005)",Ref    19
+"Quality 
+Objectives",품질  목표,품질    정책과  전략을  측정  가능한  활동으로  전환시키는  수단.,"A 
+  means 
+to 
+translate 
+the  quality  policy  and 
+strategies 
+into  measurable   
+activities.",Ref    19
+"Quality 
+Planning",품질  계획,"품질    목표의  설정과  품질  목표  달성에  필요한  운영  프로세스와 
+관련  자원을  규정하는데  중점을  둔  품질  경영  부분. 
+(ISO 
+9000:2005)","Part 
+  of  quality  management 
+focused  on 
+setting  quality  objectives  and 
+specifying    necessary  operational  processes  and  related  resources  to  fulfil  the 
+quality    objectives.  (ISO  9000:2005)",Ref    19
+"Quality 
+Policy",품질  방침,"고위    경영자가  공식적으로  밝힌,  품질과  관련한  조직의  전반적인 
+의도와  방향.  (ISO  9000:2005)","Overall 
+ 
+intentions  and  direction  of  an  organisation 
+related 
+to  quality  as 
+formally    expressed  by  senior  management.  (ISO  9000:2005)",Ref    19
+"Quality  Risk 
+Management","품질리스크관리,    품질
+위해요소관리","제품라이프사이클전체에걸쳐의약품품질리스크의진단,통제,커뮤니
+케이션,검토를위한체계적인프로세스.","A    systematic  process  for  the  assessment,  control,  communication  and  review 
+of    risks  to  the  quality  of  the  drug  (medicinal)  product  across  the  product   
+lifecycle.",Ref    14
+,,"제품  라이프사이클  전체에  걸쳐  의약품의  품질과  관련한  리스크
+의  평가,  관리,    커뮤니케이션,  검토를  위한  체계적인  프로세스.","A    systematic  process  for  the  assessment,  control,  communication  and  review 
+of    risks  to  the  quality  of  the  drug  (medicinal)  product  across  the  product   
+lifecycle.",Ref    19
+"Quality 
+System","품질체계,    품질시스템","품질    방침을  이행하고  품질  목표  달성을  위한  시스템을  구성하
+는  모든  부분의  합","The 
+  sum  of  all  aspects  of  a  system 
+that 
+implements  quality  policy  and 
+ensures    that  quality  objectives  are  met.",Ref    14
+Quality,품질  목표    제품  프로,"의약품의    안전성과  유효성을  감안하여,  원하는  품질을  보장하기",A    prospective  summary  of  the  quality  characteristics  of  a  drug  product  that    Ref    18,
+"Target 
+Product 
+Profile",필,위해  달성해야  할  의약품의  예측적  품질  특성  요약.,"ideally  will  be  achieved  to  ensure  the  desired  quality,  taking  into  account   
+safety  and  efficacy  of  the  drug  product.",
+"Quality 
+Unit(s)",품질부서,"품질보증(QA)과 
+  품질관리(QC)  업무  모두를  수행하며  생산과는 
+독립된  조직  단위.  조직의  구조와  규모에  따라,  별개의  QA,  QC 
+조직으로  구성되거나    단일의  개인(또는  그룹)으로  구성될  수도 
+있다","An    organizational  unit  independent  of  production  which  fulfills  both  Quality   
+Assurance  and  Quality  Control  responsibilities.  This  can  be  in  the  form  of   
+separate  QA  and  QC  units  or  a  single  individual  or  group,  depending  upon 
+the    size  and  structure  of  the  organization.",Ref    2
+,,"품질보증(QA)과  품질관리(QC)  업무  모두를  수행하며  생산과는  독
+립된  조직  단위.    조직의  구조와  규모에  따라,  별개의  QA,  QC  조
+직으로  구성되거나  단일의  개인(또는  그룹)으로  구성될  수도  있다","An    organizational  unit  independent  of  production  which  fulfi  ls  both  quality   
+assurance  (QA)  and  quality  control  (QC)  responsibilities.  This  can  be  in  the   
+form  of 
+separate  QA 
+and  QC 
+units 
+or 
+a 
+single 
+individual  or  group, 
+depending    upon  the  size  and  structure  of  the  organization.",Ref    5
+"Quantitation 
+Limit",정량한계,"적절한    정밀성과  정확성을  가진  정량값으로  표현할  수  있는  검
+체  중  분석대상물질의  최소량을  말한다.",N/A,Ref    17
+Quarantine,격리,"이후의    승인  또는  부적합  처리에  대한  결정이  나기까지,  물리적
+으로나  기타  효과적인  수단에  의해  물품을  격리시켜  놓은  상태","The 
+ 
+status  of  materials 
+isolated  physically  or  by  other  effective  means 
+pending  a    decision  on  their  subsequent  approval  or  rejection.",Ref    2
+,,"물리적으로  고립되거나,  다른  효과적인  방법으로  출하승인,  출하
+거부  결정을  기다리는    대기  중인  출발물질  또는  포장자재,  중간
+체,  반제품,  또는  완제의약품의  상태","The    status  of  starting  or  packaging  materials,  intermediate,  bulk  or  finished   
+products 
+isolated  physically  or  by  other  effective  means  whilst  awaiting  a   
+decision  on  their  release  or  refusal.",Ref    4
+,,"출발  물질이나  포장자재,  중간  제품,  벌크  또는  최종  제품을  적합 
+승인,  부적합  처리    또는  재가공  결정이  나기까지  물리적으로  또
+는  기타  효과적인  수단에  의해  분리시켜  놓은  상태","The 
+  status  of  starting  or  packaging  materials, 
+intermediates,  or  bulk  or 
+finished 
+  products 
+isolated  physically  or  by  other  effective  means  while  a 
+decision  is    awaited  on  their  release,  rejection  or  reprocessing.",Ref    5
+"Radiopharma
+ceutical",방사성의약품,"의약의    목적으로  사용을  위한  준비가  되었을  때,  하나  이상의  방
+사핵종(방사성  동위원소)을  포함하고  있는  모든  의약품을  의미한
+다.","“Radiopharmaceutical”    shall  mean  any  medicinal  product  which,  when  ready 
+for  use,  contains  one  or    more  radionuclides  (radioactive  isotopes)  included 
+for  a  medicinal  purpose    (Article  1(6)  of  Directive  2001/83/EC.",Ref    4
+Range,범위,"적절한    정밀성,  정확성  및  직선성을  충분히  제시할  수  있는  검체 
+중  분석대상물질  양(또는  농도)의  하한  및  상한값  사이의  영역을 
+말한다.",N/A,Ref    17
+Raw  Data,"원본  자료,    기초자료,
+생  데이터,","관찰    및  행위의  결과로  만들어진  작업서,  기록서,  메모,  노트  혹
+은  그  복사물.  원본  자료는  업무(Work  Project),  프로세스,  연구   
+보고서(Study  Report)  등을  재현하거나  평가하는데  필요하다.  원
+본  자료는  종이  복사물이거나  전자적인  형태일  수  있으나  시스템
+내의    절차에  의해  정의되어야  한다.","Anywork-sheets,records,memoranda,notes,orexactcopiesthereof,thataretheresultof
+originalobservationsandactivitiesandwhicharenecessaryforthereconstructionandeva
+luationofaworkproject,processorstudyreport,etc.Rawdatamaybehard/papercopyore
+lectronicbutmustbeknownanddefinedinsystemprocedures.",Ref    1
+Raw  Material,"원료,  원료약품","중간체  또는  API  생산에  사용하는  출발물질,  시약  및    용매를  지
+칭하는  일반적인  용어","A  general  term    used  to  denote  starting  materials,  reagents,  and  solvents 
+intended  for  use  in    the  production  of  intermediates  or  APIs.",Ref    2
+,,"완제품의제조에사용되는물질(자재는제외한다)을        말하며,  완제품
+에  남아  있지  아니한  물질을  포함한다.",N/A,Ref    15
+"Real  Time 
+Release 
+Testing","실시간  출하    승인  시
+험","공정데이터에근거하여공정중물품및/또는최종제품의품질을평가하
+고확인하는것으로,일반적으로는물품특성요소평가와공정관리의유효
+한조합을포함한다.","The    ability 
+to  evaluate  and  ensure 
+the  quality  of  in-process  and/or 
+final 
+product    based  on  process  data,  which  typically  include  a  valid  combination 
+of    measured  material  attributes  and  process  controls.",Ref    18
+Reconcilation,"정산,  대조,  조사","제품이나    물품의  이론적인  생산량  또는  사용량과  실제  생산량 
+또는  사용량의  비교이며  정상  허용  편차  범위를  설정한다.","Acomparison,makingdueallowancefornormalvariation,betweentheamountofproduc
+tormaterialstheoreticallyandactuallyproducedorused.",Ref    4
+,,이론  수량과  실제  수량의  비교,A    comparison  between  the  theoretical  quantity  and  the  actual  quantity.,Ref    5
+,,,,
+Recovery,회수,"정의된  제조  단계에서  다른  배치  안으로  필요한  품
+질을  가진  이전  배치의  전부      또는  일부분을  투입
+하는  행위","The    introduction  of  all  or  part  of  previous  batches  of  the  required  quality 
+into    another  batch  at  a  defined  stage  of  manufacture.",Ref    4
+,,"필요품질수준이전제조단위(또는재증류용매및유사제품)전부또는일
+부를일정제조단계에서다른제조단위에도입하는것.회수는정제된물질
+을얻기위해폐기물에서불순물을제거하는공정또는사용한물질을별도
+로사용하기위해회수하는공정을포함한다.","The  introduction    of  all  or  part  of  previous  batches  (or  of  redistilled  solvents 
+and  similar    products)  of  the  required  quality  into  another  batch  at  a  defi 
+ned  stage  of    manufacture.  It  includes  the  removal  of  impurities  from  waste 
+to  obtain  a    pure  substance  or  the  recovery  of  used  materials  for  a  separate 
+use.",Ref    5
+"Reference 
+sample","대표검체(시험용검체),   
+참고품","해당  제조단위의    사용(유효)기간  동안  필요에  따라  분석을  실시
+할  목적으로  보관하는  원료,  포장자재,  또는  완제품의  각  제조단
+위별  검체를  말한다.    안정성시험결과에  의거하여  필요하다고  판
+단되는  경우,  중요  반제품(예:  분석시험  및  출하승인을  필요로  하
+는  것)  및  제조업자의  관리범위를    벗어나는  반제품도  대표  검체
+를  보관해야  한다.","a 
+  sample  of  a  batch  of  starting  material,  packaging  material  or 
+finished   
+product  which  is  stored  for  the  purpose  of  being  analysed  should  the  need   
+arise  during  the  shelf  life  of  the  batch  concerned.  Where  stability  permits,   
+reference 
+samples 
+from 
+critical 
+intermediate 
+stages 
+(e.g.those 
+requiring   
+analytical  testing  and  release)  or  intermediates,  that  are  transported    outside 
+of  the  manufacturer's  control,  should  be  kept.",Ref    8
+"Reference 
+Standard, 
+Primary",1차  표준품,"광범위한    분석  시험에  의해  고순도의  신뢰성  있는  것으로  확인
+된  물품.  이  표준품은  (1)  공인  기관에서  입수하거나,  (2)  별도의 
+합성에  의해    제조하거나,  (3)  고순도의  기존  생산  물품에서  확보
+하거나,  (4)  기존  생산  물품의  추가  정제에  의해  제조할  수  있다.","A    substance  that  has  been  shown  by  an  extensive  set  of  analytical  tests  to 
+be    authentic  material  that  should  be  of  high  purity.  This  standard  can  be: 
+(1) 
+  obtained 
+from 
+an  officially 
+recognised 
+source,  or 
+(2)  prepared  by 
+independent    synthesis,  or  (3)  obtained  from  existing  production  material  of 
+high  purity,    or  (4)  prepared  by  further  purification  of  existing  production 
+material.",Ref    2
+"Reference 
+Standard, 
+Secondary",2차  표준품,"일차    표준품과  비교를  통해  일상적인  시험  분석의  표준품으로 
+사용될  수  있는  규정된  품질과  순도를  갖춘  물질.","A    substance  of  established  quality  and  purity,  as  shown  by  comparison  to  a   
+primary 
+reference 
+standard, 
+used 
+as 
+a 
+reference 
+standard 
+for 
+routine   
+laboratory  analysis.",Ref    2
+"Regulated 
+User",법적  사용자,"컴퓨터화    시스템  및  어플리케이션,  그와  관련된  파일들,  데이터
+에  대해  책임이  있는  법적  실행  주체(‘사용자’  참조)","The    regulated  Good  Practice  entity,  that  is  responsible  for  the  operation  of 
+a    computerised  system  and  the  applications,  files  and  data  held  thereon. 
+(See    also  ‘User’)",Ref    1
+Repeatability,반복성,"각각    동일한  실험실,  시험자,  장치와  기구,  제조번호와  시약과  기
+타  동일한  조작  조건하에서  균일한  검체로부터  얻은  복수의  시료
+를  짧은  시간차로    반복  분석  실험하여  얻은  측정값들  사이의  근
+접성을  말한다.  Intra-assay  precision이라고도  한다.",N/A,Ref    17
+"Representati
+ve  sample",대표검체,"무작위  검체  채취  같은  합리적인  기준에  의해  채취
+되며  검체가  검체  채취  대상      물품을  정확하게  대
+표할  수  있도록  된  다수의  물품으로  구성된  검체를 
+의미한다.","Representative    samplemeans  a  sample  that  consists  of  a  number  of  units 
+that  are  drawn  based 
+  on 
+rational  criteria  such  as 
+random  sampling  and 
+intended  to  assure  that  the    sample  accurately  portrays  the  material  being 
+sampled.",Ref    3
+Reprocessing,재가공,"기준  또는  규격에  부합하지  않는  것을  포함하여  중간체  또는   
+API를  공정에  다시  투입하여  설정된  제조공정의  일부인  결정화 
+단계  또는  적절한  화학적  또는  물리적  조작  단계(예를  들어  증류, 
+여과,    크로마토그래피,  체화)를  반복하는  것.  공정관리  시험에서 
+단계가  불완전하다고  나타난  이후  해당  공정  단계를  계속하는  것
+은  재가공이  아니라    정상적인  공정의  일부  간주한다.","Introducing  an    intermediate  or  API,  including  one  that  does  not  conform  to 
+standards 
+or 
+ 
+specifications, 
+back 
+into 
+the 
+process 
+and 
+repeating 
+a 
+crystallization  step  or    other  appropriate  chemical  or  physical  manipulation 
+steps  (e.g.,    distillation,  filtration,  chromatography,  milling)  that  are  part  of  the   
+established  manufacturing  process.  Continuation  of  a  process  step  after  an   
+in-process  control  test  has  shown  that  the  step  is  incomplete  is  considered   
+to  be  part  of  the  normal  process,  and  not  reprocessing.",Ref    2
+,,"특정  생산  단계에서  품질이  부적합한  것으로  판단된  제품  배치 
+전부  또는  일부를  하나  이상의  추가  작업으로  처리해    품질을  적
+합하게  만드는  재작업.","The   
+reworking  of  all  or  part  of  a  batch  of  product  of  an  unacceptable 
+quality 
+ 
+from  a  defined  stage  of  production  so 
+that 
+its  quality  may  be 
+rendered    acceptable  by  one  or  more  additional  operations.",Ref    4
+,,"사전에결정해놓은규격에부합하지못한공정중의약품,벌크가공중간제
+품(최종생물학적벌크중간제품)또는벌크제품단일 
+ 
+배치/로트를     
+밸리데이션된  제조  공정  이전  단계에  다시  투입하여  처리하는  것.","Subjecting    all  or  part  of  a  batch  or  lot  of  an  in-process  medicine,  bulk 
+process    intermediate  (fi  nal  biological  bulk  intermediate)  or  bulk  product  of 
+a    single  batch/lot  to  a  previous  step  in  the  validated  manufacturing  process   
+due  to  failure  to  meet  predetermined  specifi  cations.",Ref    5
+,,"기준일탈한  제조공정  단계에  있는  반제품에  대하여  이미  설정되
+어  있는  생산공정의  일부    공정을  반복하는  행위를  말한다.",N/A,Ref    15
+Reproducibili,실험실간    정밀성,"일반적으로    표준화된  시험방법을  사용한  공동연구에  적용되는데,",N/A,Ref    17
+ty,,"서로  다른  실험실에서  하나의  균일한  검체로부터  채취한  시료에 
+대하여  얻은  측정값들  사이의    근접성을  말한다.",,
+"Requirement
+s","요구,    요구사항,  필요
+요건","환자    또는  그  대리인(예를  들어  보건의료  전문가,  규제당국  및 
+입법의원)의  외재적  또는  내재적  필요  또는  기대.  이  문서에서  요
+건이라  함은  법적    또는  규제  요건뿐만  아니라  필요  및  기대도 
+포함한다.","The 
+  explicit  or 
+implicit  needs  or  expectations  of 
+the  patients  or 
+their   
+surrogates  (e.g.,  health  care  professionals,  regulators  and  legislators).  In    this 
+document, 
+“requirements” 
+refers 
+not 
+only 
+to 
+statutory, 
+legislative, 
+or   
+regulatory  requirements,  but  also  to  such  needs  and  expectations.",Ref    14
+"Retention 
+sample","보관용검체,    보존품, 
+참고품","완제품    제조단위에서  채취한  포장이  완료된  개체의  검체.  이는 
+해당  제조단위의  보관기간  동안  필요한  경우,  포장,  표시,  환자용 
+설명서,  제조번호,    유효기간  등을  확인할  목적으로  보관한다.  서
+로  다른  시장용으로  같은  제조단위를  소량  포장하는  경우나  매우 
+고가인  의약품을  생산하는  경우와    같이  중복으로  검체를  보관하
+지  않아도  이  요건을  충족시킬  수  있는  예외적인  상황이  있을  수 
+있다.","a  sample  of  a 
+fully  packaged  unit 
+from  a 
+ 
+  batch  of 
+finished  product. 
+Itisstoredforidentificationpurposes.Forexample,presentation,p
+ackaging,labelling,patientinformationleaflet,batchnumber,expir
+ydateshouldtheneedariseduringtheshelflifeofthebatchconcerne
+d.Theremaybeexceptionalcircumstanceswherethisrequirement
+canbemetwithoutretentionofduplicatesamplese.g.wheresmalla
+mountsofabatcharepackagedfordifferentmarketsorintheproduc
+tionofveryexpensivemedicinalproducts.",Ref    8
+Retest  Date,재시험날짜,"원자재가  여전히  사용에  적합함을  확인하기  위하여    재검사하여
+야  하는  일자.","The  date  when  a    material  should  be  re-examined  to  ensure  that  it  is  still 
+suitable  for  use.",Ref    2
+"Retrospective 
+Validation",회고적    밸리데이션,"이미  시판  중에  잇는  제품의    공정에  대하여  축적된  제조,  시험, 
+관리  데이터를  근거로  실시하는  밸리데이션","Validation    of  a  process  for  a  product  which  has  been  marketed  based  upon 
+accumulated    manufacturing,  testing  and  control  batch  data.",Ref    6
+Return,반품,"품질  결함  여부와  상관없이  의약품을  제조업자  또는    유통업자에
+게  돌려보내는  행위.","Sending  back 
+to 
+ 
+the  manufacturer  or  distributor  of  a  medicinal  product 
+which  may  or  may  not    present  a  quality  defect.",Ref    4
+,,,,
+"Revalidation(
+Re-Validation
+)",재밸리데이션,밸리데이션  공정  또는  그    일부를  반복하는  것.,Repetition  of    the  validation  process  or  a  specific  portion  of  it.,Ref    1
+,,"변경  관리  절차에  의거하여  도입된  공정/설비의  변경이  공정  특
+성  및  제품  품질에    부정적인  영향을  주지  않는다는  점을  보증하
+기  위해  공정  밸리데이션을  반복하는  것","A    repeat  of  the  process  validation  to  provide  an  assurance  that  changes  in 
+the 
+ 
+process/equipment 
+introduced 
+in 
+accordance  with 
+change 
+control 
+procedures  do 
+  not  adversely  affect  process 
+characteristics  and  product 
+quality.",Ref    6
+Reworking,"재작업,  재처리","기준  또는  규격에  부합하지  않는  중간체  또는  API를    적합한  품
+질의  중간체  또는  API를  얻기  위해  설정된  제조  공정과  다른  하
+나  또는  그  이상의  공정  단계에  투입하는  것(예를  들어  다른    용
+매를  이용한  재결정화).","Subjecting  an    intermediate  or  API  that  does  not  conform  to  standards  or 
+specifications  to    one  or  more  processing  steps  that  are  different  from  the 
+established    manufacturing  process  to  obtain  acceptable  quality  intermediate 
+or  API  (e.g.,    recrystallizing  with  a  different  solvent).",Ref    2
+,,"사전에  결정해  놓은  규격에  부합하지  못한  공정  중  또는  벌크  가
+공  중간제품(최종  생물학적  벌크  중간제품)  또는  최종    제품  단일 
+배치를  다른  제조  공정으로  처리하는  것.  재작업은  예상치  못한 
+경우에  해당되며  판매허가의  일부로  미리  승인  받지  않는다.","Subjecting    an  in-process  or  bulk  process  intermediate  (fi  nal  biological  bulk   
+intermediate) 
+or 
+final 
+product 
+of 
+a 
+single 
+batch 
+to 
+an 
+alternate   
+manufacturing  process  due  to  a  failure  to  meet  predetermined  specifi  cations.   
+Reworking  is  an  unexpected  occurrence  and  is  not  pre-approved  as  part  of 
+the    marketing  authorization.",Ref    5
+Risk,"위해,    위험도,  리스크",위해의    발생가능성과  해당  위해의  심각성의  조합,"The    combination  of  the  probability  of  occurrence  of  harm  and  the  severity 
+of  that    harm  (ISO/IEC  Guide  51).",Ref    14
+"Risk 
+Acceptance",리스크허용,리스크를    수용하고자  하는  결정,The    decision  to  accept  risk  (ISO  Guide  73).,Ref    14
+,,,,
+Risk  Analysis,위해분석,"설비    또는  공정의  기능  부분에서  주요  변수를  평가하고  특성을 
+파악하는  방법","Methodtoassessandcharacterisethecriticalparametersinthefunctionalityofan
+equipmentorprocess.",Ref    6
+,,파악된  위해  요소와  관련된  리스크의  추정.,The    estimation  of  the  risk  associated  with  the  identified  hazards.,Ref    14
+"Risk 
+Assessment","위해성    평가,  리스크
+평가","리스크    관리  과정  내에서  리스크  관련  의사결정을  뒷받침하기 
+위해  정보를  정리하는  체계적  과정.  위해요소의  확인과  그  위해요
+소에의  노출과  관련된    위험의  분석  및  평가로  이루어진다.","A    systematic  process  of  organizing  information  to  support  a  risk  decision  to 
+be    made  within  a  risk  management  process.  It  consists  of  the  identification 
+of    hazards  and  the  analysis  and  evaluation  of  risks  associated  with  exposure 
+to    those  hazards.",Ref    14
+"Risk 
+Communicati
+on",위해정보교환,"의사결정권자와    다른  이해관계자  간  리스크와  리스크  관리에  대
+한  정보  공유","The    sharing  of  information  about  risk  and  risk  management  between  the 
+decision    maker  and  other  stakeholders.",Ref    14
+Risk  Control,위해관리,리스크  관리  결정을  이행하는  행위,Actions    implementing  risk  management  decisions  (ISO  Guide  73).,Ref    14
+"Risk 
+Evaluation",위해평가,"양적또는질적척도를활용하여정해진리스크기준에대비해추정리스크
+를비교하여리스크의중요도를결정하는행위.","The 
+ 
+comparison  of 
+the 
+estimated 
+risk 
+to  given 
+risk 
+criteria  using 
+a 
+quantitative    or  qualitative  scale  to  determine  the  significance  of  the  risk.",Ref    14
+"Risk 
+Identification",위해확인,"정보를체계적으로활용하여리스크질문또는문제기술방식에따라위해
+의잠재적요소(위해요소)를파악하는행위.","The 
+  systematic  use  of 
+information 
+to 
+identify  potential  sources  of  harm 
+(hazards)    referring  to  the  risk  question  or  problem  description.",Ref    14
+,,,,
+"Risk 
+Management","위해관리,    리스크경영","리스크의  진단,  통제,  커뮤니케이션  검토  업무에  품질  관리    정책, 
+절차  및  업무를  체계적으로  적용하는  것","The  systematic    application  of  quality  management  policies,  procedures,  and 
+practices  to  the    tasks  of  assessing,  controlling,  communicating  and  reviewing 
+risk.",Ref    14
+"Risk 
+Reduction",위해감소,위해의  발생  확률  및  위해의    강도  완화를  위한  행위.,"Actions 
+ 
+taken 
+to 
+lessen 
+the  probability  of  occurrence  of  harm  and 
+the 
+severity  of    that  harm.",Ref    14
+Risk  Review,위해검토,"(적절한경우에)리스크에관한새로운지식과경험을고려하여리스크관
+리프로세스결과의검토또는모니터.","Review 
+  or  monitoring  of  output/results  of 
+the 
+risk  management  process 
+considering    (if  appropriate)  new  knowledge  and  experience  about  the  risk.",Ref    14
+Robustness,완건성,"시험방법    중  일부  조건이  소규모라도  의도적으로  변경되었을  때 
+측정값이  영향을  받지  않는지에  대한  척도를  말한다.",N/A,Ref    17
+"Sampling 
+frequency",검체채취주기,검체를    채취하기  위해  설정된  기간,Established    period  for  collecting  samples.,Ref    11
+Security,보안,"우연한    혹은  악의적인  접근,  사용,  수정,  파괴,  비밀누설로부터  컴
+퓨터  하드웨어,  소프트웨어에  대한  보호.  보안은  사람,  데이터,  통
+신  및  컴퓨터    설치에  대한  물리적  보호에  적용된다.","The 
+  protection  of 
+computer  hardware  and 
+software 
+from  accidental  or 
+malicious    access,  use,  modification,  destruction  or  disclosure.  Security  also 
+pertains    to  personnel,  data,  communications  and  the  physical  protection  of 
+computer    installations.",Ref    1
+Self-containe,자기밀폐구역,작업자    및  설비  이동을  포함하여  특정  작업의  모든  부분이  완벽,Premiseswhichprovidecompleteandtotalseparationofallaspectsof,Ref    5
+d  area,,"하고  완전하게  분리되어  있으며  이를  위한  절차가  확립되어  있고 
+관리  및  모니터링이    수행되는  지역.  물리적  장벽과  별도로  공조 
+시스템  구비가  이에  해당되나  반드시  두  개의  별도  건물이어야 
+한다는  의미는  아니다.","anoperation,includingpersonnelandequipmentmovement,withwell
+establishedprocedures,controlsandmonitoring.Thisincludesphysical
+barriersaswellasseparateair-handlingsystems,butdoesnotnecessarily
+implytwodistinctandseparatebuildings.",
+"Senior 
+Management",고위  경영자,"회사또는사업장의자원을동원할수있는권한과책임을가지며,최고수준
+에서회사또는사업장을이끌고관리하는자.","Person(s)    who  direct  and  control  a  company  or  site  at  the  highest  levels 
+with 
+the 
+ 
+authority 
+and 
+responsibility 
+to  mobilise 
+resources  within 
+the 
+company  or    site.  (ICH  Q10  based  in  part  on  ISO  9000:2005)",Ref    19
+Severity,"심각성,    중대성",위해    요소에  따른  예상  결과의  수준.,A    measure  of  the  possible  consequences  of  a  hazard.,Ref    14
+Shift,교대,"계획에  따른  작업  또는  생산  기간으로  보통  12시간    이내이며  작
+업자  그룹들이  번갈아가며  근무한다.","Scheduledperiodsofworkorproduction,usuallylessthan12hoursin
+length,staffedbyalternatinggroupsofworkers.",Ref    11
+"Signature 
+(signed)",서명(된),사인의  용어  정의  참조,See    definition  for  signed,Ref    2
+"Signed 
+(signature)",,"특정    행위  또는  검토를  실시한  사람의  기록.  이  기록은  이니셜, 
+수기  서명,  개인  도장,  또는  보안성을  갖춘  전자  서명이  될  수  있
+다.","The    record  of  the  individual  who  performed  a  particular  action  or  review. 
+This 
+ 
+record  can  be 
+initials, 
+full  handwritten 
+signature,  personal 
+seal,  or   
+authenticated  and  secure  electronic  signature.",Ref    2
+Simulated,모의제품,밸리데이션    대상  제품의  물리적  특성과  실질적으로  가능한  경우,"A    material  that  closely  approximates  the  physical  and,  where  practical,  the",Ref    6
+Product,,"에  화학적  특성(예,  점도,  입도,  pH  등)이  아주  유사한  물품.  위약 
+제품  배치로  이런    특성이  충족되는  경우가  많다.","chemical  characteristics  (e.g.  viscosity,  particle  size,  pH  etc.)  of  the    product 
+under  validation.  In  many  cases,  these  characteristics  may  be    satisfied  by  a 
+placebo  product  batch.",
+Solvent,"용매,  용제","중간체    또는  API  제조  시에  용액  또는  현탁액의  조제를  위한  매
+개체로  사용되는  무기  또는  유기성  액체","An 
+ 
+inorganic  or  organic 
+liquid  used  as  a  vehicle 
+for 
+the  preparation  of   
+solutions  or  suspensions  in  the  manufacture  of  an  intermediate  or  API.",Ref    2
+Source  Code,소스코드,"프로그램    언어를  사용하여  사람이  읽을  수  있는  형태로  작성된 
+원시  컴퓨터  프로그램은  컴퓨터에서  실행되기  전에  기계가  읽을 
+수  있는  형태로  전환되어야    한다.","An 
+ 
+original 
+computer 
+program 
+expressed 
+in 
+human-readable 
+form 
+(programming 
+ 
+language),  which  must  be 
+translated 
+into  machine-readable 
+form  before  it  can    be  executed  by  the  computer.",Ref    1
+Specification,"규격,  기준,  시방서","제조    과정에  사용되거나  제조  과정  중에  획득되는  제품  또는  물
+품이  부합해야  하는  요건을  상세하게  기술한  목록.  규격은  품질 
+평가의  기본이다.","A    list  of  detailed  requirements  with  which  the  products  or  materials  used  or   
+obtained  during  manufacture  have 
+to  conform.  They  serve  as  a  basis 
+for   
+quality  evaluation.",Ref    5
+,,"시험,    시험절차에  대한  참조문헌  및  기재된  시험에  사용되는  수
+치기준,  범위  또는  기타  범주  등  적절한  허용기준의  목록.  규격문
+서에는  원자재가    용도에  적합하다고  간주되기  위해  부합하여야 
+하는  일련의  기준을  설정하고  있다.  ‘규격  부합’이란  수록된  시험
+절차에  따라  시험했을  때  수록된    허용  기준에  부합됨을  의미한
+다.","A 
+list 
+of 
+tests, 
+ 
+references 
+to 
+analytical 
+procedures, 
+and 
+appropriate 
+acceptance  criteria  that    are  numerical  limits,  ranges,  or  other  criteria  for  the 
+test  described.  It    establishes  the  set  of  criteria  to  which  a  material  should 
+conform  to  be    considered  acceptable  for  its  intended  use.  “Conformance  to 
+specification”    means  that  the  material,  when  tested  according  to  the  listed 
+analytical    procedures,  will  meet  the  listed  acceptance  criteria.",Ref    2
+Specificity,특이성,"불순물,  분해물,  배합성분    등의  혼재  상태에서  분석대상물질을 
+선택적으로  정확하게  측정할  수  있는  능력을  말한다.",N/A,Ref    17
+"Sporicidal 
+process.",포자살균공정,"박테리아  및  곰팡이  포자를  죽일  수  있다고  알려진  약품을    사용
+하여  표면에  적용하는  가스,  증기  또는  액체  처리법.  이  공정은 
+보통  박테리아  포자를  포함한  생물  지표를  사용하여  밸리데이션
+한다.  이    정의에서  포자  로그  리덕션  수는  규정되어  있지  않으나","Agaseous,vapourorliquidtreatmentappliedtosurfaces,usinganagentthatisrecognised
+ascapableofkillingbacterialandfungalspores.
+Theprocessisnormallyvalidatedusingbiologicalindicatorscontainingbacterialspores.
+Thenumberofsporelogreductionsisnotspecifiedinthisdefinition,butatargetofsixlogre",Ref    12
+,,"보통  6  로그  리덕션  목표가  적용된다.  이  공정은  전통적인  멸균 
+방법이  필요하지  않은    경우  아이솔레이터의  내부  표면과  아이솔
+레이터  내부  물질의  외부표면에  적용된다.  포자박멸  공정을  아이
+솔레이터에  적용하는  것은  밀봉  용기에    밸리데이션된  건열,  습열 
+또는  방사  공정을  적용하는  것과  같은  멸균  공정으로  간주하지 
+않는다.","ductionsisoftenapplied.
+Theprocessisappliedtointernalsurfacesoftheisolatorandexternalsurfacesofmaterialsi
+nsidetheisolator,whenconventionalsterilizationmethodsarenotrequired.
+Theapplicationofasporicidalprocesstoisolatorsisnotconsideredtobeasterilizationpro
+cessinthesamewayas,forexample,asealedcontainersubjectedtoavalidateddryheat,m
+oistheatorirradiationprocess.",
+Sporocide,포자살균제,"미생물과  포자를  사멸하기    위해  사용하는  화학물질  또는  화학적 
+혼합물",A    chemical  or  mixture  of  chemicals  used  to  kill  microorganisms  and  spores.,Ref    13
+Stakeholder,이해관계자,"리스크에영향을주거나리스크에의해영향을받거나리스크에의해영향
+을받을것으로생각되는개인,그룹,또는단체.의사결정자역시이해관계
+자가될수있다.이가이드라인에서일차이해관계자는환자,의료전문가,
+규제당국,그리고업체이다.","Any 
+ 
+individual,  group  or  organization 
+that  can  affect,  be  affected  by,  or   
+perceive 
+itself 
+to  be  affected  by  a 
+risk.  Decision  makers  might  also  be   
+stakeholders.  For 
+the  purposes  of 
+this  guideline, 
+the  primary  stakeholders   
+are  the  patient,  healthcare  professional,  regulatory  authority,  and  industry.",Ref    14
+"Standalone 
+System",독립형    시스템,"일체  완비된  컴퓨터  시스템으로  데이터  처리,  모니터링  또는    제
+어  기능을  제공하나  자동화  설비  내에  내재되지  않은  것.  이는  특
+정  자동화  설비를  제어하는  것이  유일한  목적인  내장형  시스템과 
+대비된다.","A 
+self-contained 
+ 
+computer 
+system, 
+which 
+provides 
+data 
+processing, 
+monitoring 
+or 
+control 
+ 
+functions 
+but  which 
+is 
+not 
+embedded  within 
+automated  equipment.  This  is    contrasted  with  an  embedded  system,  the  sole 
+purpose  of  which  is  to  control  a    particular  piece  of  automated  equipment.",Ref    1
+"Standard 
+operating 
+procedure 
+(SOP)",표준작업지침서,"특정  제품이나  물품에만    반드시  국한될  필요는  없으나  작업  수
+행에  관한  지시  사항을  제시하는  승인된  절차  문서(예,  설비  운전, 
+유지  관리  및  세척,  밸리데이션,    시설  청소  및  환경  관리,  검체 
+채취  및  검사).  일부  SOP  는  제품  특이적인  마스터  생산  문서와 
+배치  생산  문서를  보조하는  용도로    활용되기도  한다.","An 
+ 
+authorized 
+written 
+procedure 
+giving 
+instructions 
+for 
+performing 
+operations 
+  not  necessarily  specifi  c 
+to  a  given  product  or  material 
+(e.g. 
+equipment 
+  operation,  maintenance 
+and 
+cleaning 
+validation 
+cleaning  of 
+premises  and    environmental  control  sampling  and  inspection).  Certain  SOPs 
+may  be  used  to    supplement  product-specifi  c  master  and  batch  production 
+documentation.",Ref    5
+"Starting 
+Material",출발물질,"포장자재를  제외한,  의약품의  생산에  사용되는  물
+질.","Any    substance  used  in  the  production  of  a  medicinal  product,  but  excluding   
+packaging  materials.",Ref    4
+,,"의약품  생산에  사용되는  일정  품질  수준의  모든  성분.  포장  자재
+는  제외","Anysubstanceofadefinedqualityusedintheproductionofapharmaceutical
+product,butexcludingpackagingmaterials.",Ref    5
+"State  of 
+Control",관리  상태,"지속적인    프로세스  성능과  제품  품질을  일관되게  보증하는  관리 
+조건.","A    condition  in  which  the  set  of  controls  consistently  provides  assurance  of   
+continued  process  performance  and  product  quality.  (ICH  Q10)",Ref    19
+Sterile,멸균(무균)의,"살아  있는  생물이  전혀  없는  상태.(실제로  미생물의  부재와    관련
+하여  이런  절대적인  진술은  증명할  수  없다.  멸균  참조)","Freeofanyviableorganisms.(Inpractice,nosuchabsolute
+statementregardingtheabsenceofmicroorganismscanbeproven,see
+sterilisation.)",Ref    11
+Sterile  Area,무균구역,"무균작업을  위한  무균물질    또는  멸균처리된  용기가  노출되는  장
+소,  무균제제를  채워  넣거나  밀봉하는  작업을  하는  장소  및  무균
+시험  등의  무균조작을  하는  장소를  말한다.",N/A,Ref    15
+"Sterile 
+Product",무균제품,"이  가이던스에서  무균제품이란  무균조건에  노출된  하나  이상의   
+요소와  최종적으로  완성된  무균완제의약품을  가리킨다.  이러한  요
+소에는  용기,  마개와  완제의약품의  원료약품이  포함된다.","Forpurposesofthisguidance,sterileproductreferstooneormoreoftheelementsexpose
+dtoasepticconditionsandultimatelymakingupthesterilefinisheddrugproduct.Theseel
+ementsincludethecontainers,closures,andcomponentsofthefinisheddrugproduct.",Ref    10
+Sterilisation,멸균(법),"살아있는미생물이없는제품을만들기위해사용하는검증된공정
+주의:멸균공정에서미생물학적사멸특징은지수함수로서표현한다.
+따라서,멸균공정에서살아남는미생물의수는가능성으로표현할수있으
+며,이것은매우낮은수준으로감소될수있지만,0이될수없다.","Validatedprocessusedtorenderaproductfreeofviable
+organisms.Note:Inasterilisationprocess,thenatureofmicrobiological
+deathofreductionisdescribedbyanexponentialfunction.
+Therefore,thenumberofmicroorganismswhichsurviveasterilisation
+processcanbeexpressedintermsofprobability.Whiletheprobabilitymaybereducedtoa
+verylownumber,itcanneverbereducedtozero.",Ref    11
+Sterility,"무균성,    멸균도","무균은  살아  있는  개체가  없다는  의미이다.  무균  시험의    조건은 
+유럽  약전에  제시되어  있다","Sterility  is  the    absence  of  living  organisms.  The  conditions  of  the  sterility 
+test  are  given    in  the  European  Pharmacopoeia.",Ref    4
+,,,,
+"Sterility 
+assurance 
+level  (SAL)",무균성보증수준,제품의한제조단위가무균일확률(SAL은10-n으로표현한다),"Probabilitythatabatchofproductissterile.
+(SALisexpressedas10-n).",Ref    11
+"SterilityAssur
+anceSystem",무균보증시스템,"제품의무균성을보증하기위한장치들의총합.최종멸균제품의경우일반
+적으로다음단계를포함한다.
+a)제품설계
+b)출발물질및공정보조물(예를들어가스및윤활제)의미생물학적상태
+에대한지식및가능한경우이에대한관리
+c)제품으로의미생물유입및증식을방지하기위한제조공정에서의오염
+관리.일반적으로이는제품접촉표면세척과위생처리,청정실내에서처
+리함으로써공기를통한오염방지,공정관리시간제한준수및해당하는경
+우여과단계를통해관리한다.
+d)무균제품과비무균제품라인간혼동방지
+e)제품완전성유지
+f)멸균공정
+g)변경관리,훈련,절차문서,출하승인확인,계획에따른예방적유지관리,
+이상모드분석,인적오류방지,밸리데이션,교정등무균보증시스템을포
+함하는품질시스템의총체","Thesumtotalofthearrangementsmadetoassurethesterilityofproducts.
+Forterminallysterilizedproductsthesetypicallyincludethefollowingstages:
+(a)Productdesign.
+(b)Knowledgeofand,ifpossible,controlofthemicrobiological
+conditionofstartingmaterialsandprocessaids(e.g.gasesand
+lubricants).
+(c)Controlofthecontaminationoftheprocessofmanufacturetoavoid
+theingressofmicroorganismsandtheirmultiplicationintheproduct.
+Thisisusuallyaccomplishedbycleaningandsanitizationofproduct
+contactsurfaces,preventionofaerialcontaminationbyhandlingin
+cleanrooms,useofprocesscontroltimelimitsand,ifapplicable,
+filtrationstages.
+(d)Preventionofmixupbetweensterileandnonsterileproductstreams.
+(e)Maintenanceofproductintegrity.
+(f)Thesterilizationprocess.
+(g)ThetotalityoftheQualitySystemthatcontainstheSterilityAssurance
+Systeme.g.changecontrol,training,writtenprocedures,release
+checks,plannedpreventativemaintenance,failuremodeanalysis,
+preventionofhumanerror,validationcalibration,etc.",Ref    7
+Sterility  test,무균시험법,살아  있는  미생물이  있는지    확인하기  위해  실시하는  시험,Test  performed    to  determine  if  viable  microorganisms  are  present.,Ref    11
+Sterilization,멸균(법),모든    종류의  미생물과  포자를  사멸  및/또는  제거하는  공정,"A 
+  process 
+that  kills  and/or 
+removes  all  classes  of  microorganisms  and",Ref    13
+,,,spores.,
+"Sterilizinggra
+defilter",제균급  필터,"적절한    밸리데이션을  거쳐  유체  흐름에서  모든  미생물을  제거해 
+무균  상태의  여과액을  생산하는  것으로  증명된  필터.","Afilterthat,whenappropriatelyvalidated,willremoveallmicroorganismsfromafluidstre
+am,producingasterileeffluent.",Ref    10
+Strength,"함량,    역가,  강도","1)약리활성물질의농도(예중량/중량,중량/부피,또는단위복용량/부피)
+2)역가,즉적절한실험실적테스트,충분하게고안되고,관리된임상자료
+(예,표준에참조한단위로표현됨.)의해서지시된완제의약품의치료적능
+력","(i)Theconcentrationofthedrugsubstance(forexample,weight/weight,weight/volume,
+orunitdose/volumebasis),and/or
+(ii)Thepotency,thatis,thetherapeuticactivityofthedrugproductasindicatedbyappropri
+atelaboratorytestsorbyadequatelydevelopedandcontrolledclinicaldata(expressed,fo
+rexample,intermsofunitsbyreferencetoastandard)",Ref    3
+"Structural 
+Integrity 
+(Software)","구조적    무결성(소프
+트웨어)","소스  코드가  지정된  소프트웨어  요구조건을  만족시키고  최신    소
+프트웨어  개발  관계와  기준에  부합하는  정도를  반영하는  소프트
+웨어  특성.","Software 
+  attributes 
+reflecting 
+the  degree 
+to  which 
+source  code 
+satisfies 
+specified 
+ 
+software 
+requirements  and  conforms 
+to  contemporary 
+software 
+development    practices  and  standards.",Ref    1
+"Structural 
+Testing",구조적    테스트,"소스  코드의  내부  구조를    점검하는  테스트.  구조적  테스트는  낮
+은  수준  및  높은  수준의  코드  검토,  경로  분석,  실제로  사용되는 
+프로그래밍  절차  및  표준에  대한 
+  감사,  불필요한 
+""데드  코드
+(Dead  Code)""  검사,  한계  분석  및  다른  기술을  포함한다.  특정  컴
+퓨터  과학  및    프로그래밍  전문  지식을  필요로  한다.","Examining    the  internal  structure  of  the  source  code.  Includes  low-level  and 
+high-level    code  review,  path  analysis,  auditing  of  programming  procedures 
+and 
+standards 
+ 
+actually 
+used, 
+inspection 
+for 
+extraneous 
+“dead 
+code”, 
+boundary  analysis  and    other  techniques.  Requires  specific  computer  science 
+and  programming    expertise.",Ref    1
+"Structural 
+Verification",구조적인    검증,"소프트웨어가    구조적으로  적절하고  무결하다는  것을  문서로  증
+명하기  위해  수행하는  행위.","An    activity  intended  to  produce  documented  assurance  that  software  has   
+appropriate  structural  integrity.",Ref    1
+System,"시스템,  체계,  계","상호  영향을  주는  활동  및  기법이  통제된  패턴으로  통합되어    형
+성된  조직화된  전체를  의미하는  것으로  사용된다.","SYSTEM  Is  used    in  the  sense  of  a  regulated  pattern  of  interacting  activities 
+and  techniques    which  are  united  to  form  an  organised  whole.",Ref    4
+,,공통의  목적을  지닌  설비  그룹,A    group  of  equipment  with  a  common  purpose.,Ref    6
+,,공동의  목적을  가지는  한  그룹의  장비를  말한다.,N/A,Ref    17
+"System 
+Acceptance 
+Test 
+Specification","시스템  승인    시험  규
+격","시스템승인테스트규격은사용자가시스템승인허용을위해실행하는테
+스트의규격이다.일반적으로시스템승인테스트규격은아래사항을포함
+해야한다.
+-시스템기능
+-시스템성능
+-중요인자
+-운영절차
+이테스트는시스템이기능규격에기술된대로작동하고URS에정의된사
+용자요구사항들을만족하고있음을확인해야한다.보통이테스트는한계
+값,알람값,경계값    테스트를  포함한다.
+시스템승인테스트규격은계약관련문서이기때문에공급자/개발자/구
+축자및최종사용자가모두승인해야한다.시스템승인 
+  테스트  규격을 
+작성하는  절차에  대한  예시는    GAMP  가이드의  부록에서  확인할 
+수  있다.","Thesystemacceptancetestspecificationisadescriptionofthoseteststobecarriedouttop
+ermitacceptanceofthesystembytheuser.Typicallyitshouldaddressthefollowing:
+_Systemfunctionality
+_Systemperformance
+_Criticalparameters
+_Operatingprocedures
+Thetestsshouldensurethattheproductoperatesasindicatedinthefunctionalspecificati
+onandmeetstheuserrequirementsasdefinedintheURS.Theteststypicallyincludelimit,al
+armsandboundarytesting.
+TheSystemAcceptanceTestSpecificationisacontractualdocumentand,assuch,shouldb
+eapprovedbyboththesupplier/developer/integratorandtheenduser.Anexampleproc
+edureforproducingaSystemAcceptanceTestSpecificationisgiveninaGAMPGuideApp
+endix.",Ref    1
+"System 
+owner",시스템    책임자,"컴퓨터화  시스템의  유효성과  유지보수,  해당  시스템에  저장된    데
+이터의  보안을  책임지는  자","The 
+person 
+ 
+responsible 
+for 
+the 
+availability, 
+and  maintenance 
+of 
+a 
+computerised  system 
+  and 
+for 
+the  security  of 
+the  data 
+residing  on 
+that 
+system",Ref    20
+"System 
+Software",시스템    소프트웨어,"컴퓨터  시스템의  운영  및    유지관리를  지원하는  소프트웨어  및 
+그와  연관된  프로그램(운영체제,  어셈블러,  유틸리티,  네트워크  소
+프트웨어  및  실행  프로그램).  시스템    소프트웨어는  보통  특정  어
+플리케이션과  독립적으로  실행된다.","Software 
+ 
+designed 
+to 
+facilitate 
+the 
+operation 
+and  maintenance 
+of 
+a 
+computer  system  and    its  associated  programs,  such  as  operating  systems, 
+assemblers, 
+utilities, 
+ 
+network 
+software 
+and 
+executive  programs. 
+System 
+software  is  generally    independent  of  the  specific  application.",Ref    1
+"System 
+Specification",시스템  규격,시스템이  기능  요구조건을  만족시킬  방법을  서술.,Describe  how  the    system  will  meet  the  functional  requirements.  (2),Ref    1
+s,,,,
+"Terminal 
+sterilization",최종멸균,"일반적으로10-6보다적은(예:비무균개체의가능성이100만분의1보다
+큰)미리정해진무균보증수준을달성할목적으로밀봉한완제의약품에멸
+균물질을적용하는과정","Theapplicationofalethalagenttosealed,finisheddrugproductsforthepurposeofachievi
+ngapredeterminedsterilityassurancelevel(SAL)ofusuallylessthan10-6(i.e.,aprobability
+ofanonsterileunitofgreaterthanoneinamillion).",Ref    10
+"Theoretical 
+yield","이론수량,    이론생산량","이론수량이란    실제  생산에서  발생하는  모든  손실  또는  오류가 
+없다고  할  때  사용된  원자재의  양에  근거하여  적절한  제조,  가공, 
+또는  포장  단계에서  생산될    양을  의미한다.","Theoretical 
+ 
+yieldmeans 
+the 
+quantity 
+that  would 
+be 
+produced 
+at 
+any 
+appropriate  phase  of 
+  manufacture,  processing,  or  packing  of  a  particular 
+drug  product,  based  upon    the  quantity  of  components  to  be  used,  in  the 
+absence  of  any  loss  or  error  in    actual  production.",Ref    3
+Third  Party,제  3자,제조자    혹은  수입자에  의해  직접적으로  관리되지  않는  상대방,"Partiesnotdirectlymanagedbytheholderofthemanufacturingand/orimport
+authorisation.",Ref    20
+Trend,경향,변수의    변화  속도  또는  방향을  의미하는  통계학적  용어.,"A 
+ 
+statistical 
+term 
+referring 
+to 
+the  direction  or 
+rate  of 
+change  of 
+variable(s).","a   
+Ref    14"
+ULPA  filter,ULPA필터,"최소0.3μm입자를99.999%제거할수있는효율을가진초저침투공기필
+터.","Ultra-low 
+  penetration  air 
+filter  with  minimum  0.3  μm  particle 
+retaining 
+efficiency  of    99.999  percent.",Ref    10
+"Unidirectiona
+l  flow",단일방향류,"중요공정작업장또는시험실로부터지속적으로입자를제거하기위해,충
+분한속도를        가지고  일정한  한  방향으로  이동하는  공기  흐름.","An    airflow  moving  in  a  single  direction,  in  a  robust  and  uniform  manner, 
+and  at    sufficient  speed  to  reproducibly  sweep  particles  away  from  the  critical   
+processing  or  testing  area.",Ref    10
+Unplanned,계획되지    않은(비상),밸리데이션    된  시스템에  대해서  긴급한  수정을  요하는  예측불가,Anunanticipatednecessarychangetoavalidatedsystemrequiringrapid,Ref    1
+"(Emergency) 
+Change",변경,능한  변경사항.  보통  ‘핫픽스’라고  알려져  있음.,"implementation,alsoknownasa“hot-fix”.",
+User,사용자,"시스템    운영에  대한  책임을  갖는  회사  및  그룹.(3)  (‘법적  사용자’ 
+참조)  제품을  공급하는  공급자와  계약을  맺은  GxP  사용  고객  또
+는  사용자    조직.  따라서  이  문서에의  ‘사용자’는  시스템을  사용하
+는  개인만을  의미하는  것이  아니고  ‘고객’과  같은  의미이다.","The    company  or  group  responsible  for  the  operation  of  a  system.  (3)  (see 
+also    ‘Regulated  User’).  The  GxP  customer,  or  user  organisation,  contracting  a   
+supplier 
+to  provide 
+a  product. 
+In 
+the 
+context  of 
+this  document 
+it 
+is,   
+therefore,  not  intended  to  apply  only  to  individuals  who  use  the  system,  and   
+is  synonymous  with  ‘Customer’.",Ref    1
+"Utility 
+Software",유틸리티    소프트웨어,"다른    어플리케이션  소프트웨어,  운영  체제  또는  시스템  사용자에 
+의해  요구되는  어떤  일반적인  지원  기능을  수행하기  위해  설계된 
+컴퓨터  프로그램.","Computer    programs  or  routines  designed  to  perform  some  general  support 
+function    required  by  other  application  software,  by  the  operating  system,  or 
+by  system    users.",Ref    1
+Validation,밸리데이션,"특정    공정,  방법  또는  시스템이  사전  설정된  허용  기준에  부합하
+는  결과를  일관되게  만들어  낸다는  점을  상당한  정도로  보증하는 
+문서화된  프로그램.","A    documented  program  that  provides  a  high  degree  of  assurance  that  a 
+specific 
+  process,  method,  or 
+system  will 
+consistently  produce 
+a 
+result 
+meeting    pre-determined  acceptance  criteria.",Ref    2
+,,"GMP  원칙에  따라  어떤  절차,  공정,  설비,  물품,  행위  또는  시스템
+이  실제로  예상    결과를  만들어  낸다는  점을  증명하는  행위(적격
+성평가  참조)","Action    of  proving,  in  accordance  with  the  principles  of  Good  Manufacturing 
+Practice,    that  any  procedure,  process,  equipment,  material,  activity  or  system 
+actually    leads  to  the  expected  results  (see  also  qualification).",Ref    4
+,,"GMP  원칙에  따라  어떤  절차,  공정,  설비,  물품,  행위  또는  시스템
+이  실제로  예상    결과를  만들어  낸다는  점을  증명하는  행위(적격
+성평가  참조)","Action 
+  of  proving, 
+in  accordance  with 
+the  principles  of  GMP, 
+that  any 
+procedure,    process,  equipment,  material,  activity  or  system  actually  leads  to 
+the    expected  results  (see  also  qualifi  cation).",Ref    5
+,,"특정공정이기설정된규격과품질요소들을만족하고있는제품을지속적
+으로생산하고있음을보증하기위한증거를문서화하는것.","Establishingdocumentedevidencethatprovidesahighdegreeofassurancethataspecifi
+cprocesswillconsistentlyproduceaproductmeetingitspredeterminedspecificationsan",Ref    10
+,,,dqualityattributes.,
+,,"특정한공정,방법,기계설비또는시스템이미리      설정되어  있는  판정
+기준에  맞는  결과를  일관되게  도출한다는  것을      검증하고  이를 
+문서화하는  것을  말한다.",N/A,Ref    15
+"Validation 
+Protocol","밸리데이션    실시계획
+서","밸리데이션    실시  방법과  허용  기준을  규정한  계획  문서.  일례로 
+제조  공정  밸리데이션  프로토콜은  공정  설비,  중요  공정  변수/운
+전  범위,  제품  특성,    검체  채취  방법,  수집  대상  시험  데이터,  밸
+리데이션  공정  가동  횟수,  허용  시험  결과를  규정한다.","A 
+  written  plan 
+stating  how 
+validation  will  be 
+conducted  and  defining 
+acceptance    criteria.  For  example,  the  protocol  for  a  manufacturing  process 
+identifies    processing  equipment,  critical  process  parameters/operating  ranges, 
+product 
+ 
+characteristics, 
+sampling, 
+test  data 
+to  be 
+collected,  number  of 
+validation    runs,  and  acceptable  test  results.",Ref    2
+"Validation 
+Protocol/Plan
+)","밸리데이션    실시계획
+서","밸리데이션을    어떻게  실시할  것인가를  기술한  문서로서  측정해
+야  할  변수,  판정기준,  특성  및  실시방법  등을  포함한  것을  말한
+다.",N/A,Ref    17
+"Validation 
+Report","밸리데이션    결과보고
+서","밸리데이션    실시  후  얻은  기록  및  결과와  이를  평가한  문서를 
+말한다.",N/A,Ref    17
+"Validation 
+Master  Plan 
+(VMP)","밸리데이션    종합계획
+서","밸리데이션을    적절히  실시하기  위하여  방법,  조직  및  실시대상 
+등  밸리데이션에  대한  전체적인  계획을  요약·정리한  것을  말한다.",N/A,Ref    17
+Vent  filter,"통기구필터,    벤트필터","폐쇄된  관을  지나다니는  기체로부터  생물  또는  미생물  입자를   
+제거할  수  있는  입자가  떨어지지  않는  다공성  물질","Non-sheddingporousmaterialcapableofremovingviableand
+non-viableparticlesfromgasespassinginandoutofaclosedvessel.",Ref    11
+Worst  Case,최악조건,"표준작업절차범위이내의상/하한공정기준을포함하는조건으로서이
+상적인조건과비교했을때제품이나공정에이상이발생될가능성이    가
+장  큰  경우.  반드시  제품  또는  공정  이상을  유발하는  조건일  필요","A    condition  or  set  of  conditions  encompassing  upper  and  lower  processing 
+limits    and  circumstances,  within  standard  operating  procedures,  which  pose 
+the    greatest  chance  of  product  or  process  failure  when  compared  to  ideal",Ref    6
+,,는  없다.,"conditions.  Such  conditions  do  not  necessarily 
+induce  product  or  process   
+failure.",
+,,"상한,  하한  기준과  상황을  망라하는  일련의  조건들로서  표준  작업 
+절차서(SOP)  내의    최악  조건  및  제조공정  또는  제품  이상을  유
+발할  수  있는  가능성(이상적인  조건과  비교  시)등을  포함한다.  이
+러한  조건들이  필수적으로  제품    혹은  공정  이상을  유발하지는 
+않는다.","Asetofconditionsencompassingupperandlowerprocessinglimitsandcircumstances,in
+cludingthosewithinstandardoperatingprocedures,thatposethegreatestchanceofpro
+cessorproductfailure(whencomparedtoidealconditions).Suchconditionsdonotneces
+sarilyinduceproductorprocessfailure.",Ref    10
+,,"표준작업  범위  내에서  공정  허용  조건의  상한  또는  하한을  말한
+다.",N/A,Ref    17
+Yield,"수율,  수량",이론    생산량에  대한  실  생산량의  백분율을  말한다.,N/A,Ref    15
+"Yield,Control
+Accptance",수율관리기준,"제조공정이    정상적으로  진행되었을  경우  얻어지는  제품별  연간 
+평균생산수율  범위를  말한다.",N/A,Ref    15
+"Yield, 
+Expected",기대    생산량(수율),"이전의    시험  자료,  파일럿  생산  자료,  기타  제조  자료를  근거로 
+하여  적절한  생산  단계에서  예상되는  이론  수율의  백분율  또는 
+물품의  양","The    quantity  of  material  or  the  percentage  of  theoretical  yield  anticipated  at   
+any  appropriate  phase  of  production  based  on  previous 
+laboratory,  pilot   
+scale,  or  manufacturing  data.",Ref    2
+"Yield, 
+Theoretical",이론  생산량(수율),"사용된  원자재의  양에  근거하여  실제  생산에서  발생하는  모든   
+손실  또는  오류가  없는  경우  적절한  생산  단계에서  생산될  양.","The 
+quantity 
+ 
+that  would 
+be 
+produced 
+at 
+any 
+appropriate 
+phase 
+of 
+production,  based  upon  the    quantity  of  material  to  be  used,  in  the  absence 
+of  any  loss  or  error  in    actual  production.",Ref    2
+,,"원료약품의  투입량으로부터  이론적으로  계산된  반제품  또는  완제
+품의  양을  말한다.",N/A,Ref    15
