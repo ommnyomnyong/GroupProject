@@ -14,9 +14,9 @@ from fastapi.responses import FileResponse
 from docx import Document
 from docx.shared import RGBColor
 import tempfile
-from .db.chunking.regex_chunks_sop import process_single_pdf, process_pdfs_parallel, SemanticPDFProcessor
-from .db.pinecone.sop_vectordb import filter_sop_chunks, prepare_sop_documents, embed_documents_in_memory, EMBEDDING_MODEL, BATCH_SIZE
-from .db.pinecone.to_pinecone import upsert_embeddings_to_pinecone
+from db.chunking.regex_chunks_sop import process_single_pdf, process_pdfs_parallel, SemanticPDFProcessor
+from db.pinecone.sop_vectordb import filter_sop_chunks, prepare_sop_documents, embed_documents_in_memory, EMBEDDING_MODEL, BATCH_SIZE
+from db.pinecone.to_pinecone import upsert_embeddings_to_pinecone
 from auto_education import GMPTrainingService
 import time
 import pickle
