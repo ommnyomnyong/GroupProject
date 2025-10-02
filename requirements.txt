@@ -9,4 +9,5 @@ python-docx
 pymysql
 requests
 docx
-pdfplumber
+pdfplumbr
+langchain_community
