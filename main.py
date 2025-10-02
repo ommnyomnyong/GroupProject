@@ -14,9 +14,10 @@ from fastapi.responses import FileResponse
 from docx import Document
 from docx.shared import RGBColor
 import tempfile
-from db.chunking.regex_chunks_sop import process_single_pdf, process_pdfs_parallel, SemanticPDFProcessor
-from db.pinecone.sop_vectordb import filter_sop_chunks, prepare_sop_documents, embed_documents_in_memory, EMBEDDING_MODEL, BATCH_SIZE
-from db.pinecone.to_pinecone import upsert_embeddings_to_pinecone
+from .db.chunking.regex_chunks_sop import process_single_pdf, process_pdfs_parallel, SemanticPDFProcessor
+from .db.pinecone.sop_vectordb import filter_sop_chunks, prepare_sop_documents, embed_documents_in_memory, EMBEDDING_MODEL, BATCH_SIZE
+from .db.pinecone.to_pinecone import upsert_embeddings_to_pinecone
+from auto_education import GMPTrainingService
 import time
 import pickle
 
@@ -90,6 +91,13 @@ class SopUpdateModel(BaseModel):
     sop_title: Optional[str] = None
     sop_content: Optional[str] = None
     # 필요하다면 modified, updated_at 등도 추가 가능
+
+class TrainingRequest(BaseModel):
+    sop_content: str
+    guideline_content: str
+    target_audience: str = "GMP 실무자"
+    num_questions: int = 15
+
 
 # ---- DB 저장 함수 ----
 def insert_analysis_summary(summary: AnalysisSummaryModel):
@@ -447,6 +455,7 @@ def update_sop(sop_id: str, update: SopUpdateModel):
                     sop_id VARCHAR(50) NOT NULL,
                     sop_title VARCHAR(255) NOT NULL,
                     sop_content TEXT NOT NULL,
+                    educated BOOLEAN DEFAULT FALSE,
                     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
                     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
                     FOREIGN KEY (sop_id) REFERENCES SOP(sop_id) ON DELETE CASCADE
@@ -645,6 +654,75 @@ async def upload_sop_modified(file: UploadFile = File(...)):
     return {"result": "업로드 및 임베딩+Pinecone 저장 성공", "chunks": len(documents)}
 
 app.include_router(router)
+
+edu_service = GMPTrainingService(model="gpt-3.5-turbo")
+
+# 교육 생성 엔드포인트
+@router.post("/api/edu/bulk-generate")
+def bulk_generate_edu(num_questions: int = 15, target_audience: str = "GMP 실무자"):
+    conn = pymysql.connect(**DB_CONFIG)
+    try:
+        with conn.cursor(pymysql.cursors.DictCursor) as cursor:
+            # 1. 교육되지 않은 SOP_MODIFIED 전체 조회
+            cursor.execute("""
+                SELECT modified_content_id, sop_id, sop_title, sop_content
+                FROM SOP_MODIFIED
+                WHERE educated = FALSE
+            """)
+            mod_rows = cursor.fetchall()
+            if not mod_rows:
+                raise HTTPException(status_code=404, detail="교육 대상 SOP가 없습니다.")
+            results = []
+            updated_ids = []
+            for mod_row in mod_rows:
+                sop_id = mod_row["sop_id"]
+                mod_title = mod_row["sop_title"]
+                mod_content = mod_row["sop_content"]
+                modified_content_id = mod_row["modified_content_id"]
+                # 원본 SOP 가져오기
+                cursor.execute("""
+                    SELECT sop_title, sop_content
+                    FROM SOP
+                    WHERE sop_id=%s
+                    LIMIT 1
+                """, (sop_id,))
+                orig_row = cursor.fetchone()
+                if not orig_row:
+                    continue
+                orig_title = orig_row["sop_title"]
+                orig_content = orig_row["sop_content"]
+                # 변경점 비교 프롬프트
+                compare_prompt = f"""
+                                아래는 변경 전 SOP와 변경 후 SOP입니다. 변경된 부분을 중심으로 교육자료와 평가문항을 생성하세요.
+
+                                === 변경 전 SOP ===\n제목: {orig_title}\n{orig_content}\n
+                                === 변경 후 SOP ===\n제목: {mod_title}\n{mod_content}\n"""
+                # LLM 요청
+                result = edu_service.generate_training_package(
+                    sop_content=compare_prompt,
+                    guideline_content="21 CFR Part 211 등 관련 가이드라인 내용",
+                    target_audience=target_audience,
+                    num_questions=num_questions
+                )
+                results.append({
+                    "modified_content_id": modified_content_id,
+                    "sop_id": sop_id,
+                    "training": result
+                })
+                updated_ids.append(modified_content_id)
+            # 2. SOP_MODIFIED educated=True로 일괄 업데이트
+            if updated_ids:
+                format_strings = ','.join(['%s'] * len(updated_ids))
+                cursor.execute(f"""
+                    UPDATE SOP_MODIFIED SET educated=TRUE WHERE modified_content_id IN ({format_strings})
+                """, tuple(updated_ids))
+            conn.commit()
+        return {"result": "교육자료 생성 및 SOP_MODIFIED 업데이트 성공", "data": results}
+    finally:
+        conn.close()
+
+# GMP 변경 내용도 교육 하도록 추가해야 함
+
 
 if __name__ == "__main__":
     uvicorn.run(
