@@ -9,3 +9,4 @@ python-docx
 pymysql
 requests
 docx
+pdfplumber
