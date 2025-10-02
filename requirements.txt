@@ -10,4 +10,4 @@ pymysql
 requests
 docx
 pdfplumbr
-langchain_community
+langchain-community
