@@ -369,7 +369,7 @@ async def upload_json(file: UploadFile = File(...)):
         contents = await file.read()
         data = json.loads(contents.decode('utf-8'))
         summary = data.get('summary', {})
-
+        summary['analyzed_at'] = datetime.utcnow().isoformat()
         # 한글 키가 있으면 영문 키로 복사
         if '총_gmp_변경점' in summary:
             summary['total_gmp_changes'] = summary['총_gmp_변경점']
@@ -377,7 +377,7 @@ async def upload_json(file: UploadFile = File(...)):
             summary['affected_sop_sections'] = summary['영향받는_sop_섹션']
 
         # 필수 키가 없으면 에러 메시지 반환
-        required_keys = ['total_gmp_changes', 'affected_sop_sections']
+        required_keys = ['total_gmp_changes', 'affected_sop_sections' 'analyzed_at']
         for key in required_keys:
             if key not in summary:
                 raise HTTPException(status_code=400, detail=f"'{key}' 필드가 summary에 없습니다.")
