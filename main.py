@@ -61,6 +61,7 @@ def get_db_connection():
 class AnalysisSummaryModel(BaseModel):
     총_gmp_변경점: int = Field(..., alias="total_gmp_changes")
     영향받는_sop_섹션: int = Field(..., alias="affected_sop_sections")
+    분석완료시각: str = Field(..., alias="analyzed_at")
 
 class SopInfoModel(BaseModel):
     sop_id: str
