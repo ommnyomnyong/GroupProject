@@ -373,8 +373,7 @@ async def upload_json(file: UploadFile = File(...)):
         pipeline_info = data.get('pipeline_info', {})
 
         # pipeline_info에서 analyzed_at을 summary로 복사
-        if '분석완료시각' in pipeline_info:
-            summary['analyzed_at'] = pipeline_info['분석완료시각']
+        summary['analyzed_at'] = datetime.utcnow().isoformat()
 
         # 한글 키가 있으면 영문 키로 복사
         if '총_gmp_변경점' in summary:
