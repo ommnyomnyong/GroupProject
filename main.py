@@ -168,16 +168,7 @@ def insert_sop_data(sop_list: List[DetailedAnalysisModel]):
     finally:
         conn.close()
 
-def insert_gmp_data(sop_list: List[DetailedAnalysisModel]):
-    create_sql = '''
-        CREATE TABLE IF NOT EXISTS GMP (
-            gmp_id VARCHAR(100) PRIMARY KEY,
-            topic VARCHAR(255),
-            gmp_content TEXT,
-            similarity_score FLOAT,
-            created_at DATETIME
-        )
-    '''
+def insert_gmp_data(sop_list, db_config):
     insert_sql = """
         INSERT INTO GMP (
             gmp_id,
@@ -191,81 +182,94 @@ def insert_gmp_data(sop_list: List[DetailedAnalysisModel]):
             gmp_content = VALUES(gmp_content),
             similarity_score = VALUES(similarity_score)
     """
-    conn = pymysql.connect(**DB_CONFIG)
+    conn = pymysql.connect(**db_config)
     try:
         with conn.cursor() as cursor:
-            cursor.execute(create_sql)
-            for item in sop_list:
-                gmp_info = item.gmp_change_info
-                if not gmp_info or not gmp_info.change_id:
-                    continue
-                old_content = gmp_info.old_gmp_content or ""
-                new_content = gmp_info.new_gmp_content or ""
-                gmp_content = f"OLD:\n{old_content}\n\nNEW:\n{new_content}"
-                cursor.execute(insert_sql, (
-                    gmp_info.change_id,
-                    gmp_info.topic,
-                    gmp_content,
-                    gmp_info.similarity_score
-                ))
+            for sop_item in sop_list:
+                gmp_changes = sop_item.get('gmp_changes', [])
+                # match_score 기준 내림차순 정렬 후 상위 5개 추출
+                top_gmp_changes = sorted(gmp_changes, key=lambda x: x.get('match_score', 0), reverse=True)[:5]
+
+                for gmp_info in top_gmp_changes:
+                    gmp_id = gmp_info.get('change_id')
+                    topic = gmp_info.get('topic')
+                    old_content = gmp_info.get('old_gmp_summary', '')
+                    new_content = gmp_info.get('new_gmp_summary', '')
+                    gmp_content = f"OLD:\n{old_content}\n\nNEW:\n{new_content}"
+                    similarity_score = gmp_info.get('similarity_score', 0)
+                    if gmp_id is None or not gmp_content:
+                        continue
+                    cursor.execute(insert_sql, (
+                        gmp_id,
+                        topic,
+                        gmp_content,
+                        similarity_score
+                    ))
             conn.commit()
     finally:
         conn.close()
 
-def insert_sop_gmp_link(sop_list: List[DetailedAnalysisModel]):
-    create_sql = '''
-        CREATE TABLE IF NOT EXISTS SOP_GMP_LINK (
-            sop_id VARCHAR(100),
-            gmp_id VARCHAR(100),
-            match_score FLOAT,
-            change_rationale TEXT,
-            key_changes TEXT,
-            update_recommendation TEXT,
-            completed VARCHAR(20),
-            created_at DATETIME,
-            PRIMARY KEY (sop_id, gmp_id)
-        )
-    '''
+def insert_sop_gmp_link(sop_list, db_config):
     insert_sql = """
         INSERT INTO SOP_GMP_LINK (
             sop_id,
             gmp_id,
             match_score,
             change_rationale,
-            key_changes,
             update_recommendation,
             completed,
             created_at
-        ) VALUES (%s, %s, %s, %s, %s, %s, %s, NOW())
+        ) VALUES (%s, %s, %s, %s, %s, %s, NOW())
         ON DUPLICATE KEY UPDATE
             match_score = VALUES(match_score),
             change_rationale = VALUES(change_rationale),
-            key_changes = VALUES(key_changes),
             update_recommendation = VALUES(update_recommendation),
             completed = VALUES(completed)
     """
-    conn = pymysql.connect(**DB_CONFIG)
+    conn = pymysql.connect(**db_config)
     try:
         with conn.cursor() as cursor:
-            cursor.execute(create_sql)
-            for item in sop_list:
-                sop_info = item.sop_info
-                gmp_info = item.gmp_change_info
-                if not sop_info.sop_id or not gmp_info or not gmp_info.change_id:
-                    continue
-                rationale_json = json.dumps(item.change_rationale, ensure_ascii=False)
-                key_changes_json = json.dumps(item.key_changes, ensure_ascii=False)
+            for sop_item in sop_list:
+                sop_info = sop_item.get('sop_info', {})
+                gmp_changes = sop_item.get('gmp_changes', [])
+                rationale = sop_item.get('change_rationale', {})
+                update_recommendation = sop_item.get('update_recommendation', '')
                 completed_status = '미처리'
-                cursor.execute(insert_sql, (
-                    sop_info.sop_id,
-                    gmp_info.change_id,
-                    sop_info.match_score or 0,
-                    rationale_json,
-                    key_changes_json,
-                    item.update_recommendation,
-                    completed_status
-                ))
+                sop_id = sop_info.get('sop_id')
+
+                top_gmp_changes = sorted(gmp_changes, key=lambda x: x.get('match_score', 0), reverse=True)[:5]
+
+                for gmp_info in top_gmp_changes:
+                    gmp_id = gmp_info.get('change_id')
+                    match_score = gmp_info.get('match_score', 0)
+                    if sop_id is None or gmp_id is None:
+                        continue
+                    change_rationale_json = json.dumps(rationale, ensure_ascii=False)
+                    cursor.execute(insert_sql, (
+                        sop_id,
+                        gmp_id,
+                        match_score,
+                        change_rationale_json,
+                        update_recommendation,
+                        completed_status
+                    ))
             conn.commit()
+    finally:
+        conn.close()
+
+def drop_all_tables(db_config):
+    conn = pymysql.connect(**db_config)
+    try:
+        with conn.cursor() as cursor:
+            cursor.execute("SET FOREIGN_KEY_CHECKS = 0;")
+            cursor.execute("SELECT table_name FROM information_schema.tables WHERE table_schema = %s;", (db_config['database'],))
+            tables = cursor.fetchall()
+            for (table_name,) in tables:
+                print(f"Dropping table: {table_name}")
+                cursor.execute(f"DROP TABLE IF EXISTS `{table_name}`;")
+            cursor.execute("SET FOREIGN_KEY_CHECKS = 1;")
+        conn.commit()
+        print("모든 테이블 삭제 완료")
     finally:
         conn.close()
 
@@ -741,14 +745,8 @@ def bulk_generate_edu(num_questions: int = 15, target_audience: str = "GMP 실�
     finally:
         conn.close()
 
-# GMP 변경 내용도 교육 하도록 추가해야 함
-
-
 if __name__ == "__main__":
     uvicorn.run(
         app, host="127.0.0.1", port=8000,
         reload=True, log_level="info"
     )
-
-
-### GMP 변경 시 기존 db에서 관리하던 데이터가 날라가지 않도록? sop를 반만 수정하여 다시 돌릴 경우?
