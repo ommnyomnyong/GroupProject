@@ -365,6 +365,8 @@ def create_all_tables(db_config):
 @app.post("/upload_json")
 async def upload_json(file: UploadFile = File(...)):
     try:
+        drop_all_tables(DB_CONFIG)
+        create_all_tables(DB_CONFIG)
         contents = await file.read()
         data = json.loads(contents.decode('utf-8'))
         summary = data.get('summary', {})
@@ -832,8 +834,6 @@ def bulk_generate_edu(num_questions: int = 15, target_audience: str = "GMP ì‹¤ë¬
         conn.close()
 
 if __name__ == "__main__":
-    drop_all_tables(DB_CONFIG)
-    create_all_tables(DB_CONFIG)
     uvicorn.run(
         app, host="127.0.0.1", port=8000,
         reload=True, log_level="info"
