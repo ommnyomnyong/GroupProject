@@ -746,6 +746,7 @@ def bulk_generate_edu(num_questions: int = 15, target_audience: str = "GMP ì‹¤ë¬
         conn.close()
 
 if __name__ == "__main__":
+    drop_all_tables(DB_CONFIG)
     uvicorn.run(
         app, host="127.0.0.1", port=8000,
         reload=True, log_level="info"
