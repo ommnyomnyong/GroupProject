@@ -80,7 +80,6 @@ class DetailedAnalysisModel(BaseModel):
     sop_info: SopInfoModel
     gmp_change_info: Optional[GmpChangeInfoModel] = None
     change_rationale: Optional[Dict[str, Any]] = {}
-    key_changes: Optional[List[Any]] = []
     update_recommendation: Optional[str] = ""
 
 class SaveAllRequestModel(BaseModel):
@@ -168,7 +167,16 @@ def insert_sop_data(sop_list: List[DetailedAnalysisModel]):
     finally:
         conn.close()
 
-def insert_gmp_data(sop_list, db_config):
+def insert_gmp_data(gmp_list, db_config):
+    create_sql = '''
+        CREATE TABLE IF NOT EXISTS GMP (
+            gmp_id VARCHAR(50) PRIMARY KEY,
+            topic VARCHAR(255),             
+            gmp_content TEXT,              
+            similarity_score FLOAT,         
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        )
+    '''
     insert_sql = """
         INSERT INTO GMP (
             gmp_id,
@@ -185,8 +193,9 @@ def insert_gmp_data(sop_list, db_config):
     conn = pymysql.connect(**db_config)
     try:
         with conn.cursor() as cursor:
-            for sop_item in sop_list:
-                gmp_changes = sop_item.get('gmp_changes', [])
+            cursor.execute(create_sql)
+            for gmp_item in gmp_list:
+                gmp_changes = gmp_item.get('gmp_changes', [])
                 # match_score 기준 내림차순 정렬 후 상위 5개 추출
                 top_gmp_changes = sorted(gmp_changes, key=lambda x: x.get('match_score', 0), reverse=True)[:5]
 
@@ -210,6 +219,21 @@ def insert_gmp_data(sop_list, db_config):
         conn.close()
 
 def insert_sop_gmp_link(sop_list, db_config):
+    create_sql = '''
+        CREATE TABLE IF NOT EXISTS SOP_GMP_LINK (
+            link_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+            sop_id VARCHAR(50) NOT NULL,
+            gmp_id VARCHAR(50) NOT NULL,
+            match_score FLOAT,              
+            change_rationale JSON,          
+            update_recommendation TEXT,  
+            completed VARCHAR(20) NOT NULL DEFAULT '미처리', 
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+            FOREIGN KEY (sop_id) REFERENCES SOP(sop_id) ON DELETE CASCADE,
+            FOREIGN KEY (gmp_id) REFERENCES GMP(gmp_id) ON DELETE CASCADE,
+            UNIQUE KEY unique_sop_gmp (sop_id, gmp_id)
+        )
+    '''
     insert_sql = """
         INSERT INTO SOP_GMP_LINK (
             sop_id,
@@ -229,6 +253,7 @@ def insert_sop_gmp_link(sop_list, db_config):
     conn = pymysql.connect(**db_config)
     try:
         with conn.cursor() as cursor:
+            cursor.execute(create_sql)
             for sop_item in sop_list:
                 sop_info = sop_item.get('sop_info', {})
                 gmp_changes = sop_item.get('gmp_changes', [])
@@ -270,6 +295,68 @@ def drop_all_tables(db_config):
             cursor.execute("SET FOREIGN_KEY_CHECKS = 1;")
         conn.commit()
         print("모든 테이블 삭제 완료")
+    finally:
+        conn.close()
+
+def create_all_tables(db_config):
+    conn = pymysql.connect(**db_config)
+    try:
+        with conn.cursor() as cursor:
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS ANALYSIS_SUMMARY (
+                    total_gmp_changes INT,
+                    affected_sop_sections INT,
+                    created_at VARCHAR(50)
+                )
+            """)
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS SOP (
+                    sop_id VARCHAR(100) PRIMARY KEY,
+                    sop_title VARCHAR(255),
+                    sop_content TEXT,
+                    is_current BOOLEAN DEFAULT FALSE,
+                    created_at DATETIME,
+                    updated_at DATETIME
+                )
+            """)
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS GMP (
+                    gmp_id VARCHAR(50) PRIMARY KEY,
+                    topic VARCHAR(255),
+                    gmp_content TEXT,
+                    similarity_score FLOAT,
+                    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+                )
+            """)
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS SOP_GMP_LINK (
+                    link_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+                    sop_id VARCHAR(50) NOT NULL,
+                    gmp_id VARCHAR(50) NOT NULL,
+                    match_score FLOAT,
+                    change_rationale JSON,
+                    update_recommendation TEXT,
+                    completed VARCHAR(20) NOT NULL DEFAULT '미처리',
+                    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+                    FOREIGN KEY (sop_id) REFERENCES SOP(sop_id) ON DELETE CASCADE,
+                    FOREIGN KEY (gmp_id) REFERENCES GMP(gmp_id) ON DELETE CASCADE,
+                    UNIQUE KEY unique_sop_gmp (sop_id, gmp_id)
+                )
+            """)
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS SOP_MODIFIED (
+                    modified_content_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+                    sop_id VARCHAR(50) NOT NULL,
+                    sop_title VARCHAR(255) NOT NULL,
+                    sop_content TEXT NOT NULL,
+                    educated BOOLEAN DEFAULT FALSE,
+                    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+                    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+                    FOREIGN KEY (sop_id) REFERENCES SOP(sop_id) ON DELETE CASCADE
+                )
+            """)
+        conn.commit()
+        print("모든 테이블 생성 완료")
     finally:
         conn.close()
 
@@ -416,7 +503,7 @@ def get_sop_gmp_link():
     try:
         with conn.cursor(pymysql.cursors.DictCursor) as cursor:
             sql = """
-                SELECT sop_id, gmp_id, match_score, change_rationale, key_changes, update_recommendation, completed, created_at
+                SELECT sop_id, gmp_id, match_score, change_rationale, update_recommendation, completed, created_at
                 FROM SOP_GMP_LINK
                 ORDER BY created_at DESC
             """
@@ -579,7 +666,7 @@ def export_gmp_docx(sop_id: str):
         with conn.cursor(pymysql.cursors.DictCursor) as cursor:
             # SOP_GMP_LINK에서 sop_id로 연결된 gmp_id, 근거 등 조회
             cursor.execute("""
-                SELECT gmp_id, change_rationale, key_changes, update_recommendation
+                SELECT gmp_id, change_rationale, update_recommendation
                 FROM SOP_GMP_LINK
                 WHERE sop_id=%s AND completed='처리'
             """, (sop_id,))
@@ -607,7 +694,6 @@ def export_gmp_docx(sop_id: str):
         doc.add_heading(gmp['topic'] if gmp else link['gmp_id'], level=1)
         doc.add_paragraph(gmp['gmp_content'] if gmp else "(GMP 내용 없음)")
         doc.add_paragraph(f"근거: {link['change_rationale']}")
-        doc.add_paragraph(f"주요 변경사항: {link['key_changes']}")
         doc.add_paragraph(f"업데이트 권장사항: {link['update_recommendation']}")
         doc.add_paragraph("")
 
@@ -747,6 +833,7 @@ def bulk_generate_edu(num_questions: int = 15, target_audience: str = "GMP 실�
 
 if __name__ == "__main__":
     drop_all_tables(DB_CONFIG)
+    create_all_tables(DB_CONFIG)
     uvicorn.run(
         app, host="127.0.0.1", port=8000,
         reload=True, log_level="info"
