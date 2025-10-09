@@ -194,25 +194,21 @@ def insert_gmp_data(gmp_list):
     try:
         with conn.cursor() as cursor:
             cursor.execute(create_sql)
-            for gmp_item in gmp_list:
-                gmp_changes = gmp_item.gmp_changes or []
-                top_gmp_changes = sorted(gmp_changes, key=lambda x: x.get('match_score', 0), reverse=True)[:5]
+            for item in gmp_list:
+                gmp_changes = item.gmp_changes or []
+                # similarity_score가 None일 경우 0 대체
+                top_gmp_changes = sorted(gmp_changes, key=lambda x: x.similarity_score or 0, reverse=True)[:5]
 
-                for gmp_info in top_gmp_changes:
-                    gmp_id = gmp_info.get('change_id')
-                    topic = gmp_info.get('topic')
-                    old_content = gmp_info.get('old_gmp_summary', '')
-                    new_content = gmp_info.get('new_gmp_summary', '')
+                for gmp_obj in top_gmp_changes:
+                    gmp_id = gmp_obj.change_id
+                    topic = gmp_obj.topic
+                    old_content = gmp_obj.old_gmp_content or ""
+                    new_content = gmp_obj.new_gmp_content or ""
                     gmp_content = f"OLD:\n{old_content}\n\nNEW:\n{new_content}"
-                    similarity_score = gmp_info.get('similarity_score', 0)
-                    if gmp_id is None or not gmp_content:
+                    similarity_score = gmp_obj.similarity_score or 0.0
+                    if not gmp_id or not gmp_content.strip():
                         continue
-                    cursor.execute(insert_sql, (
-                        gmp_id,
-                        topic,
-                        gmp_content,
-                        similarity_score
-                    ))
+                    cursor.execute(insert_sql, (gmp_id, topic, gmp_content, similarity_score))
             conn.commit()
     finally:
         conn.close()
@@ -253,19 +249,20 @@ def insert_sop_gmp_link(sop_list):
     try:
         with conn.cursor() as cursor:
             cursor.execute(create_sql)
-            for sop_item in sop_list:
-                sop_info = sop_item.sop_info
-                gmp_changes = sop_item.gmp_changes or []
-                rationale = sop_item.change_rationale or {}
-                update_recommendation = sop_item.update_recommendation or ''
-                completed_status = '미처리'
+            for item in sop_list:
+                sop_info = item.sop_info
+                gmp_changes = item.gmp_changes or []
+                rationale = item.change_rationale or {}
+                update_recommendation = item.update_recommendation or ""
+                completed_status = "미처리"
                 sop_id = sop_info.sop_id if sop_info else None
 
-                top_gmp_changes = sorted(gmp_changes, key=lambda x: x.get('match_score', 0), reverse=True)[:5]
+                # similarity_score가 None일 경우 0 대체
+                top_gmp_changes = sorted(gmp_changes, key=lambda x: x.similarity_score or 0, reverse=True)[:5]
 
-                for gmp_info in top_gmp_changes:
-                    gmp_id = gmp_info.get('change_id')
-                    match_score = gmp_info.get('match_score', 0)
+                for gmp_obj in top_gmp_changes:
+                    gmp_id = gmp_obj.change_id
+                    match_score = gmp_obj.similarity_score or 0.0
                     if sop_id is None or gmp_id is None:
                         continue
                     change_rationale_json = json.dumps(rationale, ensure_ascii=False)
