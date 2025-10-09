@@ -78,7 +78,7 @@ class GmpChangeInfoModel(BaseModel):
 
 class DetailedAnalysisModel(BaseModel):
     sop_info: SopInfoModel
-    gmp_change_info: Optional[GmpChangeInfoModel] = None
+    gmp_changes: Optional[List[GmpChangeInfoModel]] = []
     change_rationale: Optional[Dict[str, Any]] = {}
     update_recommendation: Optional[str] = ""
 
