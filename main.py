@@ -72,8 +72,8 @@ class SopInfoModel(BaseModel):
 class GmpChangeInfoModel(BaseModel):
     change_id: str
     topic: Optional[str] = None
-    old_gmp_content: Optional[str] = ""
-    new_gmp_content: Optional[str] = ""
+    old_gmp_summary: Optional[str] = ""
+    new_gmp_summary: Optional[str] = ""
     similarity_score: Optional[float] = 0
 
 class DetailedAnalysisModel(BaseModel):
@@ -782,7 +782,7 @@ def bulk_generate_edu(num_questions: int = 15, target_audience: str = "GMP 실�
 
                 # GMP 변경 근거 조회 (sop_id와 연동된 gmp_id 목록 통해 조회)
                 cursor.execute("""
-                    SELECT topic, gmp_content
+                    SELECT topic, new_gmp_summary
                     FROM GMP
                     WHERE gmp_id IN (
                         SELECT gmp_id FROM SOP_GMP_LINK WHERE sop_id=%s
@@ -790,7 +790,7 @@ def bulk_generate_edu(num_questions: int = 15, target_audience: str = "GMP 실�
                 """, (sop_id,))
                 gmp_rows = cursor.fetchall()
                 # GMP 근거 텍스트 결합
-                gmp_contents = "\n\n".join(f"주제: {g['topic']}\n내용: {g['gmp_content']}" for g in gmp_rows) if gmp_rows else ""
+                gmp_contents = "\n\n".join(f"주제: {g['topic']}\n내용: {g['new_gmp_summary']}" for g in gmp_rows) if gmp_rows else ""
 
                 # SOP와 GMP를 하나로 통합하여 sop_content로 전달
                 combined_sop_content = (
