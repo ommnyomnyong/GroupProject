@@ -172,7 +172,8 @@ def insert_gmp_data(gmp_list):
         CREATE TABLE IF NOT EXISTS GMP (
             gmp_id VARCHAR(50) PRIMARY KEY,
             topic VARCHAR(255),             
-            gmp_content TEXT,              
+            old_gmp_summary TEXT,
+            new_gmp_summary TEXT,              
             similarity_score FLOAT,         
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP
         )
@@ -181,13 +182,15 @@ def insert_gmp_data(gmp_list):
         INSERT INTO GMP (
             gmp_id,
             topic,
-            gmp_content,
+            old_gmp_summary,
+            new_gmp_summary, 
             similarity_score,
             created_at
-        ) VALUES (%s, %s, %s, %s, NOW())
+        ) VALUES (%s, %s, %s, %s, %s, NOW())
         ON DUPLICATE KEY UPDATE
             topic = VALUES(topic),
-            gmp_content = VALUES(gmp_content),
+            old_gmp_summary = VALUES(old_gmp_summary),
+            new_gmp_summary = VALUES(new_gmp_summary),
             similarity_score = VALUES(similarity_score)
     """
     conn = pymysql.connect(**DB_CONFIG)
@@ -478,7 +481,7 @@ def get_changed_gmp():
     try:
         with conn.cursor(pymysql.cursors.DictCursor) as cursor:
             sql = """
-                SELECT gmp_id, topic, gmp_content, similarity_score, created_at
+                SELECT gmp_id, topic, old_gmp_summary, new_gmp_summary, similarity_score, created_at
                 FROM GMP
                 ORDER BY created_at DESC
             """
