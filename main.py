@@ -167,7 +167,7 @@ def insert_sop_data(sop_list: List[DetailedAnalysisModel]):
     finally:
         conn.close()
 
-def insert_gmp_data(gmp_list, db_config):
+def insert_gmp_data(gmp_list):
     create_sql = '''
         CREATE TABLE IF NOT EXISTS GMP (
             gmp_id VARCHAR(50) PRIMARY KEY,
@@ -190,7 +190,7 @@ def insert_gmp_data(gmp_list, db_config):
             gmp_content = VALUES(gmp_content),
             similarity_score = VALUES(similarity_score)
     """
-    conn = pymysql.connect(**db_config)
+    conn = pymysql.connect(**DB_CONFIG)
     try:
         with conn.cursor() as cursor:
             cursor.execute(create_sql)
@@ -218,7 +218,7 @@ def insert_gmp_data(gmp_list, db_config):
     finally:
         conn.close()
 
-def insert_sop_gmp_link(sop_list, db_config):
+def insert_sop_gmp_link(sop_list):
     create_sql = '''
         CREATE TABLE IF NOT EXISTS SOP_GMP_LINK (
             link_id BIGINT AUTO_INCREMENT PRIMARY KEY,
@@ -250,7 +250,7 @@ def insert_sop_gmp_link(sop_list, db_config):
             update_recommendation = VALUES(update_recommendation),
             completed = VALUES(completed)
     """
-    conn = pymysql.connect(**db_config)
+    conn = pymysql.connect(**DB_CONFIG)
     try:
         with conn.cursor() as cursor:
             cursor.execute(create_sql)
@@ -282,12 +282,12 @@ def insert_sop_gmp_link(sop_list, db_config):
     finally:
         conn.close()
 
-def drop_all_tables(db_config):
-    conn = pymysql.connect(**db_config)
+def drop_all_tables(DB_CONFIG):
+    conn = pymysql.connect(**DB_CONFIG)
     try:
         with conn.cursor() as cursor:
             cursor.execute("SET FOREIGN_KEY_CHECKS = 0;")
-            cursor.execute("SELECT table_name FROM information_schema.tables WHERE table_schema = %s;", (db_config['database'],))
+            cursor.execute("SELECT table_name FROM information_schema.tables WHERE table_schema = %s;", (DB_CONFIG['database'],))
             tables = cursor.fetchall()
             for (table_name,) in tables:
                 print(f"Dropping table: {table_name}")
@@ -298,8 +298,8 @@ def drop_all_tables(db_config):
     finally:
         conn.close()
 
-def create_all_tables(db_config):
-    conn = pymysql.connect(**db_config)
+def create_all_tables(DB_CONFIG):
+    conn = pymysql.connect(**DB_CONFIG)
     try:
         with conn.cursor() as cursor:
             cursor.execute("""
