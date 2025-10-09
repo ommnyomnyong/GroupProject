@@ -211,7 +211,7 @@ def insert_gmp_data(gmp_list):
                     similarity_score = gmp_obj.similarity_score or 0.0
                     if not gmp_id or not gmp_content.strip():
                         continue
-                    cursor.execute(insert_sql, (gmp_id, topic, gmp_content, similarity_score))
+                    cursor.execute(insert_sql, (gmp_id, topic, old_content, new_content, similarity_score))
             conn.commit()
     finally:
         conn.close()
@@ -672,7 +672,7 @@ def export_gmp_docx(sop_id: str):
             if gmp_ids:
                 format_strings = ','.join(['%s'] * len(gmp_ids))
                 cursor.execute(f"""
-                    SELECT gmp_id, topic, gmp_content
+                    SELECT gmp_id, topic, new_gmp_summary
                     FROM GMP
                     WHERE gmp_id IN ({format_strings})
                 """, tuple(gmp_ids))
@@ -688,7 +688,7 @@ def export_gmp_docx(sop_id: str):
     for link in link_data:
         gmp = gmp_data.get(link['gmp_id'])
         doc.add_heading(gmp['topic'] if gmp else link['gmp_id'], level=1)
-        doc.add_paragraph(gmp['gmp_content'] if gmp else "(GMP 내용 없음)")
+        doc.add_paragraph(gmp['new_gmp_summary'] if gmp else "(GMP 내용 없음)")
         doc.add_paragraph(f"근거: {link['change_rationale']}")
         doc.add_paragraph(f"업데이트 권장사항: {link['update_recommendation']}")
         doc.add_paragraph("")
