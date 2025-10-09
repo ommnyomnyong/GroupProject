@@ -205,8 +205,8 @@ def insert_gmp_data(gmp_list):
                 for gmp_obj in top_gmp_changes:
                     gmp_id = gmp_obj.change_id
                     topic = gmp_obj.topic
-                    old_content = gmp_obj.old_gmp_content or ""
-                    new_content = gmp_obj.new_gmp_content or ""
+                    old_content = gmp_obj.old_gmp_summary or ""
+                    new_content = gmp_obj.new_gmp_summary or ""
                     gmp_content = f"OLD:\n{old_content}\n\nNEW:\n{new_content}"
                     similarity_score = gmp_obj.similarity_score or 0.0
                     if not gmp_id or not gmp_content.strip():
@@ -305,7 +305,7 @@ def create_all_tables(DB_CONFIG):
                 CREATE TABLE IF NOT EXISTS ANALYSIS_SUMMARY (
                     total_gmp_changes INT,
                     affected_sop_sections INT,
-                    created_at VARCHAR(50)
+                    created_at DATETIME
                 )
             """)
             cursor.execute("""
@@ -322,7 +322,8 @@ def create_all_tables(DB_CONFIG):
                 CREATE TABLE IF NOT EXISTS GMP (
                     gmp_id VARCHAR(50) PRIMARY KEY,
                     topic VARCHAR(255),
-                    gmp_content TEXT,
+                    old_gmp_summary TEXT,
+                    new_gmp_summary TEXT,
                     similarity_score FLOAT,
                     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
                 )
