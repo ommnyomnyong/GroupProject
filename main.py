@@ -195,8 +195,7 @@ def insert_gmp_data(gmp_list):
         with conn.cursor() as cursor:
             cursor.execute(create_sql)
             for gmp_item in gmp_list:
-                gmp_changes = gmp_item.get('gmp_changes', [])
-                # match_score 기준 내림차순 정렬 후 상위 5개 추출
+                gmp_changes = gmp_item.gmp_changes or []
                 top_gmp_changes = sorted(gmp_changes, key=lambda x: x.get('match_score', 0), reverse=True)[:5]
 
                 for gmp_info in top_gmp_changes:
@@ -255,12 +254,12 @@ def insert_sop_gmp_link(sop_list):
         with conn.cursor() as cursor:
             cursor.execute(create_sql)
             for sop_item in sop_list:
-                sop_info = sop_item.get('sop_info', {})
-                gmp_changes = sop_item.get('gmp_changes', [])
-                rationale = sop_item.get('change_rationale', {})
-                update_recommendation = sop_item.get('update_recommendation', '')
+                sop_info = sop_item.sop_info
+                gmp_changes = sop_item.gmp_changes or []
+                rationale = sop_item.change_rationale or {}
+                update_recommendation = sop_item.update_recommendation or ''
                 completed_status = '미처리'
-                sop_id = sop_info.get('sop_id')
+                sop_id = sop_info.sop_id if sop_info else None
 
                 top_gmp_changes = sorted(gmp_changes, key=lambda x: x.get('match_score', 0), reverse=True)[:5]
 
